@@ -99,12 +99,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util_session_api_util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./util/session_api_util */ "./frontend/util/session_api_util.js");
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
   var rootEl = document.getElementById('root');
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Welcome to MangoMusic"), rootEl);
+  window.signup = _util_session_api_util__WEBPACK_IMPORTED_MODULE_2__["signup"];
+  window.login = _util_session_api_util__WEBPACK_IMPORTED_MODULE_2__["login"];
+  window.logout = _util_session_api_util__WEBPACK_IMPORTED_MODULE_2__["logout"];
 });
+
+/***/ }),
+
+/***/ "./frontend/util/session_api_util.js":
+/*!*******************************************!*\
+  !*** ./frontend/util/session_api_util.js ***!
+  \*******************************************/
+/*! exports provided: signup, login, logout */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "signup", function() { return signup; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var signup = function signup(user) {
+  return $.ajax({
+    method: 'POST',
+    url: 'api/users',
+    data: {
+      user: user
+    }
+  });
+};
+var login = function login(user) {
+  return $.ajax({
+    method: 'POST',
+    url: 'api/session',
+    data: {
+      user: user
+    }
+  });
+};
+var logout = function logout() {
+  return $.ajax({
+    method: 'DELETE',
+    url: 'api/session'
+  });
+};
 
 /***/ }),
 

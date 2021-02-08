@@ -10,12 +10,13 @@ class Api::SessionsController < ApplicationController
             login(@user)
             render 'api/users/show';
         else
-            render json: ["Your Mango ID or password was incorrect."], status: 422
+            render json: ["Your Mango ID or password was incorrect."], status: 401
         end
     end
 
     def destroy
+        @user = current_user
         logout
-        render json: ["Success"]
+        render 'api/users/show'
     end
 end
