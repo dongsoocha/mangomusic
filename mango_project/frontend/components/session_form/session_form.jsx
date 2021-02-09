@@ -25,6 +25,7 @@ class SessionForm extends React.Component {
     }
 
     renderErrors() {
+        debugger
         if (this.props.errors.session.length !== 0) {
             return (
                 <ul id="session_error">
@@ -39,37 +40,72 @@ class SessionForm extends React.Component {
     }
 
     render() {
-        return (
-            <div className="login-form-container">
-                <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Sign in with your Mango ID
-          <br />
-          You will be signed in to Mango TV and Mango Music
-                    <div onClick={this.props.closeModal} className="close-x">X</div>
-                    {this.renderErrors()}
-                    <div className="login-form">
-                        <br />
-                        <label>Mango ID:
-              <input type="text"
-                                value={this.state.email}
-                                onChange={this.update('email')}
-                                className="login-input"
-                            />
-                        </label>
-                        <br />
-                        <label>Password:
-              <input type="password"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                className="login-input"
-                            />
-                        </label>
-                        <br />
-                        <input className="session-submit" type="submit" value={this.props.formType} />
-                    </div>
-                </form>
-            </div>
-        );
+        if (this.props.formType === "login") {
+            return (
+                <div className="login-form-container">
+                    <form onSubmit={this.handleSubmit} className="login-form-box">
+                        Sign in with your Mango ID
+            <br />
+            You will be signed in to Mango TV and Mango Music
+                        <div onClick={this.props.closeModal} className="close-x">X</div>
+                        {this.renderErrors()}
+                        <div className="login-form">
+                            <br />
+                            <label>Mango ID:
+                <input type="text"
+                                    value={this.state.email}
+                                    onChange={this.update('email')}
+                                    className="login-input"
+                                />
+                            </label>
+                            <br />
+                            <label>Password:
+                <input type="password"
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                    className="login-input"
+                                />
+                            </label>
+                            <br />
+                            <input className="session-submit" type="submit" value={this.props.formType} />
+                        </div>
+                    </form>
+                    {this.props.otherForm}
+                </div>
+            );
+        } else if (this.props.formType === 'signup') {
+            return (
+                <div className="signup-form-container">
+                    <form onSubmit={this.handleSubmit} className="signup-form-box">
+                        Create a new Mango ID
+            <br />
+                        <div onClick={this.props.closeModal} className="close-x">X</div>
+                        {this.renderErrors()}
+                        <div className="signup-form">
+                            <br />
+                            <label>Mango ID:
+                <input type="text"
+                                    value={this.state.email}
+                                    onChange={this.update('email')}
+                                    className="signup-input"
+                                />
+                            </label>
+                            <br />
+                            <label>Password:
+                <input type="password"
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                    className="signup-input"
+                                />
+                            </label>
+                            <br />
+                            <input className="session-submit" type="submit" value={this.props.formType} />
+                        </div>
+                    </form>
+                    {this.props.otherForm}
+                </div>
+            );
+        }
     }
 }
 
