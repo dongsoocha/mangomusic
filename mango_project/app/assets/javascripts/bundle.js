@@ -159,6 +159,8 @@ var signup = function signup(user) {
   return function (dispatch) {
     return _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__["signup"](user).then(function (user) {
       return dispatch(receiveCurrentUser(user));
+    }, function (errors) {
+      return dispatch(receiveErrors(errors.responseJSON));
     });
   };
 };
@@ -166,6 +168,8 @@ var login = function login(user) {
   return function (dispatch) {
     return _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__["login"](user).then(function (user) {
       return dispatch(receiveCurrentUser(user));
+    }, function (errors) {
+      return dispatch(receiveErrors(errors.responseJSON));
     });
   };
 };
@@ -419,7 +423,7 @@ __webpack_require__.r(__webpack_exports__);
 var mapStateToProps = function mapStateToProps(_ref) {
   var errors = _ref.errors;
   return {
-    errors: errors.session,
+    errors: errors,
     formType: 'login'
   };
 };
@@ -495,10 +499,11 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      username: '',
+      email: '',
       password: ''
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.renderErrors = _this.renderErrors.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -517,20 +522,20 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
       e.preventDefault();
       var user = Object.assign({}, this.state);
       this.props.processForm(user).then(this.props.closeModal);
-    } // renderErrors() {
-    //     if (this.props.errors.length !== 0) {
-    //         return (
-    //             <ul>
-    //                 {this.props.errors.map((error, i) => (
-    //                     <li key={`error-${i}`}>
-    //                         {error}
-    //                     </li>
-    //                 ))}
-    //             </ul>
-    //         );
-    //     }
-    // }
-
+    }
+  }, {
+    key: "renderErrors",
+    value: function renderErrors() {
+      if (this.props.errors.session.length !== 0) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+          id: "session_error"
+        }, this.props.errors.session.map(function (error, i) {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+            key: "error-".concat(i)
+          }, error);
+        }));
+      }
+    }
   }, {
     key: "render",
     value: function render() {
@@ -539,15 +544,15 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "login-form-box"
-      }, "Welcome to BenchBnB!", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Please ", this.props.formType, " or ", this.props.otherForm, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Sign in with your Mango ID", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "You will be signed in to Mango TV and Mango Music", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         onClick: this.props.closeModal,
         className: "close-x"
       }, "X"), this.renderErrors(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "login-form"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Username:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Mango ID:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
-        value: this.state.username,
-        onChange: this.update('username'),
+        value: this.state.email,
+        onChange: this.update('email'),
         className: "login-input"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Password:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
@@ -759,13 +764,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/session_actions */ "./frontend/actions/session_actions.js");
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
   var action = arguments.length > 1 ? arguments[1] : undefined;
   Object.freeze(state);
 
   switch (action.type) {
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SESSION_ERRORS"]:
-      return Object.values(action.errors);
+      return action.errors;
 
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
       return [];

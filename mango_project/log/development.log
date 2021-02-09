@@ -937,3 +937,1076 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 236ms (Views: 227.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2021-02-08 17:51:04 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1224ms (Views: 1219.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 17:51:41 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 820ms (Views: 813.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 17:52:56 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 725ms (Views: 719.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 17:53:25 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 664ms (Views: 658.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-08 17:54:00 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"d", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started GET "/" for ::1 at 2021-02-08 17:56:37 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 926ms (Views: 920.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 17:58:29 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 658ms (Views: 651.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 17:58:49 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 249ms (Views: 243.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 18:01:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 700ms (Views: 695.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 18:05:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 746ms (Views: 738.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 18:08:29 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 629ms (Views: 621.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 18:10:17 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 141ms (Views: 134.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 18:10:22 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 524ms (Views: 519.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 18:11:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 514ms (Views: 510.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 18:11:29 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 158ms (Views: 153.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 18:11:35 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 891ms (Views: 881.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 18:12:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 60ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 18:12:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 72ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 19:20:30 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (149.3ms)
+Completed 200 OK in 749ms (Views: 671.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 19:24:14 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 949ms (Views: 936.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 19:24:20 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 137ms (Views: 117.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 19:24:42 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 692ms (Views: 682.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-08 19:24:46 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 88ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 08:55:50 -0800
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dongsoo/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 2302ms (Views: 2288.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 08:55:59 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started GET "/" for ::1 at 2021-02-09 08:58:38 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 732ms (Views: 685.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 08:58:43 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started GET "/" for ::1 at 2021-02-09 08:59:25 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 87ms (Views: 68.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 08:59:29 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (19.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 76ms (Views: 0.3ms | ActiveRecord: 48.1ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:04:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 667ms (Views: 655.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:04:06 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 14ms (Views: 0.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:04:20 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:06:25 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 76ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:06:30 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 7ms (Views: 0.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:08:07 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 613ms (Views: 609.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:09:10 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:11:05 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 575ms (Views: 565.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:11:16 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:14:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 553ms (Views: 537.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:14:27 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 11ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:15:10 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 511ms (Views: 504.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:15:16 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:15:40 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:16:26 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 594ms (Views: 589.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:18:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 555ms (Views: 551.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:18:28 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 6ms (Views: 0.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:19:32 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 73ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:19:40 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:42:34 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 146ms (Views: 112.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:42:45 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david2@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 42ms (Views: 0.4ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:42:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 138ms (Views: 123.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:44:11 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david2@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 5ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:46:13 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1195ms (Views: 1184.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:46:47 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 9ms (Views: 0.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:47:46 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 894ms (Views: 888.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:47:49 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 116ms (Views: 112.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:47:57 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:49:52 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1174ms (Views: 1168.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:50:00 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:56:13 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 699ms (Views: 686.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:56:50 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 57ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:57:06 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 86ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:57:17 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:58:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 781ms (Views: 775.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:58:07 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 174ms (Views: 170.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:58:14 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 670ms (Views: 666.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:58:18 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 5ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 09:58:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 304ms (Views: 284.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 09:58:56 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 11ms (Views: 0.3ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:00:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 931ms (Views: 916.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:00:27 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:03:28 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david2@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 5ms (Views: 0.4ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:03:36 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david2@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:03:47 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david2@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:07:27 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david2@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 4ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:07:29 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david2@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:07:43 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david3@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:07:47 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david3@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:07:53 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david2@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:08:06 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david1@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:08:10 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david1@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:08:16 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:08:17 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 6ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:10:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 986ms (Views: 815.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:10:34 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 11ms (Views: 0.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:11:03 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:11:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 101ms (Views: 92.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:11:46 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:12:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 146ms (Views: 141.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:12:06 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:12:09 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:12:20 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 950ms (Views: 944.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:12:29 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:13:22 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 709ms (Views: 695.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:13:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 299ms (Views: 295.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:14:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 64ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:14:29 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 90ms (Views: 76.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:17:44 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 994ms (Views: 947.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:20:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 86ms (Views: 80.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:22:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1276ms (Views: 1269.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:23:17 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 127ms (Views: 121.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:23:42 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 8ms (Views: 0.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:23:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 104ms (Views: 93.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:24:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1544ms (Views: 1534.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:24:09 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 107ms (Views: 97.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:24:17 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:25:48 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 68ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:26:03 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david2@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:26:18 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:26:49 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:27:11 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 97ms (Views: 86.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:27:17 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 103ms (Views: 90.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:27:27 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:27:38 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 137ms (Views: 132.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:27:48 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david2@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:29:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 180ms (Views: 172.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:29:12 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:29:26 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 940ms (Views: 934.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:29:39 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"david@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:30:40 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 714ms (Views: 707.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:30:48 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 209ms (Views: 204.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:31:04 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>"david@mango.com"}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@mango.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 21ms (Views: 0.5ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:31:24 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>"david@mango.com"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@mango.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:32:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 82ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:32:36 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 63ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:32:45 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 186ms (Views: 181.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:32:55 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>"david@mango.com"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@mango.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:33:00 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>"david@mango.com"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@mango.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:33:03 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>"david@mango.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@mango.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:37:46 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 793ms (Views: 780.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:38:03 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 93ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:38:25 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 690ms (Views: 686.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:38:36 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 95ms (Views: 90.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:38:57 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 90ms (Views: 80.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:39:08 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 293ms (Views: 288.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:39:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 197ms (Views: 193.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:41:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 819ms (Views: 808.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:41:29 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 155ms (Views: 151.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:42:13 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"d", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "d"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mUser Load (11.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for ::1 at 2021-02-09 10:46:06 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 98ms (Views: 89.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-02-09 10:47:08 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1414ms (Views: 1409.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-09 10:47:21 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"david2@mango.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david2@mango.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:33
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "david2@mango.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "jtExKPmmX2SIGrk5jiXPuQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Update (51.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "jtExKPmmX2SIGrk5jiXPuQ"], ["updated_at", "2021-02-09 18:47:21.414074"], ["id", 1]]
+  ↳ app/models/user.rb:33
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:33
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (0.6ms)
+Completed 200 OK in 402ms (Views: 11.3ms | ActiveRecord: 82.3ms)
+
+

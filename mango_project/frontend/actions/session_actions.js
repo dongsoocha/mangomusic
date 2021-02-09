@@ -26,11 +26,13 @@ export const receiveErrors = errors => {
 
 export const signup = user => dispatch => {
     return SessionAPI.signup(user)
-        .then(user => dispatch(receiveCurrentUser(user)));
+        .then(user => dispatch(receiveCurrentUser(user)),
+            errors => dispatch(receiveErrors(errors.responseJSON)));
 };
 export const login = user => dispatch => {
     return SessionAPI.login(user)
-        .then(user => dispatch(receiveCurrentUser(user)));
+        .then(user => dispatch(receiveCurrentUser(user)),
+            errors => dispatch(receiveErrors(errors.responseJSON)));
 };
 
 export const logout = () => dispatch => {

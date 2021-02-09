@@ -5,10 +5,11 @@ class SessionForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: '',
+            email: '',
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
     }
 
     update(field) {
@@ -23,35 +24,35 @@ class SessionForm extends React.Component {
         this.props.processForm(user).then(this.props.closeModal);
     }
 
-    // renderErrors() {
-    //     if (this.props.errors.length !== 0) {
-    //         return (
-    //             <ul>
-    //                 {this.props.errors.map((error, i) => (
-    //                     <li key={`error-${i}`}>
-    //                         {error}
-    //                     </li>
-    //                 ))}
-    //             </ul>
-    //         );
-    //     }
-    // }
+    renderErrors() {
+        if (this.props.errors.session.length !== 0) {
+            return (
+                <ul id="session_error">
+                    {this.props.errors.session.map((error, i) => (
+                        <li key={`error-${i}`}>
+                            {error}
+                        </li>
+                    ))}
+                </ul>
+            );  
+        }
+    }
 
     render() {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome to BenchBnB!
+                    Sign in with your Mango ID
           <br />
-          Please {this.props.formType} or {this.props.otherForm}
+          You will be signed in to Mango TV and Mango Music
                     <div onClick={this.props.closeModal} className="close-x">X</div>
                     {this.renderErrors()}
                     <div className="login-form">
                         <br />
-                        <label>Username:
+                        <label>Mango ID:
               <input type="text"
-                                value={this.state.username}
-                                onChange={this.update('username')}
+                                value={this.state.email}
+                                onChange={this.update('email')}
                                 className="login-input"
                             />
                         </label>
