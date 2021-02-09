@@ -9,9 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ReactDOM.render(<Root store={store} />, rootEl);
     // testings
-    window.signup = signup;
-    window.login = login;
-    window.logout = logout;
     window.getState = store.getState;
     window.dispatch = store.dispatch;
 })

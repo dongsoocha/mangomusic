@@ -1,11 +1,13 @@
 import React from "react";
-
+import Modal from "./modal/modal";
+import NavBarContainer from "./nav_bar/nav_bar_container";
 
 const App = () => {
     return (
         <div>
+            <Modal modal="login" />
             <h1>Mango Music</h1>
-            <button type="button" onClick={this.showModal}>Open</button>
+            <NavBarContainer />
         </div>
     )
 };
