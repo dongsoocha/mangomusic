@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const signup = user => {
     return $.ajax({
         method: 'POST',
