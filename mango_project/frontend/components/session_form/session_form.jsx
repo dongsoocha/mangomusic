@@ -25,7 +25,6 @@ class SessionForm extends React.Component {
     }
 
     renderErrors() {
-        debugger
         if (this.props.errors.session.length !== 0) {
             return (
                 <ul id="session_error">

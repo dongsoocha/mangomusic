@@ -9,7 +9,6 @@ const App = () => {
             <Modal modal="" />
             <NavBarContainer />
             <h1>Mango Music</h1>
-            <Modal modal="" />
             <SubscribePromptContainer />
         </div>
     )
