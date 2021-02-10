@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => {
         processForm: (user) => dispatch(signup(user)),
         otherForm: (
             <button onClick={() => dispatch(openModal('login'))}>
-                Login
+                Sign in with existing Mango ID
             </button>
         ),
         closeModal: () => dispatch(closeModal())

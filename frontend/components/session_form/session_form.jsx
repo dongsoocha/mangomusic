@@ -43,9 +43,12 @@ class SessionForm extends React.Component {
             return (
                 <div className="login-form-container">
                     <form onSubmit={this.handleSubmit} className="login-form-box">
-                        Sign in with your Mango ID
-            <br />
-            You will be signed in to Mango TV and Mango Music
+                        <img className="logo" src={window.mangoURL} alt="Mango Logo"/>
+                        <br />
+                        <h3 className="Sign in header">Sign in with your Mango ID</h3>
+                        
+                        <br />
+                        <h4 className="sign-in-info">You will be signed in to Mango TV and Mango Music</h4>
                         <div onClick={this.props.closeModal} className="close-x">X</div>
                         {this.renderErrors()}
                         <div className="login-form">
@@ -68,15 +71,15 @@ class SessionForm extends React.Component {
                             <br />
                             <input className="session-submit" type="submit" value={this.props.formType} />
                         </div>
-                    </form>
                     {this.props.otherForm}
+                    </form>
                 </div>
             );
         } else if (this.props.formType === 'signup') {
             return (
                 <div className="signup-form-container">
                     <form onSubmit={this.handleSubmit} className="signup-form-box">
-                        Create a new Mango ID
+                        <h3 className="Log in header"></h3>
             <br />
                         <div onClick={this.props.closeModal} className="close-x">X</div>
                         {this.renderErrors()}
@@ -100,8 +103,8 @@ class SessionForm extends React.Component {
                             <br />
                             <input className="session-submit" type="submit" value={this.props.formType} />
                         </div>
-                    </form>
                     {this.props.otherForm}
+                    </form>
                 </div>
             );
         }
