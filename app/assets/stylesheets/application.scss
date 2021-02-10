@@ -11,5 +11,17 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
- *= require_self
  */
+
+// Reset
+@import "reset.css";
+
+// Modals
+@import "modals.scss";
+
+// API
+@import "api/sessions.scss";
+@import "api/users.scss";
+
+// Components
+@import "components/*";
