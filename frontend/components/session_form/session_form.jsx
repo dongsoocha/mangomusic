@@ -46,7 +46,6 @@ class SessionForm extends React.Component {
                         <img className="logo" src={window.mangoURL} alt="Mango Logo"/>
                         <br />
                         <h3 className="signin-header">Sign in with your Mango ID</h3>
-                        
                         <br />
                         <h4 className="sign-in-info">You will be signed in to Mango TV and Mango Music</h4>
                         <div onClick={this.props.closeModal} className="close-x">X</div>
@@ -58,21 +57,27 @@ class SessionForm extends React.Component {
                                     value={this.state.email}
                                     placeholder="Mango ID"
                                     onChange={this.update('email')}
-                                    className="login-input"
+                                    className="login-email"
                                 />
                             </label>
                             <br />
                             <label>
                                 <input type="password"
                                     value={this.state.password}
-                                    placeholder="password"
+                                    placeholder="Password"
                                     onChange={this.update('password')}
-                                    className="login-input"
+                                    className="login-password"
                                 />
                             </label>
                             <br />
+                            <br />
+                            <br />
+                            <br />
                             <input className="session-submit" type="submit" value={this.props.formType} />
                             {this.props.otherForm}
+                            <br />
+                            <br />
+                            
                         </div>
                     </form>
                 </div>
@@ -87,19 +92,21 @@ class SessionForm extends React.Component {
                         {this.renderErrors()}
                         <div className="signup-form">
                             <br />
-                            <label>Mango ID:
+                            <label>
                                 <input type="text"
                                     value={this.state.email}
+                                    placeholder="Mango ID"
                                     onChange={this.update('email')}
-                                    className="signup-input"
+                                    className="signup-email"
                                 />
                             </label>
                             <br />
-                            <label>Password:
+                            <label>
                                 <input type="password"
                                     value={this.state.password}
+                                    placeholder="Password"
                                     onChange={this.update('password')}
-                                    className="signup-input"
+                                    className="signup-password"
                                 />
                             </label>
                             <br />
