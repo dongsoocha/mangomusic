@@ -88,17 +88,20 @@ table {
   color: white;
   background-color: #333333;
   align-items: center;
-  max-width: 400px;
+  max-width: 800px;
   width: 100vw;
   z-index: 3;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
   position: relative; }
+  .login-form-box .login-form, .login-form-box .signup-form, .signup-form-box .login-form, .signup-form-box .signup-form {
+    display: flex;
+    flex-direction: column; }
   .login-form-box .logo, .signup-form-box .logo {
-    top: 100px;
-    width: 55px;
-    height: 45.1px; }
+    padding-top: 20px;
+    width: 90px;
+    height: 80px; }
   .login-form-box .close-x, .signup-form-box .close-x {
     z-index: 100;
     position: absolute;
@@ -106,46 +109,59 @@ table {
     left: 12px;
     transform: scale(1.4, 1);
     font-weight: 300;
-    font-size: 11px;
+    font-size: 22px;
     cursor: pointer;
     color: gray; }
   .login-form-box .session-submit, .signup-form-box .session-submit {
-    width: 100%; }
+    width: 100%;
+    outline: none;
+    padding-top: 120px; }
   .login-form-box .other-form, .signup-form-box .other-form {
-    width: 100%; }
+    width: 100%;
+    outline: none;
+    padding-top: 20px;
+    padding-bottom: 50px; }
 
 .login-email, .login-password, .signup-email, .signup-password {
   border-style: none;
   vertical-align: middle;
   font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-  font-size: 8px;
+  font-size: 16px;
   font-weight: 345;
   line-height: 2.0;
-  width: 150px;
-  background-color: #0a0a0a96; }
+  width: 300px;
+  background-color: #0a0a0a96;
+  color: white;
+  outline: none; }
 
 .login-email, .signup-email {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px; }
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  margin-top: 50px; }
+
+.session-inputs {
+  padding-left: 20px; }
 
 .session-error {
-  padding-top: 5px;
+  padding-top: 10px;
   font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-  font-size: 8px;
+  font-size: 16px;
   font-weight: 300; }
 
 .login-password, .signup-password {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px; }
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px; }
 
 .signin-header, .signup-header {
-  font-size: 12px;
-  font-style: normal; }
+  font-size: 24px;
+  font-style: normal;
+  padding-top: 30px; }
 
 .sign-in-info, .signup-info {
   font-weight: 300;
-  font-size: 9px;
-  font-style: normal; }
+  font-size: 18px;
+  font-style: normal;
+  padding-top: 30px; }
 
 .session-submit, .other-form {
   border-style: none;
@@ -153,8 +169,8 @@ table {
   color: #66bbff;
   cursor: pointer;
   font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-  font-size: 7px;
-  font-weight: 345; }
+  font-size: 15px;
+  font-weight: 348; }
 
 .session-submit:hover, .other-form:hover {
   text-decoration: underline; }

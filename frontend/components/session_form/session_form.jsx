@@ -46,40 +46,38 @@ class SessionForm extends React.Component {
                 <div className="login-form-container">
                     <form onSubmit={this.handleSubmit} className="login-form-box">
                         <img className="logo" src={window.mangoURL} alt="Mango Logo"/>
-                        <br />
                         <h3 className="signin-header">Sign in with your Mango ID</h3>
-                        <br />
                         <h4 className="sign-in-info">You will be signed in to Mango TV and Mango Music</h4>
                         <div onClick={this.props.closeModal} className="close-x">X</div>
                         
                         <div className="login-form">
-                            <br />
+
                             <label>
-                                <input type="text"
+                                <input className="session-inputs" type="text"
                                     value={this.state.email}
-                                    placeholder=" Mango ID"
+                                    placeholder="  Mango ID"
                                     onChange={this.update('email')}
                                     className="login-email"
                                 />
                             </label>
-                            <br />
+
                             <label>
-                                <input type="password"
+                                <input className="session-inputs" type="password"
                                     value={this.state.password}
-                                    placeholder=" Password"
+                                    placeholder="  Password"
                                     onChange={this.update('password')}
                                     className="login-password"
                                 />
                             </label>
-                            <br />
+
                             {this.renderErrors()}
-                            <br />
-                            <br />
-                            <br />
-                            <input className="session-submit" type="submit" value={this.props.formType} />
+
+
+
+                            <input className="session-submit" type="submit" value="Login" />
                             {this.props.otherForm}
-                            <br />
-                            <br />
+
+
                             
                         </div>
                     </form>
@@ -92,37 +90,36 @@ class SessionForm extends React.Component {
                         <img className="logo" src={window.mangoURL} alt="Mango Logo" />
                         <br/>
                         <h3 className="signup-header">Create a new Mango ID</h3>
-                        <br />
                         <h4 className="signup-info">You will be signed in to Mango TV and Mango Music</h4>
                         <div onClick={this.props.closeModal} className="close-x">X</div>
                         <div className="signup-form">
-                            <br />
+
                             <label>
-                                <input type="text"
+                                <input className="session-inputs" type="text"
                                     value={this.state.email}
-                                    placeholder=" Mango ID"
+                                    placeholder="  Mango ID"
                                     onChange={this.update('email')}
                                     className="signup-email"
                                 />
                             </label>
-                            <br />
+
                             <label>
-                                <input type="password"
+                                <input className="session-inputs" type="password"
                                     value={this.state.password}
-                                    placeholder=" Password"
+                                    placeholder="  Password"
                                     onChange={this.update('password')}
                                     className="signup-password"
                                 />
                             </label>
-                            <br />
+
                             {this.renderErrors()}
-                            <br />
-                            <br />
-                            <br />
-                            <input className="session-submit" type="submit" value={this.props.formType} />
+
+
+
+                            <input className="session-submit" type="submit" value="Sign Up" />
                             {this.props.otherForm}
-                            <br />
-                            <br />
+
+
                         </div>
                     </form>
                 </div>
