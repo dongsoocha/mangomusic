@@ -81,7 +81,7 @@ table {
 
 .login-form-box, .signup-form-box {
   display: flex;
-  padding-top: 50px;
+  padding-top: 40px;
   flex-direction: column;
   justify-content: center;
   text-align: center;
@@ -99,7 +99,7 @@ table {
     display: flex;
     flex-direction: column; }
   .login-form-box .logo, .signup-form-box .logo {
-    padding-top: 20px;
+    padding-top: 25px;
     width: 90px;
     height: 80px; }
   .login-form-box .close-x, .signup-form-box .close-x {
@@ -115,7 +115,7 @@ table {
   .login-form-box .session-submit, .signup-form-box .session-submit {
     width: 100%;
     outline: none;
-    padding-top: 120px; }
+    padding-top: 100px; }
   .login-form-box .other-form, .signup-form-box .other-form {
     width: 100%;
     outline: none;
@@ -128,7 +128,7 @@ table {
   font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
   font-size: 16px;
   font-weight: 345;
-  line-height: 2.0;
+  line-height: 2.5;
   width: 300px;
   background-color: #0a0a0a96;
   color: white;
@@ -137,7 +137,7 @@ table {
 .login-email, .signup-email {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  margin-top: 50px; }
+  margin-top: 40px; }
 
 .session-inputs {
   padding-left: 20px; }
@@ -155,13 +155,13 @@ table {
 .signin-header, .signup-header {
   font-size: 24px;
   font-style: normal;
-  padding-top: 30px; }
+  padding-top: 20px; }
 
 .sign-in-info, .signup-info {
   font-weight: 300;
   font-size: 18px;
   font-style: normal;
-  padding-top: 30px; }
+  padding-top: 25px; }
 
 .session-submit, .other-form {
   border-style: none;
