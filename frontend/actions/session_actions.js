@@ -3,6 +3,7 @@ import * as SessionAPI from "../util/session_api_util";
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const SIGNOUT_CURRENT_USER = 'SIGNOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
+export const CLEAR_SESSION_ERRORS = 'CLEAR_SESSION_ERRORS';
 
 export const receiveCurrentUser = user => {
     return {
@@ -24,6 +25,12 @@ export const receiveErrors = errors => {
     };
 };
 
+export const clearErrors = () => {
+    return {
+        type: CLEAR_SESSION_ERRORS
+    };
+};
+
 export const signup = user => dispatch => {
     return SessionAPI.signup(user)
         .then(user => dispatch(receiveCurrentUser(user)),
@@ -40,3 +47,9 @@ export const logout = () => dispatch => {
         .then(() => dispatch(signoutCurrentUser()));
 };
 
+const demoUser = {email: "mango@mango.com", password: "ilovemusic"}
+
+export const demoLogin = () => dispatch => {
+    return SessionAPI.login(demoUser)
+        .then(user => dispatch(receiveCurrentUser(user)));
+};

@@ -23,13 +23,15 @@ class SessionForm extends React.Component {
         const user = Object.assign({}, this.state);
         this.props.processForm(user).then(this.props.closeModal);
     }
-
+    componentWillUnmount() {
+        this.props.clearErrors();
+    }
     renderErrors() {
         if (this.props.errors.session.length !== 0) {
             return (
                 <ul id="session_error">
                     {this.props.errors.session.map((error, i) => (
-                        <li key={`error-${i}`}>
+                        <li className="session-error" key={`error-${i}`}>
                             {error}
                         </li>
                     ))}
@@ -49,13 +51,13 @@ class SessionForm extends React.Component {
                         <br />
                         <h4 className="sign-in-info">You will be signed in to Mango TV and Mango Music</h4>
                         <div onClick={this.props.closeModal} className="close-x">X</div>
-                        {this.renderErrors()}
+                        
                         <div className="login-form">
                             <br />
                             <label>
                                 <input type="text"
                                     value={this.state.email}
-                                    placeholder="Mango ID"
+                                    placeholder=" Mango ID"
                                     onChange={this.update('email')}
                                     className="login-email"
                                 />
@@ -64,12 +66,13 @@ class SessionForm extends React.Component {
                             <label>
                                 <input type="password"
                                     value={this.state.password}
-                                    placeholder="Password"
+                                    placeholder=" Password"
                                     onChange={this.update('password')}
                                     className="login-password"
                                 />
                             </label>
                             <br />
+                            {this.renderErrors()}
                             <br />
                             <br />
                             <br />
@@ -86,16 +89,18 @@ class SessionForm extends React.Component {
             return (
                 <div className="signup-form-container">
                     <form onSubmit={this.handleSubmit} className="signup-form-box">
-                        <h3 className="Log in header"></h3>
+                        <img className="logo" src={window.mangoURL} alt="Mango Logo" />
+                        <br/>
+                        <h3 className="signup-header">Create a new Mango ID</h3>
                         <br />
+                        <h4 className="signup-info">You will be signed in to Mango TV and Mango Music</h4>
                         <div onClick={this.props.closeModal} className="close-x">X</div>
-                        {this.renderErrors()}
                         <div className="signup-form">
                             <br />
                             <label>
                                 <input type="text"
                                     value={this.state.email}
-                                    placeholder="Mango ID"
+                                    placeholder=" Mango ID"
                                     onChange={this.update('email')}
                                     className="signup-email"
                                 />
@@ -104,14 +109,20 @@ class SessionForm extends React.Component {
                             <label>
                                 <input type="password"
                                     value={this.state.password}
-                                    placeholder="Password"
+                                    placeholder=" Password"
                                     onChange={this.update('password')}
                                     className="signup-password"
                                 />
                             </label>
                             <br />
+                            {this.renderErrors()}
+                            <br />
+                            <br />
+                            <br />
                             <input className="session-submit" type="submit" value={this.props.formType} />
                             {this.props.otherForm}
+                            <br />
+                            <br />
                         </div>
                     </form>
                 </div>

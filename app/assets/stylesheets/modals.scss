@@ -20,7 +20,7 @@
 
 .login-form-box, .signup-form-box {
     display: flex;
-    top: 50px;
+    padding-top: 50px;
     flex-direction: column;
     justify-content: center; 
     text-align: center;
@@ -48,8 +48,9 @@
         left: 12px;
         transform: scale(1.4, 1);
         font-weight: 300;
-        font-size: 12px;
+        font-size: 11px;
         cursor: pointer;
+        color: gray;
     }
 
     .session-submit {
@@ -63,7 +64,7 @@
 }
 
 
-.login-email, .login-password, .signup-email, .singup-password {
+.login-email, .login-password, .signup-email, .signup-password {
     border-style: none;
     vertical-align: middle;
     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -79,17 +80,23 @@
     border-top-right-radius: 3px;
 }
 
+.session-error {
+    padding-top: 5px;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 8px;
+    font-weight: 300; 
+}
 .login-password, .signup-password {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
 }
 
-.signin-header {
+.signin-header, .signup-header {
     font-size: 12px;
     font-style: normal;
 }
 
-.sign-in-info {
+.sign-in-info, .signup-info {
     font-weight: 300; 
     font-size: 9px;
     font-style: normal;
