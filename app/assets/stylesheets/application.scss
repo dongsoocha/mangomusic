@@ -17,4 +17,11 @@
 @import "reset.scss";
 
 /* modal */
-@import "modals.scss";
+@import "./components/modals.scss";
+
+/* splash */
+@import "./splash.scss";
+
+body {
+    background-color: #1F1F1F;
+}

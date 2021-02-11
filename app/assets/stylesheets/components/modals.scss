@@ -83,6 +83,7 @@
     background-color: #0a0a0a96;
     color: white;
     outline: none;
+    padding-left: 1vw;
 }
 
 .login-email, .signup-email {
@@ -95,10 +96,11 @@
     padding-left: 20px;
 }
 .session-error {
-    padding-top: 10px;
+    padding-top: 5px;
     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: 16px;
     font-weight: 300; 
+    line-height: 1.5;
 }
 .login-password, .signup-password {
     border-bottom-left-radius: 6px;

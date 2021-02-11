@@ -14,9 +14,9 @@ const IndexPage = () => {
     return (
         <div>
             <Modal modal="" />
-            <NavBarContainer />
+            <NavBarContainer className="nav-bar"/>
             <h1>Mango Music</h1>
-            <SubscribePromptContainer />
+            <SubscribePromptContainer className="subscribe-prompt"/>
         </div>
     );
 };

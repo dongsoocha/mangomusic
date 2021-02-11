@@ -1,11 +1,10 @@
 import React from 'react';
-import { openModal } from '../../actions/modal_actions';
 
 const NavBar = ({ currentUser, logout, openModal, demoLogin }) => {
     
     const sessionLinks = () => (
         <nav className="login-signup">
-            <button onClick={() => openModal('login')}>Login</button>
+            <button onClick={() => openModal('login')}><i class="fas fa-user"></i> Login</button>
             <button onClick={() => demoLogin()}>Demo Login</button>
         </nav>
     );

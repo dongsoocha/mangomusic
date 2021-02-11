@@ -132,7 +132,8 @@ table {
   width: 300px;
   background-color: #0a0a0a96;
   color: white;
-  outline: none; }
+  outline: none;
+  padding-left: 1vw; }
 
 .login-email, .signup-email {
   border-top-left-radius: 6px;
@@ -143,10 +144,11 @@ table {
   padding-left: 20px; }
 
 .session-error {
-  padding-top: 10px;
+  padding-top: 5px;
   font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
   font-size: 16px;
-  font-weight: 300; }
+  font-weight: 300;
+  line-height: 1.5; }
 
 .login-password, .signup-password {
   border-bottom-left-radius: 6px;
@@ -174,5 +176,34 @@ table {
 
 .session-submit:hover, .other-form:hover {
   text-decoration: underline; }
+
+/* splash */
+.login-signup {
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 15px; }
+  .login-signup button:last-child {
+    margin-left: 10px;
+    margin-right: 20px; }
+  .login-signup button {
+    color: white;
+    background-color: #FA2D48;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    line-height: 2.0;
+    appearance: none;
+    outline: none;
+    border-style: none;
+    border-radius: 5px; }
+  .login-signup button:hover {
+    cursor: pointer; }
+
+.signup-login {
+  position: absolute;
+  bottom: 0; }
+
+body {
+  background-color: #1F1F1F; }
 
 /*# sourceMappingURL=application.css.map */

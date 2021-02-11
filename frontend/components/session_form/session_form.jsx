@@ -55,7 +55,7 @@ class SessionForm extends React.Component {
                             <label>
                                 <input className="session-inputs" type="text"
                                     value={this.state.email}
-                                    placeholder="  Mango ID"
+                                    placeholder="Mango ID"
                                     onChange={this.update('email')}
                                     className="login-email"
                                 />
@@ -64,7 +64,7 @@ class SessionForm extends React.Component {
                             <label>
                                 <input className="session-inputs" type="password"
                                     value={this.state.password}
-                                    placeholder="  Password"
+                                    placeholder="Password"
                                     onChange={this.update('password')}
                                     className="login-password"
                                 />
@@ -97,7 +97,7 @@ class SessionForm extends React.Component {
                             <label>
                                 <input className="session-inputs" type="text"
                                     value={this.state.email}
-                                    placeholder="  Mango ID"
+                                    placeholder="Mango ID"
                                     onChange={this.update('email')}
                                     className="signup-email"
                                 />
@@ -106,7 +106,7 @@ class SessionForm extends React.Component {
                             <label>
                                 <input className="session-inputs" type="password"
                                     value={this.state.password}
-                                    placeholder="  Password"
+                                    placeholder="Password"
                                     onChange={this.update('password')}
                                     className="signup-password"
                                 />

@@ -1,0 +1,28 @@
+.login-signup {
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 15px;
+    button:last-child {
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+    button {
+        color: white;
+        background-color: #FA2D48;
+        font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+        line-height: 2.0;
+        appearance: none;
+        outline: none;
+        border-style: none;
+        border-radius: 5px;
+    }
+    button:hover {
+        cursor: pointer;
+    }
+}
+.signup-login {
+    position: absolute;
+    bottom: 0;
+}
