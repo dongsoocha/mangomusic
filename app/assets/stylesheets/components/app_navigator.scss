@@ -1,0 +1,60 @@
+.app-nav {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    float: left;
+    width: 259px;
+    background-color: rgba(38,38,38,255);
+    position: absolute;
+    top: 0;
+        button {
+        margin-left: 25px;
+        margin-right: 25px;
+        background-color: rgba(38,38,38,255);;
+        font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        font-weight: 350;
+        color: rgb(194, 194, 194);
+        appearance: none;
+        border: none;
+        :hover {
+            cursor: pointer;
+        }
+        line-height: 2.25;
+        text-align: left;
+    }
+    border-right: solid rgb(75, 75, 75);
+    border-width: 0.5px;
+}
+
+
+.mango-logo {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-left: 22px;
+    .small-logo {
+        height: 25px;
+        width: 30px;
+        margin-right: -5px;
+    }
+    
+    font-size: 25px;
+    color: white;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    
+}
+
+.nav-search {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    outline: none;
+    margin-left: 25px;
+    margin-right: 25px;
+    line-height: 2.1;
+    background-color: #1F1F1F;
+    appearance: none;
+    border: solid rgba(19, 19, 19, 0.604);
+    border-radius: 3px;
+    border-width: 1px;
+}

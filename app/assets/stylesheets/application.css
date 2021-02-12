@@ -177,7 +177,64 @@ table {
 .session-submit:hover, .other-form:hover {
   text-decoration: underline; }
 
+/* app navigator */
+.app-nav {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  float: left;
+  width: 259px;
+  background-color: #262626;
+  position: absolute;
+  top: 0;
+  border-right: solid #4b4b4b;
+  border-width: 0.5px; }
+  .app-nav button {
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #262626;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 350;
+    color: #c2c2c2;
+    appearance: none;
+    border: none;
+    line-height: 2.25;
+    text-align: left; }
+    .app-nav button :hover {
+      cursor: pointer; }
+
+.mango-logo {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  padding-left: 22px;
+  font-size: 25px;
+  color: white;
+  font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif; }
+  .mango-logo .small-logo {
+    height: 25px;
+    width: 30px;
+    margin-right: -5px; }
+
+.nav-search {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  outline: none;
+  margin-left: 25px;
+  margin-right: 25px;
+  line-height: 2.1;
+  background-color: #1F1F1F;
+  appearance: none;
+  border: solid rgba(19, 19, 19, 0.604);
+  border-radius: 3px;
+  border-width: 1px; }
+
 /* splash */
+.splash-page {
+  display: flex;
+  flex-direction: column; }
+
 .login-signup {
   float: right;
   display: flex;
@@ -199,7 +256,27 @@ table {
   .login-signup button:hover {
     cursor: pointer; }
 
+.splash {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 260px;
+  text-align: center; }
+  .splash .mango-logo-2 {
+    display: flex;
+    align-content: center;
+    margin-right: 5px;
+    font-size: 25px;
+    color: white;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif; }
+    .splash .mango-logo-2 .small-logo {
+      height: 25px;
+      width: 30px;
+      margin-right: -5px; }
+
 .subscribe {
+  align-self: left;
   display: flex;
   justify-content: space-between;
   position: absolute;
