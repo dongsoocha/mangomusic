@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from "./modal/modal";
-import NavBarContainer from "./nav_bar/nav_bar_container";
+import NavBarContainer from "./player/nav_bar_container";
 import SubscribePromptContainer from "./signup_footer/subscribe_prompt_container";
 import AppNavigatorContainer from "./app_navigator/app_navigator_container";
 import SplashContainer from "./splash/splash_container";

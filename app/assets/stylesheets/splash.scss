@@ -3,12 +3,13 @@
     flex-direction: column;
 }
 
-.login-signup, .if-logged-in {
+.login-signup {
+    height: 55px;
     float: right;
+    margin-left: 260px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-top: 15px;
     button:last-child {
         margin-left: 10px;
         margin-right: 20px;
@@ -26,6 +27,111 @@
     button:hover {
         cursor: pointer;
     }
+}
+
+.player-toolbar {
+    height: 55px;
+    float: right;
+    margin-left: 260px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .player {
+        display: flex;
+        width: 25vw;
+        max-width: 400px;
+        justify-content: center;
+        button {
+            background-color: #2b2b2b;
+            border: none;
+            appearance: none;
+            color: #4b4b4b;
+        }
+        .play-button {
+            transform: scale(1.5);
+            color: #868686;
+        }
+        .next-button {
+            transform: scale(1.5, 1.1);
+            margin-left: 2px;
+            color: #868686;
+        }
+        .rewind-button {
+            transform: scale(1.5, 1.1);
+            margin-right: 5px;
+            color: #868686;
+        }
+    }
+    .current-info {
+        display: flex;
+        justify-content: center;
+        width: 30vw;
+        max-width: 600px;
+        height: 45px;
+        .info {
+            background-color: #464646;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            display: flex;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+            height: 45px;
+            .default-info-logo {
+                height: 35px;
+                width: 40px;
+            }
+        }
+    }
+    .volume-slider {
+        display: flex;
+        align-items: center;
+        max-width: 300px;
+        .volume-icon {
+            transform: scale(.8, 0.7);
+            color: #d3d3d3;
+        }
+        #myRange {
+            margin-left: 5px;
+            -webkit-appearance: none;
+            width: 100%;
+            max-width: 70px;
+            height: 3px;
+            border-radius: 5px;  
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+    }
+    #myRange::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%; 
+        background: white;
+        cursor: pointer;
+    }
+    .logout-button {
+        margin-left: 10px;
+        margin-right: 20px;
+        color: white;
+        background-color: #FA2D48;
+        font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+        line-height: 2.0;
+        appearance: none;
+        outline: none;
+        border-style: none;
+        border-radius: 5px;
+    }
+    button:hover {
+        cursor: pointer;
+    }
+    background-color: #2b2b2b;
+    border-bottom: solid #4b4b4b;;
+    border-width: 1px;
 }
 
 

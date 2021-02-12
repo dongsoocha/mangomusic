@@ -1,1 +1,1 @@
-json.extract! @album, :id, :email
+json.extract! @album, :id, :album_name, :artist_id, :release_date
