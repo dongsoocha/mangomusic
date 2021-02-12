@@ -2,9 +2,9 @@ import { connect } from 'react-redux';
 import Splash from './splash';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
-const mapStateToProps = () => {
-    return {};
-};
+const mapStateToProps = ({ session }) => ({
+    currentUser: session.id
+});
 
 const mapDispatchToProps = dispatch => {
     return {

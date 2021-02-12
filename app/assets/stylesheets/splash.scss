@@ -135,13 +135,14 @@
 }
 
 
-.splash {
+.splash, .splash-2 {
     padding-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 260px;
     text-align: center;
+    
     .mango-logo-2 {
         display: flex;
         align-content: center;
@@ -196,6 +197,11 @@
         max-width: 1200px;
     }
 }
+
+.splash-2 {
+    color: white;
+}
+
 .subscribe {
     align-self: left;
     display: flex;
@@ -246,5 +252,5 @@
 }
 
 body {
-    background-color: #1F1F1F;
+    background-color: #202020;
 }

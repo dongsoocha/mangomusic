@@ -38,8 +38,7 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 body {
-  height: 100%;
-  overflow-y: hidden; }
+  height: 100%; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -351,25 +350,25 @@ table {
   .player-toolbar button:hover {
     cursor: pointer; }
 
-.splash {
+.splash, .splash-2 {
   padding-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-left: 260px;
   text-align: center; }
-  .splash .mango-logo-2 {
+  .splash .mango-logo-2, .splash-2 .mango-logo-2 {
     display: flex;
     align-content: center;
     margin-right: 5px;
     font-size: 25px;
     color: white;
     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif; }
-    .splash .mango-logo-2 .small-logo {
+    .splash .mango-logo-2 .small-logo, .splash-2 .mango-logo-2 .small-logo {
       height: 25px;
       width: 30px;
       margin-right: -5px; }
-  .splash .Greeting {
+  .splash .Greeting, .splash-2 .Greeting {
     padding-top: 10px;
     font-size: 62px;
     font-weight: 400;
@@ -377,7 +376,7 @@ table {
     line-height: 1.1;
     color: white;
     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif; }
-  .splash .splash-text {
+  .splash .splash-text, .splash-2 .splash-text {
     padding-top: 20px;
     font-size: 17px;
     font-weight: 300;
@@ -385,7 +384,7 @@ table {
     max-width: 400px;
     color: white;
     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif; }
-  .splash .register-button {
+  .splash .register-button, .splash-2 .register-button {
     margin-top: 20px;
     line-height: 2.0;
     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -399,10 +398,13 @@ table {
     appearance: none;
     outline: none;
     border: none; }
-  .splash .upsell {
+  .splash .upsell, .splash-2 .upsell {
     padding-top: 102px;
     width: 70vw;
     max-width: 1200px; }
+
+.splash-2 {
+  color: white; }
 
 .subscribe {
   align-self: left;
@@ -449,6 +451,6 @@ table {
   border-radius: 5px; }
 
 body {
-  background-color: #1F1F1F; }
+  background-color: #202020; }
 
 /*# sourceMappingURL=application.css.map */

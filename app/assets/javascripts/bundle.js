@@ -439,23 +439,23 @@ var NavBar = function NavBar(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "shuffle-button"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      "class": "fas fa-random"
+      className: "fas fa-random"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "rewind-button"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      "class": "fas fa-backward"
+      className: "fas fa-backward"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "play-button"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      "class": "fas fa-play"
+      className: "fas fa-play"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "next-button"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      "class": "fas fa-forward"
+      className: "fas fa-forward"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "repeat-button"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      "class": "fas fa-redo"
+      className: "fas fa-redo"
     }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "current-info"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -473,14 +473,14 @@ var NavBar = function NavBar(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "volume-icon"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      "class": "fas fa-volume-up"
+      className: "fas fa-volume-up"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
       type: "range",
       min: "1",
       max: "100",
       defaultValue: "50",
       step: "1",
-      "class": "slider",
+      className: "slider",
       id: "myRange"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "logout-button",
@@ -950,29 +950,41 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Splash = function Splash(_ref) {
-  var openModal = _ref.openModal;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "splash"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "mango-logo-2"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "small-logo",
-    src: window.mangoURL,
-    alt: "Mango Logo"
-  }), "Music"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "Greeting"
-  }, "Discover new music every day."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "splash-text"
-  }, "Get playlists and albums inspired by the artists and genres you're listening to. 3 months free, then $9.99/month"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "register-button",
-    onClick: function onClick() {
-      return openModal('login');
-    }
-  }, "Try It Free"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "upsell",
-    src: window.upsellURL,
-    alt: "upsell image"
-  }));
+  var openModal = _ref.openModal,
+      currentUser = _ref.currentUser;
+
+  var Greeting = function Greeting() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "splash"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "mango-logo-2"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "small-logo",
+      src: window.mangoURL,
+      alt: "Mango Logo"
+    }), "Music"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "Greeting"
+    }, "Discover new music every day."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "splash-text"
+    }, "Get playlists and albums inspired by the artists and genres you're listening to. 3 months free, then $9.99/month"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "register-button",
+      onClick: function onClick() {
+        return openModal('login');
+      }
+    }, "Try It Free"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "upsell",
+      src: window.upsellURL,
+      alt: "upsell image"
+    }));
+  };
+
+  var Browse = function Browse() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "splash-2"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "SHOULD SEE CONTENT HERE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Size 2 boxes down, minimum widths fixed, smaller and can't scroll"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "This is under construction using CSS Grid"));
+  };
+
+  return currentUser ? Browse() : Greeting();
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
@@ -995,8 +1007,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var mapStateToProps = function mapStateToProps() {
-  return {};
+var mapStateToProps = function mapStateToProps(_ref) {
+  var session = _ref.session;
+  return {
+    currentUser: session.id
+  };
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
