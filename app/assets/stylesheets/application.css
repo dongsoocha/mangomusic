@@ -190,7 +190,7 @@ table {
   background-color: #262626;
   position: absolute;
   top: 0;
-  border-right: solid #4b4b4b;
+  border-right: solid #343434;
   border-width: 0.5px; }
   .app-nav button {
     margin-left: 25px;
@@ -262,17 +262,16 @@ table {
 
 .player-toolbar {
   height: 55px;
-  float: right;
   margin-left: 260px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #2b2b2b;
-  border-bottom: solid #4b4b4b;
+  border-bottom: solid #343434;
   border-width: 1px; }
   .player-toolbar .player {
     display: flex;
-    width: 25vw;
+    width: 16vw;
     max-width: 400px;
     justify-content: center; }
     .player-toolbar .player button {
@@ -350,25 +349,25 @@ table {
   .player-toolbar button:hover {
     cursor: pointer; }
 
-.splash, .splash-2 {
+.splash {
   padding-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-left: 260px;
   text-align: center; }
-  .splash .mango-logo-2, .splash-2 .mango-logo-2 {
+  .splash .mango-logo-2 {
     display: flex;
     align-content: center;
     margin-right: 5px;
     font-size: 25px;
     color: white;
     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif; }
-    .splash .mango-logo-2 .small-logo, .splash-2 .mango-logo-2 .small-logo {
+    .splash .mango-logo-2 .small-logo {
       height: 25px;
       width: 30px;
       margin-right: -5px; }
-  .splash .Greeting, .splash-2 .Greeting {
+  .splash .Greeting {
     padding-top: 10px;
     font-size: 62px;
     font-weight: 400;
@@ -376,7 +375,7 @@ table {
     line-height: 1.1;
     color: white;
     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif; }
-  .splash .splash-text, .splash-2 .splash-text {
+  .splash .splash-text {
     padding-top: 20px;
     font-size: 17px;
     font-weight: 300;
@@ -384,7 +383,7 @@ table {
     max-width: 400px;
     color: white;
     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif; }
-  .splash .register-button, .splash-2 .register-button {
+  .splash .register-button {
     margin-top: 20px;
     line-height: 2.0;
     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -398,9 +397,9 @@ table {
     appearance: none;
     outline: none;
     border: none; }
-  .splash .register-button:hover, .splash-2 .register-button:hover {
+  .splash .register-button:hover {
     cursor: pointer; }
-  .splash .upsell, .splash-2 .upsell {
+  .splash .upsell {
     padding-top: 102px;
     width: 70vw;
     max-width: 1200px; }
@@ -452,5 +451,39 @@ table {
 
 body {
   background-color: #202020; }
+
+.splash-2 {
+  margin-left: 260px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white; }
+  .splash-2 .page-sections {
+    margin-top: 34px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1600px;
+    width: 93%; }
+    .splash-2 .page-sections .headers {
+      font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+      color: white;
+      font-weight: 500;
+      font-size: 30px;
+      text-align: start;
+      padding-bottom: 10px;
+      border-bottom: solid #343434;
+      border-width: 1px; }
+    .splash-2 .page-sections .grid-text-header {
+      padding-top: 15px;
+      font-weight: 500;
+      font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif; }
+    .splash-2 .page-sections .subgrids {
+      padding-top: 15px;
+      padding-bottom: 34px;
+      border-bottom: solid #343434;
+      border-width: 1px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto; }
 
 /*# sourceMappingURL=application.css.map */

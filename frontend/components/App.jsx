@@ -26,6 +26,20 @@ const SplashPage = () => {
     );
 };
 
+const BrowsePage = () => {
+    return (
+        <div className="splash-page">
+            <Modal modal="" />
+            <NavBarContainer className="nav-bar" />
+            <div className="splash-content">
+                <AppNavigatorContainer className="navigator" />
+                <SplashContainer />
+            </div>
+            <SubscribePromptContainer className="subscribe-prompt" />
+        </div>
+    );
+}
+
 const App = () => {
     // return (
     //     <div>
@@ -39,6 +53,7 @@ const App = () => {
         <section className="App">
             <Switch>
                 <Route exact path="/" component={SplashPage} />
+                <Route exact path="/browse" component={BrowsePage} />
                 <Route component={NoMatchPage} />
             </Switch>
         </section>

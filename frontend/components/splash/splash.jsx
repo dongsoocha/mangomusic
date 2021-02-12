@@ -13,9 +13,21 @@ const Splash = ({ openModal, currentUser }) => {
 
     const Browse = () => (
         <div className="splash-2">
-            <h1>SHOULD SEE CONTENT HERE</h1>
-            <p>Size 2 boxes down, minimum widths fixed, smaller and can't scroll</p>
-            <p>This is under construction using CSS Grid</p>
+            <div className="page-sections">
+                <h1 className="headers">Browse</h1>
+                <p className="grid-text-header">You Gotta Hear</p>
+                <div className="gotta-hear subgrids">
+                </div>
+                <p className="grid-text-header">New Albums</p>
+                <div className="new-albums subgrids">
+                </div>
+                <p className="grid-text-header">New Music</p>
+                <div className="new-music subgrids">
+                </div>
+                <p className="grid-text-header">Best New Songs</p>
+                <div className="best-songs subgrids">
+                </div>
+            </div>
         </div>
     )
 

@@ -31,14 +31,13 @@
 
 .player-toolbar {
     height: 55px;
-    float: right;
     margin-left: 260px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     .player {
         display: flex;
-        width: 25vw;
+        width: 16vw;
         max-width: 400px;
         justify-content: center;
         button {
@@ -130,12 +129,12 @@
         cursor: pointer;
     }
     background-color: #2b2b2b;
-    border-bottom: solid #4b4b4b;;
+    border-bottom: solid #343434;
     border-width: 1px;
 }
 
 
-.splash, .splash-2 {
+.splash {
     padding-top: 80px;
     display: flex;
     flex-direction: column;

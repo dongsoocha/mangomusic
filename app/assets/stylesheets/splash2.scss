@@ -1,8 +1,39 @@
 .splash-2 {
+    margin-left: 260px; 
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     color: white;
-    max-width: 1600px;
-    width: 90vw;
-    border: solid white;
+    .page-sections {
+        margin-top: 34px;
+        display: flex;
+        flex-direction: column;
+        max-width: 1600px;
+        width: 93%;
+        .headers {
+            font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+            color: white;
+            font-weight: 500;
+            font-size: 30px;
+            // transform: scale(0.9, 1);
+            text-align: start;
+            padding-bottom: 10px;
+            border-bottom: solid #343434;
+            border-width: 1px;
+        }
+        .grid-text-header {
+            padding-top: 15px;
+            font-weight: 500;
+            font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+        .subgrids {
+            padding-top: 15px;
+            padding-bottom: 34px;
+            border-bottom: solid #343434;
+            border-width: 1px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+        }
+    }
 }
