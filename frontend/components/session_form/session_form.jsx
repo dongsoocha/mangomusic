@@ -88,7 +88,6 @@ class SessionForm extends React.Component {
                 <div className="signup-form-container">
                     <form onSubmit={this.handleSubmit} className="signup-form-box">
                         <img className="logo" src={window.mangoURL} alt="Mango Logo" />
-                        <br/>
                         <h3 className="signup-header">Create a new Mango ID</h3>
                         <h4 className="signup-info">You will be signed in to Mango TV and Mango Music</h4>
                         <div onClick={this.props.closeModal} className="close-x">X</div>

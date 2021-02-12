@@ -24,6 +24,11 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+body {
+   height: 100%;
+   overflow-y: hidden;
+}
+
 
 
 /* HTML5 display-role reset for older browsers */

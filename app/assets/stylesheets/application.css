@@ -37,6 +37,10 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline; }
 
+body {
+  height: 100%;
+  overflow-y: hidden; }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -235,16 +239,16 @@ table {
   display: flex;
   flex-direction: column; }
 
-.login-signup {
+.login-signup, .if-logged-in {
   float: right;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-top: 15px; }
-  .login-signup button:last-child {
+  .login-signup button:last-child, .if-logged-in button:last-child {
     margin-left: 10px;
     margin-right: 20px; }
-  .login-signup button {
+  .login-signup button, .if-logged-in button {
     color: white;
     background-color: #FA2D48;
     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -253,11 +257,11 @@ table {
     outline: none;
     border-style: none;
     border-radius: 5px; }
-  .login-signup button:hover {
+  .login-signup button:hover, .if-logged-in button:hover {
     cursor: pointer; }
 
 .splash {
-  padding-top: 50px;
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -274,6 +278,40 @@ table {
       height: 25px;
       width: 30px;
       margin-right: -5px; }
+  .splash .Greeting {
+    padding-top: 10px;
+    font-size: 62px;
+    font-weight: 400;
+    max-width: 600px;
+    line-height: 1.1;
+    color: white;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif; }
+  .splash .splash-text {
+    padding-top: 20px;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.4;
+    max-width: 400px;
+    color: white;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif; }
+  .splash .register-button {
+    margin-top: 20px;
+    line-height: 2.0;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+    appearance: none;
+    outline: none;
+    border: none; }
+  .splash .upsell {
+    padding-top: 102px;
+    width: 70vw;
+    max-width: 1200px; }
 
 .subscribe {
   align-self: left;
@@ -310,7 +348,7 @@ table {
 .pseudo-button {
   float: right;
   align-self: center;
-  margin-right: 10px;
+  margin-right: 20px;
   padding-right: 30px;
   padding-left: 30px;
   padding-top: 7px;

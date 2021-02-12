@@ -3,7 +3,7 @@
     flex-direction: column;
 }
 
-.login-signup {
+.login-signup, .if-logged-in {
     float: right;
     display: flex;
     justify-content: flex-end;
@@ -30,7 +30,7 @@
 
 
 .splash {
-    padding-top: 50px;
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,6 +48,46 @@
         font-size: 25px;
         color: white;
         font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    }
+    .Greeting {
+        padding-top: 10px;
+        font-size: 62px;
+        font-weight: 400;
+        max-width: 600px;
+        line-height: 1.1;
+        color: white;
+        font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    }
+    .splash-text {
+        padding-top: 20px;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 1.4;
+        max-width: 400px;
+        color: white;
+        font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    }
+
+    .register-button {
+        margin-top: 20px;
+        line-height: 2.0;
+        font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        border-radius: 3px;
+        appearance: none;
+        outline: none;
+        border: none;
+    }
+    
+    .upsell {
+        padding-top: 102px;
+        width: 70vw;
+        max-width: 1200px;
     }
 }
 .subscribe {
@@ -89,7 +129,7 @@
 .pseudo-button {
     float: right;
     align-self: center;
-    margin-right: 10px;
+    margin-right: 20px;
     padding-right: 30px;
     padding-left: 30px;
     padding-top:7px;
@@ -102,3 +142,5 @@
 body {
     background-color: #1F1F1F;
 }
+
+// just for development, will be useless after making users show page
