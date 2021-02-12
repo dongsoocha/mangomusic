@@ -67,7 +67,7 @@ table {
 /* modal */
 .modal-background {
   position: fixed;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.3);
   top: 0;
   bottom: 0;
   left: 0;
