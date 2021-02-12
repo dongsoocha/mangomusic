@@ -398,18 +398,12 @@ table {
     appearance: none;
     outline: none;
     border: none; }
+  .splash .register-button:hover, .splash-2 .register-button:hover {
+    cursor: pointer; }
   .splash .upsell, .splash-2 .upsell {
     padding-top: 102px;
     width: 70vw;
     max-width: 1200px; }
-
-.splash-2 {
-  display: flex;
-  justify-content: center;
-  color: white;
-  max-width: 1600px;
-  width: 90vw;
-  border: solid white; }
 
 .subscribe {
   align-self: left;

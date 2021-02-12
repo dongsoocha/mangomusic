@@ -190,6 +190,9 @@
         outline: none;
         border: none;
     }
+    .register-button:hover {
+        cursor: pointer;
+    }
     
     .upsell {
         padding-top: 102px;
@@ -198,14 +201,7 @@
     }
 }
 
-.splash-2 {
-    display: flex;
-    justify-content: center;
-    color: white;
-    max-width: 1600px;
-    width: 90vw;
-    border: solid white;
-}
+
 
 .subscribe {
     align-self: left;
