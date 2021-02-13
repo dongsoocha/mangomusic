@@ -183,12 +183,12 @@ table {
 /* app navigator */
 .app-nav {
   display: flex;
-  height: 100vh;
+  height: 100vw;
   flex-direction: column;
   float: left;
   width: 259px;
   background-color: #262626;
-  position: absolute;
+  position: fixed;
   top: 0;
   border-right: solid #343434;
   border-width: 0.5px; }
@@ -202,10 +202,13 @@ table {
     color: #c2c2c2;
     appearance: none;
     border: none;
+    outline: none;
     line-height: 2.25;
-    text-align: left; }
-    .app-nav button :hover {
-      cursor: pointer; }
+    text-align: left;
+    border-radius: 5px; }
+  .app-nav button:hover {
+    cursor: pointer;
+    background-color: #727272; }
 
 .mango-logo {
   display: flex;
@@ -470,20 +473,53 @@ body {
       font-weight: 500;
       font-size: 30px;
       text-align: start;
-      padding-bottom: 10px;
-      border-bottom: solid #343434;
-      border-width: 1px; }
+      padding-bottom: 10px; }
     .splash-2 .page-sections .grid-text-header {
       padding-top: 15px;
       font-weight: 500;
-      font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif; }
+      font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+      border-top: solid #343434;
+      border-width: 1px; }
     .splash-2 .page-sections .subgrids {
       padding-top: 15px;
       padding-bottom: 34px;
-      border-bottom: solid #343434;
-      border-width: 1px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: auto; }
+      .splash-2 .page-sections .subgrids img {
+        width: 100%;
+        display: flex;
+        align-self: center;
+        justify-self: center; }
+    .splash-2 .page-sections .best-songs {
+      padding-top: 15px;
+      padding-bottom: 34px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 45px 45px 45px 45px; }
+      .splash-2 .page-sections .best-songs .grid-sub-cont {
+        margin-right: 30px;
+        display: flex;
+        align-content: flex-start;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-top: solid #343434;
+        border-width: 1px; }
+        .splash-2 .page-sections .best-songs .grid-sub-cont .grid-sub-text {
+          padding-left: 30px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif; }
+          .splash-2 .page-sections .best-songs .grid-sub-cont .grid-sub-text .grid-title {
+            line-height: 1.5;
+            font-size: 12px;
+            font-weight: 300;
+            transform: scale(1.1, 1); }
+          .splash-2 .page-sections .best-songs .grid-sub-cont .grid-sub-text .grid-artist {
+            font-size: 10px;
+            font-weight: 300;
+            transform: scale(1.1, 1);
+            color: #b2b2b2; }
 
 /*# sourceMappingURL=application.css.map */

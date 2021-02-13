@@ -1,13 +1,15 @@
 .app-nav {
     display: flex;
-    height: 100vh;
+    height: 100vw;
     flex-direction: column;
     float: left;
     width: 259px;
     background-color: rgba(38,38,38,255);
-    position: absolute;
+    position: fixed;
     top: 0;
-        button {
+    border-right: solid #343434;
+    border-width: 0.5px;
+    button {
         margin-left: 25px;
         margin-right: 25px;
         background-color: rgba(38,38,38,255);;
@@ -17,14 +19,15 @@
         color: rgb(194, 194, 194);
         appearance: none;
         border: none;
-        :hover {
-            cursor: pointer;
-        }
+        outline: none;
         line-height: 2.25;
         text-align: left;
+        border-radius: 5px;
     }
-    border-right: solid #343434;
-    border-width: 0.5px;
+    button:hover {
+        cursor: pointer;
+        background-color: #727272;
+    }
 }
 
 

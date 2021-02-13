@@ -18,22 +18,61 @@
             // transform: scale(0.9, 1);
             text-align: start;
             padding-bottom: 10px;
-            border-bottom: solid #343434;
-            border-width: 1px;
         }
         .grid-text-header {
             padding-top: 15px;
             font-weight: 500;
             font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+            border-top: solid #343434;
+            border-width: 1px;
         }
         .subgrids {
             padding-top: 15px;
             padding-bottom: 34px;
-            border-bottom: solid #343434;
-            border-width: 1px;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             grid-template-rows: auto;
+            img {
+                width: 100%;
+                display: flex;
+                align-self: center;
+                justify-self: center;
+            }
+        }
+        .best-songs {
+            padding-top: 15px;
+            padding-bottom: 34px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 45px 45px 45px 45px;
+            .grid-sub-cont {
+                margin-right: 30px;
+                display: flex;
+                align-content: flex-start;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                border-top: solid #343434;
+                border-width: 1px;
+                .grid-sub-text {
+                    padding-left: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+                    .grid-title {
+                        line-height: 1.5;
+                        font-size: 12px;
+                        font-weight: 300;
+                        transform: scale(1.1, 1.0);
+                    }
+                    .grid-artist {
+                        font-size: 10px;
+                        font-weight: 300;
+                        transform: scale(1.1, 1.0);
+                        color: #b2b2b2;
+                    }
+                }
+            }
         }
     }
 }
