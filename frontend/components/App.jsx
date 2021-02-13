@@ -4,6 +4,7 @@ import NavBarContainer from "./player/nav_bar_container";
 import SubscribePromptContainer from "./signup_footer/subscribe_prompt_container";
 import AppNavigatorContainer from "./app_navigator/app_navigator_container";
 import SplashContainer from "./splash/splash_container";
+import BrowseContainer from "./browse/browse_container"
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const NoMatchPage = () => {
@@ -33,11 +34,19 @@ const BrowsePage = () => {
             <NavBarContainer className="nav-bar" />
             <div className="splash-content">
                 <AppNavigatorContainer className="navigator" />
-                <SplashContainer />
+                <BrowseContainer />
             </div>
             <SubscribePromptContainer className="subscribe-prompt" />
         </div>
     );
+}
+const AlbumsPage = () => {
+
+    return (
+        <div>
+            <p>ALBUMS</p>
+        </div>
+    )
 }
 
 const App = () => {
@@ -54,7 +63,8 @@ const App = () => {
             <Switch>
                 <Route exact path="/" component={SplashPage} />
                 <Route exact path="/browse" component={BrowsePage} />
-                <Route component={NoMatchPage} />
+                <Route exact path="/api/albums" component={AlbumsPage} />
+                {/* <Route component={NoMatchPage} /> */}
             </Switch>
         </section>
     );

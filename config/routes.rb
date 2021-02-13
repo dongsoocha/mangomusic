@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create] 
     # login/logout
     resource :session, only: [:create, :destroy] 
-    resources :albums, only: [:show]
+    resources :albums, only: [:show, :index]
     resources :artists, only: [:show]
     resources :songs, only: [:show]
 
