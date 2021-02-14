@@ -1,7 +1,8 @@
 class Api::SongsController < ApplicationController
     def index
-        @songs = Song.all
-        if params[:album_id]
+        if params[:album_id] == "browse"
+            @songs = Song.all
+        else
             album = Album.find(params[:album_id])
             @songs = album.songs
         end

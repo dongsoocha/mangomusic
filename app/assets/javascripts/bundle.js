@@ -652,8 +652,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _albums_album_index_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../albums/album_index_container */ "./frontend/components/albums/album_index_container.jsx");
+/* harmony import */ var _songs_songs_index_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../songs/songs_index_container */ "./frontend/components/songs/songs_index_container.jsx");
 
  // import ArtistIndexContainer from "../artist/artist_index_container";
+
+
 
 var Browse = function Browse() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -662,13 +665,17 @@ var Browse = function Browse() {
     className: "browse-header"
   }, "Browse"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "browse-headers"
+  }, "Artist Spotlight"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "browse-headers"
   }, "Featured"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "browse-headers"
   }, "Albums"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_albums_album_index_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "browse-headers"
   }, "Popular Artists"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "browse-headers"
-  }, "New Songs"));
+  }, "New Songs"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_songs_songs_index_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    albumId: "browse"
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Browse);
@@ -1378,7 +1385,6 @@ var SongsIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(SongsIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      debugger;
       this.props.fetchSongs(this.props.albumId);
     }
   }, {
@@ -1420,7 +1426,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mapStateToProps = function mapStateToProps(state) {
-  debugger;
   return {
     songs: Object.values(state.entities.songs)
   };
