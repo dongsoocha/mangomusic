@@ -1,4 +1,4 @@
-import * as SongsAPI from "../util/albums_api_util";
+import * as SongsAPI from "../util/songs_api_util";
 
 export const RECEIVE_SONGS = 'RECEIVE_SONGS'
 

@@ -8,7 +8,6 @@ class Api::AlbumsController < ApplicationController
 
     def show
         @album = Album.find(params[:id])
-        @songs = Song.find_by(album_id: @album.id)
         render 'api/albums/show';
     end
 end

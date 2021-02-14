@@ -1,1 +1,1 @@
-json(@songs)
+json.array! @songs

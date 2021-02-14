@@ -1,4 +1,4 @@
-import {connect } from 'react-redux';
+import { connect } from 'react-redux';
 import AlbumIndex from './album_index';
 import { fetchAlbums } from '../../actions/album_actions';
 

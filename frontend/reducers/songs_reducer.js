@@ -6,7 +6,7 @@ export default (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_SONGS:
-            return Object.assign({}, action.songs);
+            return action.songs;
         default:
             return state;
     }
