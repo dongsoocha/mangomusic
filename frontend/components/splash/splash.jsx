@@ -10,6 +10,6 @@ const Splash = ({ openModal, currentUser}) => {
             <img className="upsell" src={window.upsellURL} alt="upsell image" />        
         </div>
     )
-    return currentUser ? Greeting() : null;
+    return currentUser ? null : Greeting();
 };
 export default Splash;

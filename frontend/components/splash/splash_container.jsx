@@ -3,9 +3,8 @@ import Splash from './splash';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import { fetchAlbums } from '../../actions/album_actions';
 
-const mapStateToProps = ({ session, entities }) => ({
-    currentUser: session.id,
-    albums: entities.albums
+const mapStateToProps = ({ session }) => ({
+    currentUser: session.id
 });
 
 const mapDispatchToProps = dispatch => {

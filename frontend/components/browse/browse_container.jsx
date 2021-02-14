@@ -1,12 +1,11 @@
 import { connect } from 'react-redux';
-import React from 'react';
-import { } from '../../actions/album_actions';
+import { fetchAlbums } from '../../actions/album_actions';
 
 import Browse from './browse';
 
-const mapStateToProps = ({ albums }) => {
+const mapStateToProps = ({ entities }) => {
     return {
-        albums: albums
+        albums: entities.albums
     };
 };
 

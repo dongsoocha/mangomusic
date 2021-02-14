@@ -455,4 +455,11 @@ table {
 body {
   background-color: #202020; }
 
+.browse {
+  display: flex;
+  margin-left: 260px; }
+
+.album-show {
+  margin-left: 260px; }
+
 /*# sourceMappingURL=application.css.map */

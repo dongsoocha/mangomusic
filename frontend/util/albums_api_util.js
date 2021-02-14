@@ -1,5 +1,3 @@
-import { $CombinedState } from "redux"
-
 export const receiveAlbums = () => {
     return $.ajax({
         method: 'GET',
