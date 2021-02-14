@@ -1,4 +1,26 @@
 .browse {
     display: flex;
+    flex-direction: column;
     margin-left: 260px;
+    margin-top: 34px;
+    max-width: 1600px;
+    width: 93%;
+    .browse-header {
+        font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+        color: white;
+        font-weight: 500;
+        font-size: 30px;
+        text-align: start;
+        padding-bottom: 10px;
+    }
+    .browse-headers {
+        padding-top: 15px;
+        font-weight: 500;
+        font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+        color: white;
+        border-top: solid #343434;
+        border-width: 1px;
+        padding-bottom: 10px;
+    }
 }
+
