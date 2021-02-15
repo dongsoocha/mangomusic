@@ -4,6 +4,7 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const SIGNOUT_CURRENT_USER = 'SIGNOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 export const CLEAR_SESSION_ERRORS = 'CLEAR_SESSION_ERRORS';
+export const TOGGLE_PLAY_STATE = 'TOGGLE_PLAY_STATE';
 
 export const receiveCurrentUser = user => {
     return {
@@ -46,6 +47,12 @@ export const logout = () => dispatch => {
     return SessionAPI.logout()
         .then(() => dispatch(signoutCurrentUser()));
 };
+
+export const togglePlayState = () => {
+    return {
+        type: TOGGLE_PLAY_STATE
+    }
+}
 
 const demoUser = {email: "mango@mango.com", password: "ilovemusic"}
 

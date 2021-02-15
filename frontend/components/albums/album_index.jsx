@@ -15,7 +15,7 @@ class AlbumIndex extends React.Component {
                         albums.map(album => (
                             <AlbumIndexItem
                                 album={album}
-                                key={album.id}
+                                key={`${album.id}${album.name}`}
                             />
                         ))
                     }

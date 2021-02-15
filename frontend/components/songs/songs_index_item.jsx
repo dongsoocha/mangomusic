@@ -2,16 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 
-const SongsIndexItem = props => {
-
-// debugger
+const SongsIndexItem = ({ song, fetchSong, togglePlayState }) => {
     return (
         <li className="song-container">
-            <audio controls id={`song`}>
-                <source src={props.song.audioUrl} type="audio/mpeg" />
+            <audio id={`song`}>
+                <source src={song.audioUrl} type="audio/mpeg" />
             </audio>
-            <button></button>
-            <p>{props.song.name}</p>
+            <button onClick={() => fetchSong(song.id)} onClick={() => togglePlayState()}>Play</button>
+            <p>{song.name}</p>
 
         </li>
     )

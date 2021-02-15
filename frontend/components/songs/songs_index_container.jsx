@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import SongsIndex from './songs_index';
-import { fetchSongs } from '../../actions/song_actions';
+import { fetchSongs, fetchCurrentSong } from '../../actions/song_actions';
+import { togglePlayState } from '../../actions/session_actions'; 
 
 const mapStateToProps = state => {
     return {
@@ -10,7 +11,9 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    fetchSongs: (albumId) => dispatch(fetchSongs(albumId))
+    fetchSongs: (albumId) => dispatch(fetchSongs(albumId)),
+    fetchSong: (songId) => dispatch(fetchCurrentSong(songId)),
+    togglePlayState: () => dispatch(togglePlayState()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SongsIndex);

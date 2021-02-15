@@ -167,7 +167,7 @@ var closeModal = function closeModal() {
 /*!*********************************************!*\
   !*** ./frontend/actions/session_actions.js ***!
   \*********************************************/
-/*! exports provided: RECEIVE_CURRENT_USER, SIGNOUT_CURRENT_USER, RECEIVE_SESSION_ERRORS, CLEAR_SESSION_ERRORS, receiveCurrentUser, signoutCurrentUser, receiveErrors, clearErrors, signup, login, logout, demoLogin */
+/*! exports provided: RECEIVE_CURRENT_USER, SIGNOUT_CURRENT_USER, RECEIVE_SESSION_ERRORS, CLEAR_SESSION_ERRORS, TOGGLE_PLAY_STATE, receiveCurrentUser, signoutCurrentUser, receiveErrors, clearErrors, signup, login, logout, togglePlayState, demoLogin */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -176,6 +176,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SIGNOUT_CURRENT_USER", function() { return SIGNOUT_CURRENT_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_SESSION_ERRORS", function() { return RECEIVE_SESSION_ERRORS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CLEAR_SESSION_ERRORS", function() { return CLEAR_SESSION_ERRORS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TOGGLE_PLAY_STATE", function() { return TOGGLE_PLAY_STATE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveCurrentUser", function() { return receiveCurrentUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "signoutCurrentUser", function() { return signoutCurrentUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveErrors", function() { return receiveErrors; });
@@ -183,6 +184,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "signup", function() { return signup; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "togglePlayState", function() { return togglePlayState; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "demoLogin", function() { return demoLogin; });
 /* harmony import */ var _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/session_api_util */ "./frontend/util/session_api_util.js");
 
@@ -190,6 +192,7 @@ var RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 var SIGNOUT_CURRENT_USER = 'SIGNOUT_CURRENT_USER';
 var RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 var CLEAR_SESSION_ERRORS = 'CLEAR_SESSION_ERRORS';
+var TOGGLE_PLAY_STATE = 'TOGGLE_PLAY_STATE';
 var receiveCurrentUser = function receiveCurrentUser(user) {
   return {
     type: RECEIVE_CURRENT_USER,
@@ -235,6 +238,11 @@ var logout = function logout() {
     return _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__["logout"]().then(function () {
       return dispatch(signoutCurrentUser());
     });
+  };
+};
+var togglePlayState = function togglePlayState() {
+  return {
+    type: TOGGLE_PLAY_STATE
   };
 };
 var demoUser = {
@@ -424,7 +432,7 @@ var AlbumIndex = /*#__PURE__*/function (_React$Component) {
       }, albums.map(function (album) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_album_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
           album: album,
-          key: album.id
+          key: "".concat(album.id).concat(album.name)
         });
       })));
     }
@@ -684,9 +692,7 @@ var Browse = function Browse() {
     className: "browse-headers"
   }, "Artist Spotlight"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "browse-headers"
-  }, "Featured"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "browse-headers"
-  }, "Albums"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_albums_album_index_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+  }, "Featured Albums"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_albums_album_index_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "browse-headers"
   }, "Popular Artists"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "browse-headers"
@@ -1407,13 +1413,19 @@ var SongsIndex = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var songs = this.props.songs;
+      var _this$props = this.props,
+          songs = _this$props.songs,
+          fetchSong = _this$props.fetchSong,
+          togglePlayState = _this$props.togglePlayState; // debugger
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "songs-grid sub-grid"
       }, songs.map(function (song) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_songs_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
           song: song,
-          key: song.id
+          fetchSong: fetchSong,
+          key: song.id,
+          togglePlayState: togglePlayState
         });
       })));
     }
@@ -1438,6 +1450,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _songs_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./songs_index */ "./frontend/components/songs/songs_index.jsx");
 /* harmony import */ var _actions_song_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/song_actions */ "./frontend/actions/song_actions.js");
+/* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
+
 
 
 
@@ -1452,6 +1466,12 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     fetchSongs: function fetchSongs(albumId) {
       return dispatch(Object(_actions_song_actions__WEBPACK_IMPORTED_MODULE_2__["fetchSongs"])(albumId));
+    },
+    fetchSong: function fetchSong(songId) {
+      return dispatch(Object(_actions_song_actions__WEBPACK_IMPORTED_MODULE_2__["fetchCurrentSong"])(songId));
+    },
+    togglePlayState: function togglePlayState() {
+      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["togglePlayState"])());
     }
   };
 };
@@ -1474,21 +1494,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 
-var SongsIndexItem = function SongsIndexItem(props) {
-  // debugger
+
+var SongsIndexItem = function SongsIndexItem(_ref) {
+  var song = _ref.song,
+      fetchSong = _ref.fetchSong,
+      togglePlayState = _ref.togglePlayState;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "song-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("audio", {
-    controls: true,
     id: "song"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
-    src: props.song.audioUrl,
+    src: song.audioUrl,
     type: "audio/mpeg"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.song.name));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", _defineProperty({
+    onClick: function onClick() {
+      return fetchSong(song.id);
+    }
+  }, "onClick", function onClick() {
+    return togglePlayState();
+  }), "Play"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, song.name));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SongsIndexItem);
@@ -1792,9 +1821,13 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/session_actions */ "./frontend/actions/session_actions.js");
+/* harmony import */ var _actions_song_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/song_actions */ "./frontend/actions/song_actions.js");
+
 
 var _nullSession = {
-  id: null
+  id: null,
+  currentSong: null,
+  playState: false
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _nullSession;
@@ -1803,12 +1836,24 @@ var _nullSession = {
 
   switch (action.type) {
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
-      return Object.assign({}, {
+      return Object.assign({}, state, {
         id: action.user.id
       });
 
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["SIGNOUT_CURRENT_USER"]:
       return _nullSession;
+
+    case _actions_song_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_SONG"]:
+      return Object.assign({}, state, {
+        currentSong: action.song
+      });
+
+    case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["TOGGLE_PLAY_STATE"]:
+      return state.playState ? Object.assign({}, state, {
+        playState: false
+      }) : Object.assign({}, state, {
+        playState: true
+      });
 
     default:
       return state;
@@ -1835,12 +1880,7 @@ __webpack_require__.r(__webpack_exports__);
 
   switch (action.type) {
     case _actions_song_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SONGS"]:
-      return action.songs;
-
-    case _actions_song_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SONG"]:
-      return Object.assign({}, state, {
-        currentSong: action.song
-      });
+      return Object.assign({}, action.songs);
 
     default:
       return state;

@@ -8,8 +8,7 @@ const Browse = () => {
             <h1 className="browse-header">Browse</h1>
             <h3 className="browse-headers">Artist Spotlight</h3>
             {/* artist show container */}
-            <h3 className="browse-headers">Featured</h3>
-            <h3 className="browse-headers">Albums</h3>
+            <h3 className="browse-headers">Featured Albums</h3>
             <AlbumsIndexContainer />
             <h3 className="browse-headers">Popular Artists</h3>
             {/* <ArtistIndexContainer /> */}
