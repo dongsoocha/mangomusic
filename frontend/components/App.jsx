@@ -18,18 +18,20 @@ const App = () => {
     // return (
         // )
         return (
-        <div>
+        <div className="whole-app">
             <Modal modal="" />
             <NavBarContainer />
-            <AppNavigatorContainer className="navigator" />
-            <section className="App">
-                <Switch>
-                    <Route exact path="/" component={SplashContainer} />
-                    <Route exact path="/browse" component={BrowseContainer} />
-                    <Route exact path="/albums/:albumId" component={AlbumShowContainer} />
-                    <Route component={NoMatchPage} />
-                </Switch>
-            </section>
+            <div className="main-space">
+                <AppNavigatorContainer className="navigator" />
+                <section className="App">
+                    <Switch>
+                        <Route exact path="/" component={SplashContainer} />
+                        <Route exact path="/browse" component={BrowseContainer} />
+                        <Route exact path="/albums/:albumId" component={AlbumShowContainer} />
+                        <Route component={NoMatchPage} />
+                    </Switch>
+                </section>
+            </div>
             <SubscribePromptContainer />
         </div>
     );

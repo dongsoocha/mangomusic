@@ -40,9 +40,17 @@ time, mark, audio, video {
 body {
   height: 100%; }
 
-.App {
+.whole-app {
   display: flex;
-  justify-content: center; }
+  flex-direction: column; }
+
+.App {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 260px;
+  text-align: center; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -357,12 +365,9 @@ table {
     cursor: pointer; }
 
 .splash {
-  padding-top: 80px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-left: 260px;
-  text-align: center; }
+  align-items: center; }
   .splash .mango-logo-2 {
     display: flex;
     align-content: center;
@@ -462,17 +467,18 @@ body {
 .browse {
   display: flex;
   flex-direction: column;
-  margin-left: 260px;
-  margin-top: 34px;
+  align-items: flex-start;
   max-width: 1600px;
-  width: 93%; }
+  width: 93%;
+  text-align: left; }
   .browse .browse-header {
     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
     color: white;
     font-weight: 500;
     font-size: 30px;
     text-align: start;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    width: 100%; }
   .browse .browse-headers {
     padding-top: 15px;
     font-weight: 500;
@@ -480,9 +486,19 @@ body {
     color: white;
     border-top: solid #343434;
     border-width: 1px;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    width: 100%; }
 
 .album-show {
   margin-left: 260px; }
+
+/* browse */
+.songs-grid {
+  display: grid;
+  height: 100%;
+  width: max-content;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 33%);
+  overflow-x: scroll; }
 
 /*# sourceMappingURL=application.css.map */

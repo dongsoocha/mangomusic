@@ -1,0 +1,10 @@
+.songs-grid {
+    display: grid;
+    // height: 100%;
+    // width: max-content;
+    height: 100%;
+    width: max-content;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 33%);
+    overflow-x: scroll;
+}
