@@ -491,14 +491,23 @@ body {
 
 .album-show {
   margin-left: 260px; }
+  .album-show .songs-grid {
+    display: grid;
+    height: 500px;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-auto-rows: 500px;
+    overflow-y: scroll; }
 
 /* browse */
-.songs-grid {
+.browse .songs-grid {
   display: grid;
   height: 100%;
   width: max-content;
-  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: 25%;
   grid-template-rows: repeat(3, 33%);
-  overflow-x: scroll; }
+  overflow-x: scroll;
+  overflow-y: hidden; }
 
 /*# sourceMappingURL=application.css.map */

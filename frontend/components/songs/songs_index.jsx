@@ -10,20 +10,18 @@ class SongsIndex extends React.Component {
         const { songs, fetchSong, togglePlayState } = this.props;
         // debugger
         return (
-            <div>
-                <ul className="songs-grid sub-grid">
-                    {
-                        songs.map(song => (
-                            <SongsIndexItem
-                                song={song}
-                                fetchSong={fetchSong}
-                                key={song.id}
-                                togglePlayState={togglePlayState}
-                            />
-                        ))
-                    }
-                </ul>
-            </div>
+            <ul className="songs-grid sub-grid">
+                {
+                    songs.map(song => (
+                        <SongsIndexItem
+                            song={song}
+                            fetchSong={fetchSong}
+                            key={song.id}
+                            togglePlayState={togglePlayState}
+                        />
+                    ))
+                }
+            </ul>
         )
     }
 }

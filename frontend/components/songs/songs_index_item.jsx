@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const SongsIndexItem = ({ song, fetchSong, togglePlayState }) => {
     return (
         <li className="song-container">
+            <p>{song.trackNumber}</p>
             <audio id={`song`}>
                 <source src={song.audioUrl} type="audio/mpeg" />
             </audio>

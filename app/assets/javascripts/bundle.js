@@ -1422,7 +1422,7 @@ var SongsIndex = /*#__PURE__*/function (_React$Component) {
           fetchSong = _this$props.fetchSong,
           togglePlayState = _this$props.togglePlayState; // debugger
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "songs-grid sub-grid"
       }, songs.map(function (song) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_songs_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -1431,7 +1431,7 @@ var SongsIndex = /*#__PURE__*/function (_React$Component) {
           key: song.id,
           togglePlayState: togglePlayState
         });
-      })));
+      }));
     }
   }]);
 
@@ -1510,7 +1510,7 @@ var SongsIndexItem = function SongsIndexItem(_ref) {
       togglePlayState = _ref.togglePlayState;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "song-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("audio", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, song.trackNumber), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("audio", {
     id: "song"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
     src: song.audioUrl,
