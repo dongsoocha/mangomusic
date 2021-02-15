@@ -1,1 +1,2 @@
-json.extract! @song, :id, :album_name, :artist_id, :release_date, :youtube_url
+json.extract! song, :id, :name, :album_id, :track_number
+json.audioUrl url_for(song.audio)

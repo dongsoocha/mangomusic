@@ -1,15 +1,16 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 
 const SongsIndexItem = props => {
-    
-    console.log(props.song.audioUrl)
+
+// debugger
     return (
         <li className="song-container">
-            <audio controls>
+            <audio controls id={`song`}>
                 <source src={props.song.audioUrl} type="audio/mpeg" />
             </audio>
-            {/* <p>{props.song.audioURL}</p> */}
+            <button></button>
             <p>{props.song.name}</p>
 
         </li>

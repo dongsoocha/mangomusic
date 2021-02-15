@@ -255,27 +255,44 @@ var demoLogin = function demoLogin() {
 /*!******************************************!*\
   !*** ./frontend/actions/song_actions.js ***!
   \******************************************/
-/*! exports provided: RECEIVE_SONGS, receiveSongs, fetchSongs */
+/*! exports provided: RECEIVE_SONGS, RECEIVE_SONG, receiveSongs, receiveSong, fetchSongs, fetchCurrentSong */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_SONGS", function() { return RECEIVE_SONGS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_SONG", function() { return RECEIVE_SONG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveSongs", function() { return receiveSongs; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveSong", function() { return receiveSong; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSongs", function() { return fetchSongs; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchCurrentSong", function() { return fetchCurrentSong; });
 /* harmony import */ var _util_songs_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/songs_api_util */ "./frontend/util/songs_api_util.js");
 
 var RECEIVE_SONGS = 'RECEIVE_SONGS';
+var RECEIVE_SONG = 'RECEIVE_SONG';
 var receiveSongs = function receiveSongs(songs) {
   return {
     type: RECEIVE_SONGS,
     songs: songs
   };
 };
+var receiveSong = function receiveSong(song) {
+  return {
+    type: RECEIVE_SONG,
+    song: song
+  };
+};
 var fetchSongs = function fetchSongs(albumId) {
   return function (dispatch) {
     return _util_songs_api_util__WEBPACK_IMPORTED_MODULE_0__["receiveSongs"](albumId).then(function (songs) {
       return dispatch(receiveSongs(songs));
+    });
+  };
+};
+var fetchCurrentSong = function fetchCurrentSong(songId) {
+  return function (dispatch) {
+    return _util_songs_api_util__WEBPACK_IMPORTED_MODULE_0__["receiveSong"](songId).then(function (song) {
+      return dispatch(receiveSong(song));
     });
   };
 };
@@ -1454,20 +1471,24 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 
 
 
 var SongsIndexItem = function SongsIndexItem(props) {
-  console.log(props.song.audioUrl);
+  // debugger
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "song-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("audio", {
-    controls: true
+    controls: true,
+    id: "song"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
     src: props.song.audioUrl,
     type: "audio/mpeg"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.song.name));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.song.name));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SongsIndexItem);
@@ -1816,6 +1837,11 @@ __webpack_require__.r(__webpack_exports__);
     case _actions_song_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SONGS"]:
       return action.songs;
 
+    case _actions_song_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SONG"]:
+      return Object.assign({}, state, {
+        currentSong: action.song
+      });
+
     default:
       return state;
   }
@@ -1974,16 +2000,23 @@ var logout = function logout() {
 /*!*****************************************!*\
   !*** ./frontend/util/songs_api_util.js ***!
   \*****************************************/
-/*! exports provided: receiveSongs */
+/*! exports provided: receiveSongs, receiveSong */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveSongs", function() { return receiveSongs; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveSong", function() { return receiveSong; });
 var receiveSongs = function receiveSongs(albumId) {
   return $.ajax({
     method: 'GET',
     url: "api/albums/".concat(albumId, "/songs")
+  });
+};
+var receiveSong = function receiveSong(songId) {
+  return $.ajax({
+    method: 'GET',
+    url: "api/songs/".concat(songId)
   });
 };
 
