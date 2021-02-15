@@ -1459,7 +1459,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SongsIndexItem = function SongsIndexItem(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, props.song.name);
+  console.log(props.song.audioUrl);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "song-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("audio", {
+    controls: true
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
+    src: props.song.audioUrl,
+    type: "audio/mpeg"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.song.name));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SongsIndexItem);
