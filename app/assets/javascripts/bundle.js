@@ -941,8 +941,17 @@ var Player = function Player(_ref) {
   var audio = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])('audio-tag');
 
   var toggle = function toggle() {
+    togglePlayState(currentSong.id); // debugger
+
+    playState ? audio.current.play() : audio.current.pause();
+  };
+
+  var autoplay = function autoplay() {
     debugger;
-    playState ? audio.current.play : audio.current.pause;
+
+    if (playState) {
+      audio.current.play();
+    }
   };
 
   var StaticPlayer = function StaticPlayer() {
@@ -1011,8 +1020,8 @@ var Player = function Player(_ref) {
       ref: audio
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
       src: currentSong.audioUrl,
-      type: "Blob"
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      type: "audio/mpeg"
+    })), autoplay(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "controls"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "shuffle-button"

@@ -3,9 +3,15 @@ import React, { useRef } from 'react';
 const Player = ({logout, currentSong, playState, togglePlayState}) => {
     const audio = useRef('audio-tag');
     const toggle = () => {
-        
+        togglePlayState(currentSong.id);
+        // debugger
+        playState ? audio.current.play() : audio.current.pause();
+    }
+    const autoplay = () => {
         debugger
-        playState ? audio.current.play : audio.current.pause;
+        if (playState) {
+            audio.current.play();
+        }
     }
     const StaticPlayer = () => (
         <div className="player-toolbar">
@@ -34,8 +40,9 @@ const Player = ({logout, currentSong, playState, togglePlayState}) => {
         return (
             <div className="player-toolbar">
                 <audio ref={audio}>
-                    <source src={currentSong.audioUrl} type="Blob"/>
+                    <source src={currentSong.audioUrl} type="audio/mpeg"/>
                 </audio>
+                {autoplay()}
                 <div className="controls">
                     <button className="shuffle-button"><i className="fas fa-random"></i></button>
                     <button className="rewind-button"><i className="fas fa-backward"></i></button>
