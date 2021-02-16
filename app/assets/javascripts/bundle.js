@@ -285,10 +285,10 @@ var receiveSongs = function receiveSongs(songs) {
     songs: songs
   };
 };
-var receiveSong = function receiveSong(songId) {
+var receiveSong = function receiveSong(song) {
   return {
     type: RECEIVE_SONG,
-    songId: songId
+    song: song
   };
 };
 var fetchSongs = function fetchSongs(albumId) {
@@ -301,7 +301,7 @@ var fetchSongs = function fetchSongs(albumId) {
 var fetchCurrentSong = function fetchCurrentSong(songId) {
   return function (dispatch) {
     return _util_songs_api_util__WEBPACK_IMPORTED_MODULE_0__["receiveSong"](songId).then(function (song) {
-      return dispatch(receiveSong(song.id));
+      return dispatch(receiveSong(song));
     });
   };
 };
@@ -938,15 +938,12 @@ var Player = function Player(_ref) {
       currentSong = _ref.currentSong,
       playState = _ref.playState,
       togglePlayState = _ref.togglePlayState;
-  var audio = useRef("song".concat(currentSong));
-  debugger;
+  var audio = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])('audio-tag');
 
   var toggle = function toggle() {
-    if (audio.current.paused) {
-      audio.current.play();
-    } else {
-      audio.current.pause();
-    }
+    togglePlayState(currentSong.id);
+    debugger;
+    playState ? audio.current.play() : audio.current.pause();
   };
 
   var StaticPlayer = function StaticPlayer() {
@@ -1011,7 +1008,12 @@ var Player = function Player(_ref) {
   var MusicPlayer = function MusicPlayer() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "player-toolbar"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("audio", {
+      ref: audio
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
+      src: currentSong.audioUrl,
+      type: "Blob"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "controls"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "shuffle-button"
@@ -1022,7 +1024,10 @@ var Player = function Player(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "fas fa-backward"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: "play-button"
+      className: "play-button",
+      onClick: function onClick() {
+        return toggle();
+      }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "fas fa-play"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1611,12 +1616,7 @@ var SongsIndexItem = function SongsIndexItem(_ref) {
       togglePlayState = _ref.togglePlayState;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "song-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, song.trackNumber), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("audio", {
-    ref: "song".concat(song.id)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
-    src: song.audioUrl,
-    type: "audio/mpeg"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, song.trackNumber), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: function onClick() {
       togglePlayState(song.id);
       fetchSong(song.id);
@@ -1951,11 +1951,11 @@ var _nullSession = {
       // debugger
       // let newState = {};
       return Object.assign({}, state, {
-        currentSong: action.songId
+        currentSong: action.song
       });
 
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["TOGGLE_PLAY_STATE"]:
-      return state.playState && state.currentSong === action.songId ? Object.assign({}, state, {
+      return state.playState && state.currentSong.id === action.songId ? Object.assign({}, state, {
         playState: false
       }) : Object.assign({}, state, {
         playState: true

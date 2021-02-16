@@ -21,9 +21,9 @@ export default (state= _nullSession, action) => {
         case RECEIVE_SONG:
             // debugger
             // let newState = {};
-            return Object.assign({}, state, { currentSong: action.songId });
+            return Object.assign({}, state, { currentSong: action.song });
         case TOGGLE_PLAY_STATE:
-            return state.playState && state.currentSong === action.songId ? Object.assign({}, state, { playState: false }) : Object.assign({}, state, { playState: true })
+            return state.playState && state.currentSong.id === action.songId ? Object.assign({}, state, { playState: false }) : Object.assign({}, state, { playState: true })
         default: 
             return state;
     }

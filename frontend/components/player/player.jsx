@@ -1,14 +1,11 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 const Player = ({logout, currentSong, playState, togglePlayState}) => {
-    const audio = useRef(`song${currentSong}`);
-    debugger
+    const audio = useRef('audio-tag');
     const toggle = () => {
-        if (audio.current.paused){
-            audio.current.play();
-        } else {
-            audio.current.pause();
-        }
+        togglePlayState(currentSong.id);
+        debugger
+        playState ? audio.current.play() : audio.current.pause();
     }
     const StaticPlayer = () => (
         <div className="player-toolbar">
@@ -36,10 +33,13 @@ const Player = ({logout, currentSong, playState, togglePlayState}) => {
     const MusicPlayer = () => {
         return (
             <div className="player-toolbar">
+                <audio ref={audio}>
+                    <source src={currentSong.audioUrl} type="Blob"/>
+                </audio>
                 <div className="controls">
                     <button className="shuffle-button"><i className="fas fa-random"></i></button>
                     <button className="rewind-button"><i className="fas fa-backward"></i></button>
-                    <button className="play-button"><i className="fas fa-play"></i></button>
+                    <button className="play-button" onClick={() => toggle()}><i className="fas fa-play"></i></button>
                     <button className="next-button"><i className="fas fa-forward"></i></button>
                     <button className="repeat-button"><i className="fas fa-redo"></i></button>
                 </div>
