@@ -9,11 +9,16 @@ const Browse = () => {
             <h3 className="browse-headers">Artist Spotlight</h3>
             {/* artist show container */}
             <h3 className="browse-headers">Featured Albums</h3>
+            <div className='album-scroll'></div>
             <AlbumsIndexContainer />
             <h3 className="browse-headers">Popular Artists</h3>
             {/* <ArtistIndexContainer /> */}
             <h3 className="browse-headers">New Songs</h3>
-            <SongsIndexContainer albumId="browse"/>
+            <div className="song-scroll">
+                {/* <button className="song-left"><i class="fas fa-chevron-left"></i></button> */}
+                <SongsIndexContainer className = "song-browse" albumId="browse"/>
+                {/* <button className="song-right"><i class="fas fa-chevron-right"></i></button> */}
+            </div>
         </div>
     )
 }

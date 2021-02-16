@@ -8,7 +8,6 @@ const SongsIndexItem = ({ song, fetchSong, togglePlayState }) => {
             <p>{song.trackNumber}</p>
             {/* <button onClick={() => fetchSong(song.id).then(() => togglePlayState(song.id))}>Play</button> */}
             <button onClick={() => {
-                togglePlayState(song.id)
                 fetchSong(song.id)}}>Play</button>
             <p>{song.name}</p>
 

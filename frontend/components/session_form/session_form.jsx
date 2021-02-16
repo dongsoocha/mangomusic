@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, useHistory } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 class SessionForm extends React.Component {
     constructor(props) {
         super(props);

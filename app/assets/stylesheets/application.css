@@ -296,7 +296,9 @@ table {
       color: #4b4b4b; }
     .player-toolbar .player .play-button {
       transform: scale(1.5);
-      color: #868686; }
+      color: #868686;
+      padding-right: 4px;
+      padding-left: 4px; }
     .player-toolbar .player .next-button {
       transform: scale(1.5, 1.1);
       margin-left: 2px;
@@ -323,6 +325,9 @@ table {
       .player-toolbar .current-info .info .default-info-logo {
         height: 35px;
         width: 40px; }
+    .player-toolbar .current-info .default-logo {
+      height: 35px;
+      width: 40px; }
   .player-toolbar .volume-slider {
     display: flex;
     align-items: center;
