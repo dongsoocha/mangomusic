@@ -6,7 +6,7 @@ const SongsIndexItem = ({ song, fetchSong, togglePlayState }) => {
     return (
         <li className="song-container">
             <p>{song.trackNumber}</p>
-            <audio id={`song`}>
+            <audio ref={`song${song.id}`}>
                 <source src={song.audioUrl} type="audio/mpeg" />
             </audio>
             {/* <button onClick={() => fetchSong(song.id).then(() => togglePlayState(song.id))}>Play</button> */}
