@@ -240,9 +240,10 @@ var logout = function logout() {
     });
   };
 };
-var togglePlayState = function togglePlayState() {
+var togglePlayState = function togglePlayState(songId) {
   return {
-    type: TOGGLE_PLAY_STATE
+    type: TOGGLE_PLAY_STATE,
+    songId: songId
   };
 };
 var demoUser = {
@@ -284,10 +285,10 @@ var receiveSongs = function receiveSongs(songs) {
     songs: songs
   };
 };
-var receiveSong = function receiveSong(song) {
+var receiveSong = function receiveSong(songId) {
   return {
     type: RECEIVE_SONG,
-    song: song
+    songId: songId
   };
 };
 var fetchSongs = function fetchSongs(albumId) {
@@ -300,7 +301,7 @@ var fetchSongs = function fetchSongs(albumId) {
 var fetchCurrentSong = function fetchCurrentSong(songId) {
   return function (dispatch) {
     return _util_songs_api_util__WEBPACK_IMPORTED_MODULE_0__["receiveSong"](songId).then(function (song) {
-      return dispatch(receiveSong(song));
+      return dispatch(receiveSong(song.id));
     });
   };
 };
@@ -1474,8 +1475,8 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     fetchSong: function fetchSong(songId) {
       return dispatch(Object(_actions_song_actions__WEBPACK_IMPORTED_MODULE_2__["fetchCurrentSong"])(songId));
     },
-    togglePlayState: function togglePlayState() {
-      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["togglePlayState"])());
+    togglePlayState: function togglePlayState(songId) {
+      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_3__["togglePlayState"])(songId));
     }
   };
 };
@@ -1498,8 +1499,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 
@@ -1515,13 +1514,12 @@ var SongsIndexItem = function SongsIndexItem(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
     src: song.audioUrl,
     type: "audio/mpeg"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", _defineProperty({
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: function onClick() {
-      return fetchSong(song.id);
+      togglePlayState(song.id);
+      fetchSong(song.id);
     }
-  }, "onClick", function onClick() {
-    return togglePlayState();
-  }), "Play"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, song.name));
+  }, "Play"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, song.name));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SongsIndexItem);
@@ -1848,12 +1846,14 @@ var _nullSession = {
       return _nullSession;
 
     case _actions_song_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_SONG"]:
+      // debugger
+      // let newState = {};
       return Object.assign({}, state, {
-        currentSong: action.song
+        currentSong: action.songId
       });
 
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["TOGGLE_PLAY_STATE"]:
-      return state.playState ? Object.assign({}, state, {
+      return state.playState && state.currentSong === action.songId ? Object.assign({}, state, {
         playState: false
       }) : Object.assign({}, state, {
         playState: true

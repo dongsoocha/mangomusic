@@ -11,10 +11,10 @@ export const receiveSongs = songs => {
     }
 }
 
-export const receiveSong = song => {
+export const receiveSong = songId => {
     return {
         type: RECEIVE_SONG,
-        song
+        songId
     }
 }
 
@@ -28,5 +28,5 @@ export const fetchSongs = (albumId) => dispatch => {
 
 export const fetchCurrentSong = (songId) => dispatch => {
     return SongsAPI.receiveSong(songId)
-        .then(song => dispatch(receiveSong(song)));
+        .then(song => dispatch(receiveSong(song.id)));
 };

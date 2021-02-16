@@ -19,9 +19,11 @@ export default (state= _nullSession, action) => {
         case SIGNOUT_CURRENT_USER:
             return _nullSession;
         case RECEIVE_SONG:
-            return Object.assign({}, state, { currentSong: action.song });
+            // debugger
+            // let newState = {};
+            return Object.assign({}, state, { currentSong: action.songId });
         case TOGGLE_PLAY_STATE:
-            return state.playState ? Object.assign({}, state, { playState: false }) : Object.assign({}, state, { playState: true })
+            return state.playState && state.currentSong === action.songId ? Object.assign({}, state, { playState: false }) : Object.assign({}, state, { playState: true })
         default: 
             return state;
     }

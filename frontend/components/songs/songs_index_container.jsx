@@ -13,7 +13,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
     fetchSongs: (albumId) => dispatch(fetchSongs(albumId)),
     fetchSong: (songId) => dispatch(fetchCurrentSong(songId)),
-    togglePlayState: () => dispatch(togglePlayState()),
+    togglePlayState: (songId) => dispatch(togglePlayState(songId)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SongsIndex);

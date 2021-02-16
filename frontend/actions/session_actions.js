@@ -48,9 +48,10 @@ export const logout = () => dispatch => {
         .then(() => dispatch(signoutCurrentUser()));
 };
 
-export const togglePlayState = () => {
+export const togglePlayState = (songId) => {
     return {
-        type: TOGGLE_PLAY_STATE
+        type: TOGGLE_PLAY_STATE,
+        songId
     }
 }
 
