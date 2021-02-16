@@ -941,9 +941,8 @@ var Player = function Player(_ref) {
   var audio = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])('audio-tag');
 
   var toggle = function toggle() {
-    togglePlayState(currentSong.id);
     debugger;
-    playState ? audio.current.play() : audio.current.pause();
+    playState ? audio.current.play : audio.current.pause;
   };
 
   var StaticPlayer = function StaticPlayer() {

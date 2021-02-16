@@ -3,9 +3,9 @@ import React, { useRef } from 'react';
 const Player = ({logout, currentSong, playState, togglePlayState}) => {
     const audio = useRef('audio-tag');
     const toggle = () => {
-        togglePlayState(currentSong.id);
+        
         debugger
-        playState ? audio.current.play() : audio.current.pause();
+        playState ? audio.current.play : audio.current.pause;
     }
     const StaticPlayer = () => (
         <div className="player-toolbar">
