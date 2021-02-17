@@ -2,12 +2,13 @@ import React from 'react';
 import AlbumsIndexContainer from "../albums/album_index_container";
 // import ArtistIndexContainer from "../artist/artist_index_container";
 import BrowseIndexContainer from "../songs/browse_index_container";
+import ArtistIndexContainer from "../artists/artist_index_container";
 const Browse = () => {
     return (
         <div className="browse">
             <h1 className="browse-header">Browse</h1>
             <h3 className="browse-headers">Artist Spotlight</h3>
-            {/* artist show container */}
+            <ArtistIndexContainer />
             <h3 className="browse-headers">Featured Albums</h3>
             <div className='album-scroll'></div>
             <AlbumsIndexContainer />
