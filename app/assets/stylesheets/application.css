@@ -401,14 +401,23 @@ body {
     width: 100%; }
 
 .album-show {
+  max-width: 1600px;
+  width: 93%;
   display: flex; }
-  .album-show .songs-grid {
-    display: grid;
-    height: 500px;
-    width: 100%;
-    grid-template-columns: 100%;
-    grid-auto-rows: 500px;
-    overflow-y: scroll; }
+  .album-show img {
+    max-width: 460px;
+    max-height: 460px; }
+  .album-show .album-show-info {
+    width: 100%; }
+    .album-show .album-show-info .songs-grid {
+      display: grid;
+      height: 500px;
+      width: 100%;
+      grid-template-columns: 100%;
+      grid-auto-rows: 50px;
+      overflow-y: scroll; }
+      .album-show .album-show-info .songs-grid .song-container {
+        display: flex; }
 
 .album-grid {
   display: grid;
