@@ -7,6 +7,7 @@ const mapStateToProps = state => {
     return {
         songs: Object.values(state.entities.songs),
         currentSong: state.session.currentSong,
+        playState: state.session.playState
     }
 
 };

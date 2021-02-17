@@ -20,7 +20,9 @@
         height: 20px;
         border-radius: 20px;
 } 
-
+.browse-songs-grid .browse-song-container:hover {
+    background-color: #464646;
+}
 .browse-songs-grid .browse-song-container {
     display: flex;
     justify-content: center;
@@ -29,6 +31,7 @@
     max-width: 90%;
     border-top: solid #343434;
     border-width: 1px;
+    border-radius: 5px;
     button{
         height: 100%;
         appearance: none;
@@ -38,6 +41,11 @@
         img {
             height: 80%;
             border-radius: 3px;
+            margin-left: -34.2px;
+        }
+        i {
+            visibility: hidden;
+            width: 34.2px;
         }
         display: flex;
         align-items: center;
@@ -46,6 +54,14 @@
     }
     button:hover {
         cursor: pointer;
+        i {
+            visibility: visible;
+            color: white;
+            z-index: 2;
+        }
+        img {
+            opacity: .5;
+        }
     }
     .browse-song-text {
         display: flex;

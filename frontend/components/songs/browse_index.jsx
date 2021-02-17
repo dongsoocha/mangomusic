@@ -7,7 +7,7 @@ class BrowseIndex extends React.Component {
     }
 
     render() {
-        const { songs, fetchSong, togglePlayState } = this.props;
+        const { songs, fetchSong, togglePlayState, currentSong, playState } = this.props;
         // debugger
         return (
             <ul className="browse-songs-grid sub-grid">
@@ -18,6 +18,8 @@ class BrowseIndex extends React.Component {
                             fetchSong={fetchSong}
                             key={song.id}
                             togglePlayState={togglePlayState}
+                            currentSong={currentSong}
+                            playState={playState}
                         />
                     ))
                 }

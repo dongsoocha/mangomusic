@@ -2,13 +2,14 @@ import React, { useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 
-const BrowseIndexItem = ({ song, fetchSong }) => {
+const BrowseIndexItem = ({ song, fetchSong, currentSong, playState }) => {
     return (
         <li className="browse-song-container">
             {/* <button onClick={() => fetchSong(song.id).then(() => togglePlayState(song.id))}>Play</button> */}
             <button onClick={() => {
                 fetchSong(song.id)
             }}>
+                { currentSong && song.id === currentSong.id && playState ? <i className="fas fa-pause"></i> : <i className="fas fa-play"></i>}
                 <img src={window.testalbumURL} alt="song-album-cover" />
             </button>
             <div className="browse-song-text">

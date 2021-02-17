@@ -7,7 +7,7 @@ class SongsIndex extends React.Component {
     }
 
     render() {
-        const { songs, fetchSong, togglePlayState, currentSong } = this.props;
+        const { songs, fetchSong, togglePlayState, currentSong, playState } = this.props;
         // debugger
         return (
             <ul className="songs-grid sub-grid">
@@ -19,6 +19,7 @@ class SongsIndex extends React.Component {
                             key={song.id}
                             togglePlayState={togglePlayState}
                             currentSong={currentSong}
+                            playState={playState}
                         />
                     ))
                 }
