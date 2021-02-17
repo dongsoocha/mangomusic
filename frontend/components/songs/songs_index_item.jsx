@@ -10,7 +10,7 @@ const SongsIndexItem = ({ song, fetchSong, togglePlayState }) => {
             <button onClick={() => {
                 fetchSong(song.id)
             }}><p>{song.trackNumber}</p><i className="fas fa-play"></i></button>
-            <p>{song.name}</p>
+            <p class="song-name">{song.name}</p>
 
         </li>
     )

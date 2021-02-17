@@ -10,15 +10,15 @@ class AlbumShow extends React.Component {
 
     render() {
         const { album } = this.props;
-
+        debugger
         return (
             <div className="album-show">
                 <img src={window.porterURL} alt="porter url" />
                 <div className="album-show-info">
                     <h1 className="album-show-name">{album.name}</h1>
                     <h1 className="album-show-artist">{album.artist.name}</h1>
+                    <h1 className="album-year">Year: {album.releaseDate.slice(-4)}</h1>
                     < SongsIndexContainer className="album-show"albumId={album.id} />
-                <Link to="/browse">Go Back Home</Link>
                 </div>
             </div>
         );

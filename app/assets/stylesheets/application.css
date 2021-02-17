@@ -208,16 +208,18 @@ table {
     margin-left: 25px;
     margin-right: 25px;
     background-color: #262626;
-    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    font-weight: 350;
-    color: #c2c2c2;
     appearance: none;
     border: none;
     outline: none;
     line-height: 2.25;
     text-align: left;
     border-radius: 5px; }
+  .app-nav button .link {
+    text-decoration: none;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 350;
+    color: #c2c2c2; }
   .app-nav button:hover {
     cursor: pointer;
     background-color: #727272; }
@@ -424,23 +426,38 @@ body {
       font-weight: 400;
       font-size: 20px;
       text-align: left;
+      padding-top: 10px; }
+    .album-show .album-show-info .album-year {
+      font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+      color: #5c5c5c;
+      font-weight: 200;
+      font-size: 12px;
+      text-align: left;
+      padding-top: 10px;
       padding-bottom: 30px;
-      border-top: solid #343434;
+      border-bottom: solid #343434;
       border-width: 1px; }
     .album-show .album-show-info .songs-grid {
       display: grid;
       height: 500px;
-      width: 100%;
+      max-width: 100%;
       grid-template-columns: 100%;
       grid-auto-rows: 50px;
-      overflow-y: scroll; }
+      overflow-y: scroll;
+      overflow-x: hidden;
+      border-top: solid #343434;
+      border-width: 1px; }
       .album-show .album-show-info .songs-grid p {
         font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
         color: white;
         font-weight: 300;
-        font-size: 14px;
-        transform: scale(1.1, 1); }
+        font-size: 14px; }
+      .album-show .album-show-info .songs-grid .song-name {
+        float: right;
+        width: 100%;
+        padding-left: 30px; }
       .album-show .album-show-info .songs-grid .song-container {
+        padding-left: 20px;
         display: flex;
         border-top: solid #343434;
         border-width: 1px;
@@ -455,7 +472,7 @@ body {
           display: flex;
           max-width: 29.3px; }
           .album-show .album-show-info .songs-grid .song-container button i {
-            margin-left: -8px;
+            margin-left: -12px;
             margin-bottom: -5px;
             font-size: 20px;
             visibility: hidden; }
@@ -464,7 +481,8 @@ body {
         .album-show .album-show-info .songs-grid .song-container button:hover {
           cursor: pointer; }
           .album-show .album-show-info .songs-grid .song-container button:hover i {
-            visibility: visible; }
+            visibility: visible;
+            color: #003cff; }
           .album-show .album-show-info .songs-grid .song-container button:hover p {
             visibility: hidden; }
       .album-show .album-show-info .songs-grid .song-container:hover {

@@ -7,6 +7,7 @@ import SplashContainer from "./splash/splash_container";
 import BrowseContainer from "./browse/browse_container";
 import AlbumShowContainer from "./albums/album_show_container";
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { AuthRoute } from '../util/route_util';
 
 const NoMatchPage = () => {
     return (
@@ -25,7 +26,7 @@ const App = () => {
                 <AppNavigatorContainer className="navigator" />
                 <section className="App">
                     <Switch>
-                        <Route exact path="/" component={SplashContainer} />
+                        <AuthRoute exact path="/" component={SplashContainer} />
                         <Route exact path="/browse" component={BrowseContainer} />
                         <Route exact path="/albums/:albumId" component={AlbumShowContainer} />
                         <Route component={NoMatchPage} />

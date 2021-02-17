@@ -13,16 +13,19 @@
         margin-left: 25px;
         margin-right: 25px;
         background-color: rgba(38,38,38,255);;
-        font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-        font-size: 14px;
-        font-weight: 350;
-        color: rgb(194, 194, 194);
         appearance: none;
         border: none;
         outline: none;
         line-height: 2.25;
         text-align: left;
         border-radius: 5px;
+    }
+    button .link {
+        text-decoration: none;
+        font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        font-weight: 350;
+        color: rgb(194, 194, 194);
     }
     button:hover {
         cursor: pointer;
