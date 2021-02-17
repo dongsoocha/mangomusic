@@ -15,12 +15,8 @@ class AlbumShow extends React.Component {
             <div className="album-show">
                 <img src={window.porterURL} alt="porter url" />
                 <div className="album-show-info">
-                    <h1 "album-show-name">{album.name}</h1>
-                    {/* <ul className="album-songs-list">
-                        {album.songs.map(song => (
-                            <li>{song.name}</li>
-                        ))}
-                    </ul> */}
+                    <h1 className="album-show-name">{album.name}</h1>
+                    <h1 className="album-show-artist">{album.artist.name}</h1>
                     < SongsIndexContainer className="album-show"albumId={album.id} />
                 <Link to="/browse">Go Back Home</Link>
                 </div>

@@ -3,13 +3,30 @@
     width: 93%;
     display: flex;
     img {
+        width: 20%;
         max-width: 460px;
         max-height: 460px;
+        height: 20vw;
     }
     .album-show-info {
-        width: 100%;
+        width: 80%;
+        margin-left: 30px;
         .album-show-name {
-            
+            font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+            color: white;
+            font-weight: 500;
+            font-size: 30px;
+            text-align: left;
+        }
+        .album-show-artist {
+            font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+            color: rgb(0, 60, 255);
+            font-weight: 400;
+            font-size: 20px;
+            text-align: left;
+            padding-bottom: 30px;
+            border-top: solid #343434;
+            border-width: 1px; 
         }
         .songs-grid {
             display: grid;
@@ -18,8 +35,51 @@
             grid-template-columns: 100%;
             grid-auto-rows: 50px;
             overflow-y: scroll;
+            p {
+                font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+                color: white;
+                font-weight: 300;
+                font-size: 14px;
+                transform: scale(1.1, 1);
+            }
             .song-container {
                 display: flex;
+                border-top: solid #343434;
+                border-width: 1px; 
+                align-items: center;
+                text-align: left;
+                button {
+                    position: relative;
+                    background-color: transparent;
+                    appearance: none;
+                    border: none;
+                    outline: none;
+                    display: flex;
+                    max-width: 29.3px;
+                    i {
+                        margin-left: -8px;
+                        margin-bottom: -5px;
+                        font-size: 20px;
+                        visibility: hidden;
+                    }
+                    p {
+                        visibility: visible;
+                    }
+
+                    
+                }
+                button:hover {
+                    cursor: pointer;
+                    i {
+                        visibility: visible;
+                    }
+                    p {
+                        visibility: hidden;
+                    }
+                }
+            }
+            .song-container:hover {
+                background-color: #464646;;
             }
         }
 

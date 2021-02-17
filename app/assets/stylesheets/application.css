@@ -405,10 +405,28 @@ body {
   width: 93%;
   display: flex; }
   .album-show img {
+    width: 20%;
     max-width: 460px;
-    max-height: 460px; }
+    max-height: 460px;
+    height: 20vw; }
   .album-show .album-show-info {
-    width: 100%; }
+    width: 80%;
+    margin-left: 30px; }
+    .album-show .album-show-info .album-show-name {
+      font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+      color: white;
+      font-weight: 500;
+      font-size: 30px;
+      text-align: left; }
+    .album-show .album-show-info .album-show-artist {
+      font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+      color: #003cff;
+      font-weight: 400;
+      font-size: 20px;
+      text-align: left;
+      padding-bottom: 30px;
+      border-top: solid #343434;
+      border-width: 1px; }
     .album-show .album-show-info .songs-grid {
       display: grid;
       height: 500px;
@@ -416,8 +434,41 @@ body {
       grid-template-columns: 100%;
       grid-auto-rows: 50px;
       overflow-y: scroll; }
+      .album-show .album-show-info .songs-grid p {
+        font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+        color: white;
+        font-weight: 300;
+        font-size: 14px;
+        transform: scale(1.1, 1); }
       .album-show .album-show-info .songs-grid .song-container {
-        display: flex; }
+        display: flex;
+        border-top: solid #343434;
+        border-width: 1px;
+        align-items: center;
+        text-align: left; }
+        .album-show .album-show-info .songs-grid .song-container button {
+          position: relative;
+          background-color: transparent;
+          appearance: none;
+          border: none;
+          outline: none;
+          display: flex;
+          max-width: 29.3px; }
+          .album-show .album-show-info .songs-grid .song-container button i {
+            margin-left: -8px;
+            margin-bottom: -5px;
+            font-size: 20px;
+            visibility: hidden; }
+          .album-show .album-show-info .songs-grid .song-container button p {
+            visibility: visible; }
+        .album-show .album-show-info .songs-grid .song-container button:hover {
+          cursor: pointer; }
+          .album-show .album-show-info .songs-grid .song-container button:hover i {
+            visibility: visible; }
+          .album-show .album-show-info .songs-grid .song-container button:hover p {
+            visibility: hidden; }
+      .album-show .album-show-info .songs-grid .song-container:hover {
+        background-color: #464646; }
 
 .album-grid {
   display: grid;
