@@ -1,12 +1,69 @@
-.browse .songs-grid {
+.browse .songs-grid, .browse .browse-songs-grid {
     display: grid;
     // height: 100%;
     // width: max-content;
     height: 100%;
-    width: max-content;
+    width: 100%;
     grid-auto-flow: column;
     grid-auto-columns: 25%;
     grid-template-rows: repeat(3, 33%);
     overflow-x: scroll;
     overflow-y: hidden;
+    
+}
+
+.browse-songs-grid::-webkit-scrollbar {
+        background: transparent;        /* color of the tracking area */
+} 
+.browse-songs-grid::-webkit-scrollbar-thumb {
+        background: gray;        
+        height: 20px;
+        border-radius: 20px;
+} 
+
+.browse-songs-grid .browse-song-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    max-height: 45px;
+    max-width: 100%;
+    button{
+        height: 100%;
+        appearance: none;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        img {
+            height: 90%;
+        }
+        display: flex;
+        align-items: center;
+        
+    }
+    .browse-song-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 20px;
+        width: 100%;
+        p {
+            font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+            color: white;
+            line-height: 1.5;
+            font-size: 12px;
+            font-weight: 300;
+            transform: scale(1.1, 1);
+        }
+        .artist-name-browse{
+            
+            font-size: 10px;
+            font-weight: 300;
+            transform: scale(1.1, 1);
+            color: #b2b2b2;
+        }
+        .artist-name-browse, .song-name-browse {
+            margin-left: 0;
+        }
+    }
+
 }

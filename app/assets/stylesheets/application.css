@@ -275,100 +275,6 @@ table {
   .login-signup button:hover {
     cursor: pointer; }
 
-.player-toolbar {
-  height: 55px;
-  margin-left: 260px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #2b2b2b;
-  border-bottom: solid #343434;
-  border-width: 1px; }
-  .player-toolbar .player {
-    display: flex;
-    width: 16vw;
-    max-width: 400px;
-    justify-content: center; }
-    .player-toolbar .player button {
-      background-color: #2b2b2b;
-      border: none;
-      appearance: none;
-      color: #4b4b4b; }
-    .player-toolbar .player .play-button {
-      transform: scale(1.5);
-      color: #868686;
-      padding-right: 4px;
-      padding-left: 4px; }
-    .player-toolbar .player .next-button {
-      transform: scale(1.5, 1.1);
-      margin-left: 2px;
-      color: #868686; }
-    .player-toolbar .player .rewind-button {
-      transform: scale(1.5, 1.1);
-      margin-right: 5px;
-      color: #868686; }
-  .player-toolbar .current-info {
-    display: flex;
-    justify-content: center;
-    width: 30vw;
-    max-width: 600px;
-    height: 45px; }
-    .player-toolbar .current-info .info {
-      background-color: #464646;
-      border-bottom-right-radius: 2px;
-      border-top-right-radius: 2px;
-      display: flex;
-      width: 100vw;
-      justify-content: center;
-      align-items: center;
-      height: 45px; }
-      .player-toolbar .current-info .info .default-info-logo {
-        height: 35px;
-        width: 40px; }
-    .player-toolbar .current-info .default-logo {
-      height: 35px;
-      width: 40px; }
-  .player-toolbar .volume-slider {
-    display: flex;
-    align-items: center;
-    max-width: 300px; }
-    .player-toolbar .volume-slider .volume-icon {
-      transform: scale(0.8, 0.7);
-      color: #d3d3d3; }
-    .player-toolbar .volume-slider #myRange {
-      margin-left: 5px;
-      -webkit-appearance: none;
-      width: 100%;
-      max-width: 70px;
-      height: 3px;
-      border-radius: 5px;
-      background: #d3d3d3;
-      outline: none;
-      opacity: 0.7;
-      -webkit-transition: .2s;
-      transition: opacity .2s; }
-  .player-toolbar #myRange::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: white;
-    cursor: pointer; }
-  .player-toolbar .logout-button {
-    margin-left: 10px;
-    margin-right: 20px;
-    color: white;
-    background-color: #FA2D48;
-    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-    line-height: 2.0;
-    appearance: none;
-    outline: none;
-    border-style: none;
-    border-radius: 5px; }
-  .player-toolbar button:hover {
-    cursor: pointer; }
-
 .splash {
   display: flex;
   flex-direction: column;
@@ -495,7 +401,7 @@ body {
     width: 100%; }
 
 .album-show {
-  margin-left: 260px; }
+  display: flex; }
   .album-show .songs-grid {
     display: grid;
     height: 500px;
@@ -504,15 +410,191 @@ body {
     grid-auto-rows: 500px;
     overflow-y: scroll; }
 
-/* browse */
-.browse .songs-grid {
+.album-grid {
   display: grid;
   height: 100%;
-  width: max-content;
+  width: 100%;
+  grid-auto-flow: column;
+  grid-auto-columns: 50%;
+  grid-template-rows: 100%; }
+  .album-grid li .album-picture-link img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px; }
+  .album-grid li {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%; }
+  .album-grid li .album-outter-link p {
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: white;
+    line-height: 1.5;
+    font-size: 12px;
+    font-weight: 300;
+    transform: scale(1.1, 1);
+    text-decoration: none; }
+  .album-grid li .album-outter-link p {
+    text-decoration: none; }
+  .album-grid li .album-outter-link .album-artist-link {
+    font-size: 10px;
+    font-weight: 300;
+    transform: scale(1.1, 1);
+    color: #b2b2b2; }
+  .album-grid li .album-outter-link {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%; }
+
+/* browse */
+.browse .songs-grid, .browse .browse-songs-grid {
+  display: grid;
+  height: 100%;
+  width: 100%;
   grid-auto-flow: column;
   grid-auto-columns: 25%;
   grid-template-rows: repeat(3, 33%);
   overflow-x: scroll;
   overflow-y: hidden; }
+
+.browse-songs-grid::-webkit-scrollbar {
+  background: transparent;
+  /* color of the tracking area */ }
+
+.browse-songs-grid::-webkit-scrollbar-thumb {
+  background: gray;
+  height: 20px;
+  border-radius: 20px; }
+
+.browse-songs-grid .browse-song-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-height: 45px;
+  max-width: 100%; }
+  .browse-songs-grid .browse-song-container button {
+    height: 100%;
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center; }
+    .browse-songs-grid .browse-song-container button img {
+      height: 90%; }
+  .browse-songs-grid .browse-song-container .browse-song-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    width: 100%; }
+    .browse-songs-grid .browse-song-container .browse-song-text p {
+      font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+      color: white;
+      line-height: 1.5;
+      font-size: 12px;
+      font-weight: 300;
+      transform: scale(1.1, 1); }
+    .browse-songs-grid .browse-song-container .browse-song-text .artist-name-browse {
+      font-size: 10px;
+      font-weight: 300;
+      transform: scale(1.1, 1);
+      color: #b2b2b2; }
+    .browse-songs-grid .browse-song-container .browse-song-text .artist-name-browse, .browse-songs-grid .browse-song-container .browse-song-text .song-name-browse {
+      margin-left: 0; }
+
+/* player styling */
+.player-toolbar {
+  height: 55px;
+  margin-left: 260px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #2b2b2b;
+  border-bottom: solid #343434;
+  border-width: 1px; }
+  .player-toolbar .player {
+    display: flex;
+    width: 16vw;
+    max-width: 400px;
+    justify-content: center; }
+    .player-toolbar .player button {
+      background-color: #2b2b2b;
+      border: none;
+      appearance: none;
+      color: #4b4b4b; }
+    .player-toolbar .player .play-button {
+      transform: scale(1.5);
+      color: #868686;
+      padding-right: 4px;
+      padding-left: 4px; }
+    .player-toolbar .player .next-button {
+      transform: scale(1.5, 1.1);
+      margin-left: 2px;
+      color: #868686; }
+    .player-toolbar .player .rewind-button {
+      transform: scale(1.5, 1.1);
+      margin-right: 5px;
+      color: #868686; }
+  .player-toolbar .current-info {
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    max-width: 600px;
+    height: 45px; }
+    .player-toolbar .current-info .info {
+      background-color: #464646;
+      border-bottom-right-radius: 2px;
+      border-top-right-radius: 2px;
+      display: flex;
+      width: 100vw;
+      justify-content: center;
+      align-items: center;
+      height: 45px; }
+      .player-toolbar .current-info .info .default-info-logo {
+        height: 35px;
+        width: 40px; }
+    .player-toolbar .current-info .default-logo {
+      height: 35px;
+      width: 40px; }
+  .player-toolbar .volume-slider {
+    display: flex;
+    align-items: center;
+    max-width: 300px; }
+    .player-toolbar .volume-slider .volume-icon {
+      transform: scale(0.8, 0.7);
+      color: #d3d3d3; }
+    .player-toolbar .volume-slider #myRange {
+      margin-left: 5px;
+      -webkit-appearance: none;
+      width: 100%;
+      max-width: 70px;
+      height: 3px;
+      border-radius: 5px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s; }
+  .player-toolbar #myRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer; }
+  .player-toolbar .logout-button {
+    margin-left: 10px;
+    margin-right: 20px;
+    color: white;
+    background-color: #FA2D48;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    line-height: 2.0;
+    appearance: none;
+    outline: none;
+    border-style: none;
+    border-radius: 5px; }
+  .player-toolbar button:hover {
+    cursor: pointer; }
 
 /*# sourceMappingURL=application.css.map */

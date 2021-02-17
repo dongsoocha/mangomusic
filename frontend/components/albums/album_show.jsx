@@ -13,13 +13,14 @@ class AlbumShow extends React.Component {
 
         return (
             <div className="album-show">
+                <img src={window.porterURL} alt="porter url" />
                 <h1>{album.name}</h1>
                 {/* <ul className="album-songs-list">
                     {album.songs.map(song => (
                         <li>{song.name}</li>
                     ))}
                 </ul> */}
-                < SongsIndexContainer albumId={album.id} />
+                < SongsIndexContainer className="album-show"albumId={album.id} />
                 <Link to="/browse">Go Back Home</Link>
             </div>
         );

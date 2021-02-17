@@ -4,4 +4,5 @@ json.(@albums) do |album|
     json.artistId album.artist_id
     json.releaseDate album.release_date
     json.songs album.songs
+    json.artist album.artist
 end

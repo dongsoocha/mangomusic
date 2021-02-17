@@ -1,5 +1,7 @@
 .album-show {
-    margin-left: 260px;
+    
+    display: flex;
+
     .songs-grid {
         display: grid;
         height: 500px;
@@ -7,5 +9,50 @@
         grid-template-columns: 100%;
         grid-auto-rows: 500px;
         overflow-y: scroll;
+    }
+}
+
+.album-grid {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-auto-flow: column;
+    grid-auto-columns: 50%;
+    grid-template-rows: 100%;
+    li .album-picture-link img {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+    }
+    li {
+        display: flex;
+        flex-direction: column;
+        margin-right: 5%;
+    }
+
+    li .album-outter-link p {
+        font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+        color: white;
+        line-height: 1.5;
+        font-size: 12px;
+        font-weight: 300;
+        transform: scale(1.1, 1);
+        text-decoration: none;
+    }
+    li .album-outter-link p {
+        text-decoration: none;
+    }
+
+    li .album-outter-link .album-artist-link {
+        font-size: 10px;
+        font-weight: 300;
+        transform: scale(1.1, 1);
+        color: #b2b2b2;
+    }
+
+    li .album-outter-link {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
     }
 }
