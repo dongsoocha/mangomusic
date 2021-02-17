@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const AlbumIndexItem = props => {
     return (
@@ -8,7 +8,9 @@ const AlbumIndexItem = props => {
                 <img src={window.porterURL} alt="porter url"/>
             </Link>
             <Link to={`/albums/${props.album.id}`} className="album-outter-link"><p className="album-link">{props.album.name}</p>
-            <p className="album-artist-link">{props.album.artist.name}</p></Link>
+            {props.album.artist ? 
+                <p className="album-artist-link">{props.album.artist.name}</p> : 
+                <p className="album-year">{props.album.release_date.slice(-4)}</p> }</Link>
         </li>
     )
 };

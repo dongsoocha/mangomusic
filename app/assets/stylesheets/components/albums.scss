@@ -126,9 +126,8 @@
         font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
         color: white;
         line-height: 1.5;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 300;
-        transform: scale(1.1, 1);
         text-decoration: none;
     }
     li .album-outter-link p {
@@ -138,13 +137,11 @@
     li .album-outter-link .album-artist-link {
         font-size: 10px;
         font-weight: 300;
-        transform: scale(1.1, 1);
         color: #b2b2b2;
     }
 
     li .album-outter-link {
         display: flex;
         flex-direction: column;
-        margin-left: 5%;
     }
 }

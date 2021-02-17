@@ -7,5 +7,5 @@ class Artist < ApplicationRecord
 
     has_many :songs,
         through: :albums,
-        source: :tracks
+        source: :songs
 end

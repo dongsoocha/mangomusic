@@ -6,12 +6,16 @@ import AppNavigatorContainer from "./app_navigator/app_navigator_container";
 import SplashContainer from "./splash/splash_container";
 import BrowseContainer from "./browse/browse_container";
 import AlbumShowContainer from "./albums/album_show_container";
+import ArtistShowContainer from "./artists/artist_show_container";
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 
 const NoMatchPage = () => {
     return (
-        <h3>404 - Not found</h3>
+        <div>
+            <h3>404 - Not found</h3>
+            <button><Link to="/browse">Browse</Link></button>
+        </div>
     );
 };
 
@@ -29,6 +33,7 @@ const App = () => {
                         <AuthRoute exact path="/" component={SplashContainer} />
                         <Route exact path="/browse" component={BrowseContainer} />
                         <Route exact path="/albums/:albumId" component={AlbumShowContainer} />
+                        <Route exact path="/artists/:artistId" component={ArtistShowContainer} />
                         <Route component={NoMatchPage} />
                     </Switch>
                 </section>

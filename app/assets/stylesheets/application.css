@@ -219,7 +219,9 @@ table {
     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: 14px;
     font-weight: 350;
-    color: #c2c2c2; }
+    color: #c2c2c2;
+    height: 100%;
+    width: 100%; }
   .app-nav button:hover {
     cursor: pointer;
     background-color: #727272; }
@@ -505,21 +507,18 @@ body {
     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
     color: white;
     line-height: 1.5;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
-    transform: scale(1.1, 1);
     text-decoration: none; }
   .album-grid li .album-outter-link p {
     text-decoration: none; }
   .album-grid li .album-outter-link .album-artist-link {
     font-size: 10px;
     font-weight: 300;
-    transform: scale(1.1, 1);
     color: #b2b2b2; }
   .album-grid li .album-outter-link {
     display: flex;
-    flex-direction: column;
-    margin-left: 5%; }
+    flex-direction: column; }
 
 /* browse */
 .browse .songs-grid, .browse .browse-songs-grid {
@@ -593,6 +592,69 @@ body {
       color: #b2b2b2; }
     .browse-songs-grid .browse-song-container .browse-song-text .artist-name-browse, .browse-songs-grid .browse-song-container .browse-song-text .song-name-browse {
       margin-left: 0; }
+
+.artist-grid {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-auto-flow: column;
+  grid-auto-columns: 50%;
+  grid-template-rows: 100%; }
+  .artist-grid li .artist-picture-link img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px; }
+  .artist-grid li {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%; }
+  .artist-grid li .artist-outter-link .artist-link {
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: 350;
+    text-decoration: none; }
+  .artist-grid li .artist-desc {
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: #a7a7a7;
+    font-size: 14px;
+    font-weight: 300;
+    padding-top: 20px;
+    padding-bottom: 10px; }
+
+.artist-show {
+  display: flex;
+  flex-direction: column;
+  max-width: 1600px;
+  align-items: flex-start; }
+  .artist-show .artist-box {
+    padding-top: 40px;
+    width: 103%;
+    text-align: left;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    background-image: linear-gradient(#202020, #2f2f2f); }
+    .artist-show .artist-box .artist-pic {
+      display: flex;
+      align-self: center;
+      width: 10vw;
+      height: 100%;
+      border-radius: 50%; }
+    .artist-show .artist-box .artist-show-name {
+      font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+      color: white;
+      font-size: 30px;
+      font-weight: 400;
+      padding-left: 50px;
+      margin-top: -20px;
+      padding-bottom: 20px; }
+  .artist-show .artist-header {
+    padding-top: 20px;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: 400; }
 
 /* player styling */
 .player-toolbar {

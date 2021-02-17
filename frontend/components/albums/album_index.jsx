@@ -8,6 +8,7 @@ class AlbumIndex extends React.Component {
 
     render() {
         const { albums } = this.props;
+        
         return (
             <div>
                 <ul className="album-grid sub-grid">
