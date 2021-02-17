@@ -874,7 +874,7 @@ var CurrentSongInfo = function CurrentSongInfo(_ref) {
   };
 
   var songInfo = function songInfo() {
-    debugger;
+    // debugger
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "current-info"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {

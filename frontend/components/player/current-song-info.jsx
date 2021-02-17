@@ -15,7 +15,7 @@ const CurrentSongInfo = ({ currentSong }) => {
 
 
     const songInfo = () => {
-        debugger
+        // debugger
         return (
         <div className="current-info">
             <img src={window.testalbumURL} alt="song-album-cover"/>
