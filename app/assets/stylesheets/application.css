@@ -626,6 +626,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 1600px;
+  width: 90%;
   align-items: flex-start; }
   .artist-show .artist-box {
     padding-top: 40px;
@@ -634,7 +635,7 @@ body {
     display: flex;
     align-self: center;
     flex-direction: column;
-    background-image: linear-gradient(#202020, #2f2f2f); }
+    background-image: linear-gradient(#202020, #282828); }
     .artist-show .artist-box .artist-pic {
       display: flex;
       align-self: center;
@@ -654,7 +655,50 @@ body {
     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
     color: white;
     font-size: 20px;
-    font-weight: 400; }
+    font-weight: 400;
+    padding-bottom: 10px; }
+  .artist-show .essential-albums {
+    width: 100%;
+    border-bottom: solid #343434;
+    border-width: 1px; }
+    .artist-show .essential-albums .albums-grid {
+      display: grid;
+      height: 100%;
+      width: 100%;
+      max-width: 600px;
+      grid-auto-flow: column;
+      grid-auto-columns: 50%;
+      grid-template-rows: 100%; }
+      .artist-show .essential-albums .albums-grid li .album-picture-link img {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px; }
+      .artist-show .essential-albums .albums-grid li {
+        display: flex;
+        flex-direction: column;
+        margin-right: 5%;
+        padding-bottom: 5px; }
+      .artist-show .essential-albums .albums-grid li .album-year {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start; }
+        .artist-show .essential-albums .albums-grid li .album-year i {
+          font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+          color: white;
+          font-size: 14px;
+          text-decoration: none;
+          line-height: 1.4; }
+      .artist-show .essential-albums .albums-grid li .album-year:last-child {
+        color: #afafaf; }
+  .artist-show .artist-show-desc {
+    text-align: left;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: #d8d8d8;
+    font-size: 12px;
+    max-width: 600px;
+    line-height: 1.4;
+    text-decoration: none; }
 
 /* player styling */
 .player-toolbar {

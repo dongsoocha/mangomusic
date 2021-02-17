@@ -573,7 +573,7 @@ var AlbumIndexItem = function AlbumIndexItem(props) {
     className: "album-artist-link"
   }, props.album.artist.name) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "album-year"
-  }, props.album.release_date.slice(-4))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, props.album.album_name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, props.album.release_date.slice(-4)))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AlbumIndexItem);
@@ -976,12 +976,18 @@ var ArtistShow = /*#__PURE__*/function (_React$Component) {
         className: "artist-show-name"
       }, artist.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "artist-header"
-      }, "Essential Albums"), this.props.artist.albums.map(function (album) {
+      }, "Essential Albums"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "essential-albums"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "albums-grid"
+      }, this.props.artist.albums.map(function (album) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_albums_album_index_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
           album: album,
           key: "".concat(album.id).concat(_this.props.artist.name)
         });
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "artist-header"
+      }, "About ", "".concat(this.props.artist.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "artist-show-desc"
       }, artist.description));
     }

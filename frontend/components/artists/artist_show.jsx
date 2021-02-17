@@ -16,15 +16,20 @@ class ArtistShow extends React.Component {
                     <h1 className="artist-show-name">{artist.name}</h1>
                 </div>
                 <h1 className="artist-header">Essential Albums</h1>
-                {this.props.artist.albums.map(album => {
-                    return (
-                        <AlbumIndexItem
-                        album={album}
-                        key={`${album.id}${this.props.artist.name}`}
-                        />
-                        )
-                    })
-                }
+                <div className="essential-albums">
+                    <ul className="albums-grid">
+                        {this.props.artist.albums.map(album => {
+                            return (
+                                <AlbumIndexItem
+                                album={album}
+                                key={`${album.id}${this.props.artist.name}`}
+                                />
+                                )
+                            })
+                        }
+                    </ul>
+                </div>                
+                <h1 className="artist-header">About {`${this.props.artist.name}`}</h1>
                 <p className="artist-show-desc">{artist.description}</p>
             </div>
         )
