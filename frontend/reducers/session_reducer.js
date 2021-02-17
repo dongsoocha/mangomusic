@@ -19,7 +19,8 @@ export default (state= _nullSession, action) => {
         case SIGNOUT_CURRENT_USER:
             return _nullSession;
         case RECEIVE_SONG:
-            return state.currentSong !== action.song ? 
+            debugger
+            return !state.currentSong || state.currentSong.id !== action.song.id ? 
                 Object.assign({}, state, { currentSong: action.song, playState: true }) : 
                 state.playState ? 
                     Object.assign({}, state, { playState: false }) : 

@@ -14,22 +14,20 @@
             border: none;
             appearance: none;
             color: #4b4b4b;
+            outline: none;
         }
         .play-button {
-            transform: scale(1.5);
+            font-size: 20px;
             color: #868686;
-            padding-right: 4px;
-            padding-left: 4px;
+
         }
         .next-button {
-            transform: scale(1.5, 1.1);
-            margin-left: 2px;
+            font-size: 20px;
             color: #868686;
         }
         .rewind-button {
-            transform: scale(1.5, 1.1);
-            margin-right: 5px;
             color: #868686;
+            font-size: 20px;
         }
     }
     .current-info {

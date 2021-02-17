@@ -33,7 +33,7 @@ class Player extends React.Component {
                     <button className="shuffle-button"><i className="fas fa-random"></i></button>
                     <button className="rewind-button"><i className="fas fa-backward"></i></button>
                     {this.props.playState }
-                    <button  className="play-button" onClick={() => this.toggle()}><i className="fas fa-play"></i></button>
+                    <button  className="play-button" onClick={() => this.toggle()}>{this.props.playState ? <i className="fas fa-pause"></i> : <i className="fas fa-play"></i>}</button>
                     <button className="next-button"><i className="fas fa-forward"></i></button>
                     <button className="repeat-button"><i className="fas fa-redo"></i></button>
                 </div>

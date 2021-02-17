@@ -5,7 +5,8 @@ import { togglePlayState } from '../../actions/session_actions';
 
 const mapStateToProps = state => {
     return {
-        songs: Object.values(state.entities.songs)
+        songs: Object.values(state.entities.songs),
+        currentSong: state.session.currentSong,
     }
 
 };

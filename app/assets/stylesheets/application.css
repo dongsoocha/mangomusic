@@ -45,7 +45,7 @@ body {
   flex-direction: column; }
 
 .App {
-  padding-top: 80px;
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -388,13 +388,14 @@ body {
     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
     color: white;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 34px;
     text-align: start;
     padding-bottom: 10px;
     width: 100%; }
   .browse .browse-headers {
     padding-top: 15px;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 18px;
     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
     color: white;
     border-top: solid #343434;
@@ -410,7 +411,7 @@ body {
     width: 20%;
     max-width: 460px;
     max-height: 460px;
-    height: 20vw; }
+    height: 100%; }
   .album-show .album-show-info {
     width: 80%;
     margin-left: 30px; }
@@ -439,14 +440,10 @@ body {
       border-width: 1px; }
     .album-show .album-show-info .songs-grid {
       display: grid;
-      height: 500px;
       max-width: 100%;
       grid-template-columns: 100%;
       grid-auto-rows: 50px;
-      overflow-y: scroll;
-      overflow-x: hidden;
-      border-top: solid #343434;
-      border-width: 1px; }
+      overflow: hidden; }
       .album-show .album-show-info .songs-grid p {
         font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
         color: white;
@@ -455,29 +452,29 @@ body {
       .album-show .album-show-info .songs-grid .song-name {
         float: right;
         width: 100%;
-        padding-left: 30px; }
+        padding-left: 20px; }
       .album-show .album-show-info .songs-grid .song-container {
         padding-left: 20px;
         display: flex;
-        border-top: solid #343434;
+        border-bottom: solid #343434;
         border-width: 1px;
         align-items: center;
         text-align: left; }
         .album-show .album-show-info .songs-grid .song-container button {
-          position: relative;
           background-color: transparent;
           appearance: none;
           border: none;
           outline: none;
           display: flex;
-          max-width: 29.3px; }
+          width: 29.3px; }
           .album-show .album-show-info .songs-grid .song-container button i {
-            margin-left: -12px;
             margin-bottom: -5px;
             font-size: 20px;
             visibility: hidden; }
           .album-show .album-show-info .songs-grid .song-container button p {
-            visibility: visible; }
+            margin-left: -16px;
+            visibility: visible;
+            width: 100%; }
         .album-show .album-show-info .songs-grid .song-container button:hover {
           cursor: pointer; }
           .album-show .album-show-info .songs-grid .song-container button:hover i {
@@ -548,7 +545,9 @@ body {
   justify-content: center;
   align-content: center;
   max-height: 45px;
-  max-width: 100%; }
+  max-width: 90%;
+  border-top: solid #343434;
+  border-width: 1px; }
   .browse-songs-grid .browse-song-container button {
     height: 100%;
     appearance: none;
@@ -558,24 +557,24 @@ body {
     display: flex;
     align-items: center; }
     .browse-songs-grid .browse-song-container button img {
-      height: 90%; }
+      height: 80%;
+      border-radius: 3px; }
+  .browse-songs-grid .browse-song-container button:hover {
+    cursor: pointer; }
   .browse-songs-grid .browse-song-container .browse-song-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 20px;
+    margin-left: 12px;
     width: 100%; }
     .browse-songs-grid .browse-song-container .browse-song-text p {
       font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
       color: white;
-      line-height: 1.5;
+      font-size: 14px;
+      font-weight: 300; }
+    .browse-songs-grid .browse-song-container .browse-song-text .artist-name-browse {
       font-size: 12px;
       font-weight: 300;
-      transform: scale(1.1, 1); }
-    .browse-songs-grid .browse-song-container .browse-song-text .artist-name-browse {
-      font-size: 10px;
-      font-weight: 300;
-      transform: scale(1.1, 1);
       color: #b2b2b2; }
     .browse-songs-grid .browse-song-container .browse-song-text .artist-name-browse, .browse-songs-grid .browse-song-container .browse-song-text .song-name-browse {
       margin-left: 0; }
@@ -599,20 +598,17 @@ body {
       background-color: #2b2b2b;
       border: none;
       appearance: none;
-      color: #4b4b4b; }
+      color: #4b4b4b;
+      outline: none; }
     .player-toolbar .player .play-button {
-      transform: scale(1.5);
-      color: #868686;
-      padding-right: 4px;
-      padding-left: 4px; }
+      font-size: 20px;
+      color: #868686; }
     .player-toolbar .player .next-button {
-      transform: scale(1.5, 1.1);
-      margin-left: 2px;
+      font-size: 20px;
       color: #868686; }
     .player-toolbar .player .rewind-button {
-      transform: scale(1.5, 1.1);
-      margin-right: 5px;
-      color: #868686; }
+      color: #868686;
+      font-size: 20px; }
   .player-toolbar .current-info {
     display: flex;
     justify-content: center;

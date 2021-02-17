@@ -10,7 +10,6 @@ class AlbumShow extends React.Component {
 
     render() {
         const { album } = this.props;
-        debugger
         return (
             <div className="album-show">
                 <img src={window.porterURL} alt="porter url" />

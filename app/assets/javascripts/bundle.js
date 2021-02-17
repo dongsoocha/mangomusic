@@ -581,7 +581,6 @@ var AlbumShow = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var album = this.props.album;
-      debugger;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "album-show"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -1102,7 +1101,9 @@ var Player = /*#__PURE__*/function (_React$Component) {
         onClick: function onClick() {
           return _this2.toggle();
         }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      }, this.props.playState ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-pause"
+      }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-play"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "next-button"
@@ -1774,7 +1775,8 @@ var SongsIndex = /*#__PURE__*/function (_React$Component) {
       var _this$props = this.props,
           songs = _this$props.songs,
           fetchSong = _this$props.fetchSong,
-          togglePlayState = _this$props.togglePlayState; // debugger
+          togglePlayState = _this$props.togglePlayState,
+          currentSong = _this$props.currentSong; // debugger
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "songs-grid sub-grid"
@@ -1783,7 +1785,8 @@ var SongsIndex = /*#__PURE__*/function (_React$Component) {
           song: song,
           fetchSong: fetchSong,
           key: song.id,
-          togglePlayState: togglePlayState
+          togglePlayState: togglePlayState,
+          currentSong: currentSong
         });
       }));
     }
@@ -1816,7 +1819,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    songs: Object.values(state.entities.songs)
+    songs: Object.values(state.entities.songs),
+    currentSong: state.session.currentSong
   };
 };
 
@@ -1859,16 +1863,19 @@ __webpack_require__.r(__webpack_exports__);
 var SongsIndexItem = function SongsIndexItem(_ref) {
   var song = _ref.song,
       fetchSong = _ref.fetchSong,
-      togglePlayState = _ref.togglePlayState;
+      togglePlayState = _ref.togglePlayState,
+      currentSong = _ref.currentSong;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "song-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: function onClick() {
       fetchSong(song.id);
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, song.trackNumber), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, !currentSong || song.id !== currentSong.id ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fas fa-play"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-pause"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, song.trackNumber)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     "class": "song-name"
   }, song.name));
 };
@@ -2216,7 +2223,8 @@ var _nullSession = {
       return _nullSession;
 
     case _actions_song_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_SONG"]:
-      return state.currentSong !== action.song ? Object.assign({}, state, {
+      debugger;
+      return !state.currentSong || state.currentSong.id !== action.song.id ? Object.assign({}, state, {
         currentSong: action.song,
         playState: true
       }) : state.playState ? Object.assign({}, state, {
