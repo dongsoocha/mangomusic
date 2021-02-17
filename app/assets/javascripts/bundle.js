@@ -650,7 +650,9 @@ var AlbumShow = /*#__PURE__*/function (_React$Component) {
         className: "album-show-name"
       }, album.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "album-show-artist"
-      }, album.artist.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/artists/".concat(album.artist.id)
+      }, album.artist.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "album-year"
       }, "Year: ", album.releaseDate.slice(-4)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_songs_songs_index_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
         className: "album-show",

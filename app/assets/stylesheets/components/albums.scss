@@ -21,11 +21,17 @@
         }
         .album-show-artist {
             font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-            color: rgb(0, 60, 255);
+            
             font-weight: 400;
             font-size: 20px;
             text-align: left;
             padding-top: 10px;
+            width: 100%;
+            text-decoration: none;
+            a {
+                text-decoration: none;
+                color: rgb(0, 60, 255);
+            }
         }
         .album-year {
             font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;

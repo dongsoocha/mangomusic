@@ -30,8 +30,10 @@
         width: 100%;
     }
     button:hover {
-        cursor: pointer;
         background-color: #727272;
+    }
+    button .link:hover {
+        cursor: pointer;
     }
 }
 

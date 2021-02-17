@@ -223,8 +223,9 @@ table {
     height: 100%;
     width: 100%; }
   .app-nav button:hover {
-    cursor: pointer;
     background-color: #727272; }
+  .app-nav button .link:hover {
+    cursor: pointer; }
 
 .mango-logo {
   display: flex;
@@ -426,11 +427,15 @@ body {
       text-align: left; }
     .album-show .album-show-info .album-show-artist {
       font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-      color: #003cff;
       font-weight: 400;
       font-size: 20px;
       text-align: left;
-      padding-top: 10px; }
+      padding-top: 10px;
+      width: 100%;
+      text-decoration: none; }
+      .album-show .album-show-info .album-show-artist a {
+        text-decoration: none;
+        color: #003cff; }
     .album-show .album-show-info .album-year {
       font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
       color: #5c5c5c;

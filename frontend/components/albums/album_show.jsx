@@ -15,7 +15,9 @@ class AlbumShow extends React.Component {
                 <img src={window.porterURL} alt="porter url" />
                 <div className="album-show-info">
                     <h1 className="album-show-name">{album.name}</h1>
-                    <h1 className="album-show-artist">{album.artist.name}</h1>
+                    <h1 className="album-show-artist">
+                        <Link to={`/artists/${album.artist.id}`} >{album.artist.name}</Link>
+                    </h1>
                     <h1 className="album-year">Year: {album.releaseDate.slice(-4)}</h1>
                     < SongsIndexContainer className="album-show"albumId={album.id} />
                 </div>
