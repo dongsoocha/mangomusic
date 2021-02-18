@@ -26,9 +26,28 @@ time, mark, audio, video {
 
 body {
    height: 100%;
-   
 }
 
+body::-webkit-scrollbar {
+        background: rgba(43, 43, 43, 0.95);        /* color of the tracking area */
+} 
+body::-webkit-scrollbar-thumb {
+        background: gray;        
+        height: 10px;
+        border-radius: 10px;
+		border: 3px solid transparent;
+		margin: 10px;
+} 
+body::-webkit-scrollbar-button { 
+	height: 0px; 
+	width: 0px;
+	//for horizontal scrollbar   height: 0px; //for vertical scrollbar 
+}
+body::-webkit-scrollbar-track {
+	margin-top: 10px;    
+	margin-bottom: 10px;
+	color: white;
+}
 
 .whole-app {
 	display: flex;

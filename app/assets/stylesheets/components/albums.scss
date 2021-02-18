@@ -30,7 +30,7 @@
             text-decoration: none;
             a {
                 text-decoration: none;
-                color: rgb(0, 60, 255);
+                color: rgb(16, 72, 255);
             }
         }
         .album-year {
@@ -95,7 +95,8 @@
                     cursor: pointer;
                     i {
                         visibility: visible;
-                        color: rgb(0, 60, 255);
+                        color: white;
+                        font-size: 15px;
                     }
                     p {
                         visibility: hidden;

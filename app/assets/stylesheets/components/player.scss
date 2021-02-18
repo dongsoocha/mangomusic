@@ -4,6 +4,12 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: rgba(43, 43, 43, 0.95);
+    border-bottom: solid #343434;
+    border-width: 1px;
+    position: sticky;
+    top: 0px;
+
     .player {
         display: flex;
         width: 16vw;
@@ -36,6 +42,9 @@
         width: 30vw;
         max-width: 600px;
         height: 45px;
+        img {
+            height: 45px;
+        }
         .info {
             background-color: #464646;
             border-bottom-right-radius: 2px;
@@ -48,6 +57,25 @@
             .default-info-logo {
                 height: 35px;
                 width: 40px;
+            }
+        }
+        .with-info {
+            width: 100vw;
+            display: flex;
+            background-color: #464646;
+            border-bottom-right-radius: 3px;
+            border-top-right-radius: 3px;
+            flex-direction: column;
+            font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+            color: white;
+            font-size: 14px;
+            justify-content: center;
+            p {
+                padding-left: 16px;
+            }
+            .song-artist {
+                color :#808080;
+                font-size: 12px;
             }
         }
         .default-logo {
@@ -101,7 +129,5 @@
     button:hover {
         cursor: pointer;
     }
-    background-color: #2b2b2b;
-    border-bottom: solid #343434;
-    border-width: 1px;
+    
 }

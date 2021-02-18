@@ -633,12 +633,19 @@ var AlbumShow = /*#__PURE__*/function (_React$Component) {
   _createClass(AlbumShow, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      debugger;
       this.props.fetchAlbum(this.props.match.params.albumId);
     }
   }, {
     key: "render",
     value: function render() {
+      debugger;
       var album = this.props.album;
+
+      if (!album) {
+        return null;
+      }
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "album-show"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -957,7 +964,10 @@ var ArtistShow = /*#__PURE__*/function (_React$Component) {
 
   _createClass(ArtistShow, [{
     key: "componentDidMount",
-    value: function componentDidMount() {
+    value: // constructor(props) {
+    //     super(props);
+    // }
+    function componentDidMount() {
       this.props.fetchArtist(this.props.match.params.artistId);
     }
   }, {
@@ -1228,7 +1238,7 @@ var CurrentSongInfo = function CurrentSongInfo(_ref) {
       src: window.testalbumURL,
       alt: "song-album-cover"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "info"
+      className: "with-info"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "song-name"
     }, currentSong.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -2222,12 +2232,11 @@ var SongsIndexItem = function SongsIndexItem(_ref) {
       playState = _ref.playState,
       currentSong = _ref.currentSong;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "song-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "song-container",
     onClick: function onClick() {
       fetchSong(song.id);
     }
-  }, currentSong && song.id === currentSong.id && playState ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, currentSong && song.id === currentSong.id && playState ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fas fa-pause"
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fas fa-play"

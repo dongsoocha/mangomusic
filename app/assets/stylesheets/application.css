@@ -40,6 +40,26 @@ time, mark, audio, video {
 body {
   height: 100%; }
 
+body::-webkit-scrollbar {
+  background: rgba(43, 43, 43, 0.95);
+  /* color of the tracking area */ }
+
+body::-webkit-scrollbar-thumb {
+  background: gray;
+  height: 10px;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  margin: 10px; }
+
+body::-webkit-scrollbar-button {
+  height: 0px;
+  width: 0px; }
+
+body::-webkit-scrollbar-track {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white; }
+
 .whole-app {
   display: flex;
   flex-direction: column; }
@@ -435,7 +455,7 @@ body {
       text-decoration: none; }
       .album-show .album-show-info .album-show-artist a {
         text-decoration: none;
-        color: #003cff; }
+        color: #1048ff; }
     .album-show .album-show-info .album-year {
       font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
       color: #5c5c5c;
@@ -487,7 +507,8 @@ body {
           cursor: pointer; }
           .album-show .album-show-info .songs-grid .song-container button:hover i {
             visibility: visible;
-            color: #003cff; }
+            color: white;
+            font-size: 15px; }
           .album-show .album-show-info .songs-grid .song-container button:hover p {
             visibility: hidden; }
       .album-show .album-show-info .songs-grid .song-container:hover {
@@ -712,9 +733,11 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #2b2b2b;
+  background-color: rgba(43, 43, 43, 0.95);
   border-bottom: solid #343434;
-  border-width: 1px; }
+  border-width: 1px;
+  position: sticky;
+  top: 0px; }
   .player-toolbar .player {
     display: flex;
     width: 16vw;
@@ -741,6 +764,8 @@ body {
     width: 30vw;
     max-width: 600px;
     height: 45px; }
+    .player-toolbar .current-info img {
+      height: 45px; }
     .player-toolbar .current-info .info {
       background-color: #464646;
       border-bottom-right-radius: 2px;
@@ -753,6 +778,22 @@ body {
       .player-toolbar .current-info .info .default-info-logo {
         height: 35px;
         width: 40px; }
+    .player-toolbar .current-info .with-info {
+      width: 100vw;
+      display: flex;
+      background-color: #464646;
+      border-bottom-right-radius: 3px;
+      border-top-right-radius: 3px;
+      flex-direction: column;
+      font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+      color: white;
+      font-size: 14px;
+      justify-content: center; }
+      .player-toolbar .current-info .with-info p {
+        padding-left: 16px; }
+      .player-toolbar .current-info .with-info .song-artist {
+        color: #808080;
+        font-size: 12px; }
     .player-toolbar .current-info .default-logo {
       height: 35px;
       width: 40px; }

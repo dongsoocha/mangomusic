@@ -19,7 +19,7 @@ const CurrentSongInfo = ({ currentSong }) => {
         return (
         <div className="current-info">
             <img src={window.testalbumURL} alt="song-album-cover"/>
-            <div className="info">
+            <div className="with-info">
                 <p className="song-name">{currentSong.name}</p>
                 <p className="song-artist">{currentSong.artist.name}</p>
             </div>
