@@ -9,8 +9,6 @@ class AlbumShow extends React.Component {
     }
 
     render() {
-        debugger
-        console.log(this.props);
         const { album } = this.props;
         if (!album) {
             return null;

@@ -638,8 +638,6 @@ var AlbumShow = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      debugger;
-      console.log(this.props);
       var album = this.props.album;
 
       if (!album) {
