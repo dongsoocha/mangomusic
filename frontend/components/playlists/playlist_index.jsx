@@ -1,11 +1,11 @@
 import React from 'react';
-import { createPlaylist } from '../../util/playlist_api_util';
 import PlaylistIndexItem from './playlist_index_item';
+import { withRouter } from "react-router";
 
 class PlaylistIndex extends React.Component {
     constructor(props) {
         super(props);
-        
+        // this.createPlaylist = this.createPlaylist.bind(this);
 
     }
 
@@ -13,10 +13,16 @@ class PlaylistIndex extends React.Component {
         this.props.fetchPlaylists();
     }
 
-    componentWillUpdate(prevProps) {
-        if (this.props.playlists !== prevProps.playlists) {
-            console.log('add playlist');
-        }
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.playlists.length !== prevProps.playlists.length) {
+    //         this.props.fetchPlaylists();
+    //     }
+    // }
+
+    createPlaylist(playlist) {
+        this.props.createPlaylist(playlist);
+        // this.props.fetchPlaylists();
+        // this.props.history.push(`/playlists/${playlist.id}`)
     }
 
     render() {
@@ -28,13 +34,13 @@ class PlaylistIndex extends React.Component {
         if (!playlists) return (
             <div>
                 <h3>Playlists</h3>
-                <button onClick={() => createPlaylist(defPlaylist)}>Create</button>
+                <button onClick={() => this.createPlaylist(defPlaylist)}>Create</button>
             </div>
         )
         return (
             <div>
                 <h3>Playlists</h3>
-                <button onClick={() => createPlaylist(defPlaylist)}>Create</button>
+                <button onClick={() => this.createPlaylist(defPlaylist)}>Create</button>
                 <ul className="playlist-index">
                     {
                         playlists.map(playlist => (
@@ -50,4 +56,4 @@ class PlaylistIndex extends React.Component {
     }
 }
 
-export default PlaylistIndex;
+export default withRouter(PlaylistIndex);

@@ -29,10 +29,10 @@ export const fetchPlaylist = playlistId => dispatch => {
 
 export const createPlaylist = playlist => dispatch => {
     return PlaylistAPI.createPlaylist(playlist)
-        .then(playlist => dispatch(receivePlaylist(playlist)));
+        .then(newplaylist => dispatch(receivePlaylist(newplaylist)));
 }
 
 export const updatePlaylist = playlist => dispatch => {
     return PlaylistAPI.updatePlaylist(playlist)
-        .then(playlist => dispatch(receivePlaylist(playlist)));
+        .then(updatedplaylist => dispatch(receivePlaylist(updatedplaylist)));
 }
