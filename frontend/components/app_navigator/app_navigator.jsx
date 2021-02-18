@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PlaylistIndexContainer from '../playlists/playlist_index_container';
 
 const AppNavigator = () => {
     const placeholder = (
@@ -12,7 +13,7 @@ const AppNavigator = () => {
             {/* <button>Listen Now</button> */}
             <button><Link to="/browse" className="link">Browse</Link></button>
             {/* <button>Radio</button> */}
-            <p>Playlists</p>
+            <PlaylistIndexContainer />
         </nav>
     );
 };
