@@ -5,12 +5,12 @@ import SongsIndexContainer from "../songs/songs_index_container";
 
 class AlbumShow extends React.Component {
     componentDidMount() {
-        debugger
         this.props.fetchAlbum(this.props.match.params.albumId);
     }
 
     render() {
         debugger
+        console.log(this.props.album);
         const { album } = this.props;
         if (!album) {
             return null;

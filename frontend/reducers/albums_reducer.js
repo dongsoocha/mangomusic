@@ -8,7 +8,7 @@ export default (state={}, action) => {
         case RECEIVE_ALBUMS:
             return Object.assign({}, action.albums);
         case RECEIVE_ALBUM:
-            return Object.assign({}, state, action.album);
+            return Object.assign({}, state, {[action.album.id]: action.album});
         default: 
             return state;
     }

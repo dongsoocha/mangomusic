@@ -633,13 +633,13 @@ var AlbumShow = /*#__PURE__*/function (_React$Component) {
   _createClass(AlbumShow, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      debugger;
       this.props.fetchAlbum(this.props.match.params.albumId);
     }
   }, {
     key: "render",
     value: function render() {
       debugger;
+      console.log(this.props.album);
       var album = this.props.album;
 
       if (!album) {
@@ -2399,6 +2399,8 @@ document.addEventListener("DOMContentLoaded", function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_album_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/album_actions */ "./frontend/actions/album_actions.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
@@ -2410,7 +2412,7 @@ __webpack_require__.r(__webpack_exports__);
       return Object.assign({}, action.albums);
 
     case _actions_album_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ALBUM"]:
-      return Object.assign({}, state, action.album);
+      return Object.assign({}, state, _defineProperty({}, action.album.id, action.album));
 
     default:
       return state;
