@@ -4,7 +4,9 @@ class User < ApplicationRecord
 
     attr_reader :password
 
-    # SPIRE
+    has_many :playlists,
+        foreign_key: :user_id,
+        class_name: :Playlist
 
     after_initialize :ensure_session_token
 

@@ -12,6 +12,7 @@ const AppNavigator = () => {
             {/* <button>Listen Now</button> */}
             <button><Link to="/browse" className="link">Browse</Link></button>
             {/* <button>Radio</button> */}
+            <p>Playlists</p>
         </nav>
     );
 };

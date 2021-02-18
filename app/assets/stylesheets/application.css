@@ -55,11 +55,6 @@ body::-webkit-scrollbar-button {
   height: 0px;
   width: 0px; }
 
-body::-webkit-scrollbar-track {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: white; }
-
 .whole-app {
   display: flex;
   flex-direction: column; }
@@ -512,7 +507,8 @@ body {
           .album-show .album-show-info .songs-grid .song-container button:hover p {
             visibility: hidden; }
       .album-show .album-show-info .songs-grid .song-container:hover {
-        background-color: #464646; }
+        background-color: #464646;
+        cursor: pointer; }
 
 .album-grid {
   display: grid;
@@ -567,7 +563,8 @@ body {
   border-radius: 20px; }
 
 .browse-songs-grid .browse-song-container:hover {
-  background-color: #464646; }
+  background-color: #464646;
+  cursor: pointer; }
 
 .browse-songs-grid .browse-song-container {
   display: flex;
@@ -618,6 +615,8 @@ body {
       color: #b2b2b2; }
     .browse-songs-grid .browse-song-container .browse-song-text .artist-name-browse, .browse-songs-grid .browse-song-container .browse-song-text .song-name-browse {
       margin-left: 0; }
+  .browse-songs-grid .browse-song-container .browse-song-text:hover {
+    cursor: default; }
 
 .artist-grid {
   display: grid;

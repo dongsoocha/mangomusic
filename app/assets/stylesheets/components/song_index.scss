@@ -9,7 +9,6 @@
     grid-template-rows: repeat(3, 33%);
     overflow-x: scroll;
     overflow-y: hidden;
-    
 }
 
 .browse-songs-grid::-webkit-scrollbar {
@@ -22,6 +21,7 @@
 } 
 .browse-songs-grid .browse-song-container:hover {
     background-color: #464646;
+    cursor: pointer;
 }
 .browse-songs-grid .browse-song-container {
     display: flex;
@@ -76,7 +76,7 @@
             font-size: 14px;
             font-weight: 300;
         }
-        .artist-name-browse{
+        .artist-name-browse {
             
             font-size: 12px;
             font-weight: 300;
@@ -86,5 +86,7 @@
             margin-left: 0;
         }
     }
-
+    .browse-song-text:hover {
+        cursor: default;
+    }
 }

@@ -43,11 +43,6 @@ body::-webkit-scrollbar-button {
 	width: 0px;
 	//for horizontal scrollbar   height: 0px; //for vertical scrollbar 
 }
-body::-webkit-scrollbar-track {
-	margin-top: 10px;    
-	margin-bottom: 10px;
-	color: white;
-}
 
 .whole-app {
 	display: flex;

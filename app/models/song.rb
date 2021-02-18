@@ -7,9 +7,17 @@ class Song < ApplicationRecord
         foreign_key: :album_id,
         class_name: :Album
 
+    has_many :playlist_songs,
+        foreign_key: :song_id,
+        class_name: :PlaylistSong
+        
+    has_many :playlists,
+        through: :playlist_songs,
+        source: :playlist
+
     has_one :artist,
         through: :album,
         source: :artist
-
+        
     has_one_attached :audio
 end

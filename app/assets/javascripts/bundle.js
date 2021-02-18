@@ -741,7 +741,7 @@ var AppNavigator = function AppNavigator() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/browse",
     className: "link"
-  }, "Browse")));
+  }, "Browse")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Playlists"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AppNavigator);
