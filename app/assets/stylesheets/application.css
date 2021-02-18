@@ -476,37 +476,88 @@ body {
         float: right;
         width: 100%;
         padding-left: 20px; }
-      .album-show .album-show-info .songs-grid .song-container {
-        padding-left: 20px;
-        display: flex;
+      .album-show .album-show-info .songs-grid .song-container-container {
         border-bottom: solid #343434;
         border-width: 1px;
+        display: flex;
         align-items: center;
-        text-align: left; }
-        .album-show .album-show-info .songs-grid .song-container button {
-          background-color: transparent;
-          appearance: none;
-          border: none;
-          outline: none;
+        justify-content: space-between; }
+        .album-show .album-show-info .songs-grid .song-container-container .song-container {
+          padding-left: 20px;
           display: flex;
-          width: 29.3px; }
-          .album-show .album-show-info .songs-grid .song-container button i {
-            margin-bottom: -5px;
-            font-size: 20px;
-            visibility: hidden; }
-          .album-show .album-show-info .songs-grid .song-container button p {
-            margin-left: -16px;
-            visibility: visible;
-            width: 100%; }
-        .album-show .album-show-info .songs-grid .song-container button:hover {
-          cursor: pointer; }
-          .album-show .album-show-info .songs-grid .song-container button:hover i {
-            visibility: visible;
+          align-items: center;
+          text-align: left;
+          width: 80%;
+          height: 100%; }
+          .album-show .album-show-info .songs-grid .song-container-container .song-container button {
+            background-color: transparent;
+            appearance: none;
+            border: none;
+            outline: none;
+            display: flex;
+            width: 29.3px; }
+            .album-show .album-show-info .songs-grid .song-container-container .song-container button i {
+              align-self: center;
+              margin-bottom: -5px;
+              font-size: 20px;
+              visibility: hidden; }
+            .album-show .album-show-info .songs-grid .song-container-container .song-container button p {
+              margin-left: -16px;
+              visibility: visible;
+              width: 100%; }
+          .album-show .album-show-info .songs-grid .song-container-container .song-container button:hover {
+            cursor: pointer; }
+            .album-show .album-show-info .songs-grid .song-container-container .song-container button:hover i {
+              visibility: visible;
+              color: white;
+              font-size: 15px; }
+            .album-show .album-show-info .songs-grid .song-container-container .song-container button:hover p {
+              visibility: hidden; }
+        .album-show .album-show-info .songs-grid .song-container-container i {
+          padding-right: 20px;
+          color: white; }
+          .album-show .album-show-info .songs-grid .song-container-container i ul {
+            display: none; }
+        .album-show .album-show-info .songs-grid .song-container-container i:hover ul {
+          font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+          color: white;
+          font-weight: 400;
+          font-size: 14px;
+          text-align: left;
+          padding-top: 5px;
+          margin-left: -120px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 180px;
+          position: absolute;
+          background-color: #464646;
+          opacity: .9;
+          border: 1px solid #343434;
+          border-radius: 5px; }
+          .album-show .album-show-info .songs-grid .song-container-container i:hover ul li {
+            padding-left: 7px;
+            padding-bottom: 2px; }
+          .album-show .album-show-info .songs-grid .song-container-container i:hover ul li:hover {
+            cursor: default; }
+          .album-show .album-show-info .songs-grid .song-container-container i:hover ul button {
+            width: 100%;
+            background: none;
+            border: none;
+            appearance: none;
+            outline: none;
+            font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
             color: white;
-            font-size: 15px; }
-          .album-show .album-show-info .songs-grid .song-container button:hover p {
-            visibility: hidden; }
-      .album-show .album-show-info .songs-grid .song-container:hover {
+            font-weight: 400;
+            font-size: 14px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            text-align: left; }
+          .album-show .album-show-info .songs-grid .song-container-container i:hover ul button:hover {
+            cursor: pointer;
+            background: #0b44ff;
+            border-radius: 5px; }
+      .album-show .album-show-info .songs-grid .song-container-container:hover {
         background-color: #464646;
         cursor: pointer; }
 

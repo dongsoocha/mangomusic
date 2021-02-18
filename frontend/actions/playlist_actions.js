@@ -36,3 +36,7 @@ export const updatePlaylist = playlist => dispatch => {
     return PlaylistAPI.updatePlaylist(playlist)
         .then(updatedplaylist => dispatch(receivePlaylist(updatedplaylist)));
 }
+
+export const createPlaylistSong = playlistSong => dispatch => {
+    return PlaylistAPI.createPlaylist(playlistSong)
+}
