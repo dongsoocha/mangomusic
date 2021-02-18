@@ -639,7 +639,7 @@ var AlbumShow = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       debugger;
-      console.log(this.props.album);
+      console.log(this.props);
       var album = this.props.album;
 
       if (!album) {
@@ -655,7 +655,7 @@ var AlbumShow = /*#__PURE__*/function (_React$Component) {
         className: "album-show-info"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "album-show-name"
-      }, album.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      }, album.albumName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "album-show-artist"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/artists/".concat(album.artist.id)
@@ -693,7 +693,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    album: state.entities.albums[ownProps.match.params.albumId - 1]
+    album: state.entities.albums[ownProps.match.params.albumId]
   };
 };
 
@@ -964,10 +964,7 @@ var ArtistShow = /*#__PURE__*/function (_React$Component) {
 
   _createClass(ArtistShow, [{
     key: "componentDidMount",
-    value: // constructor(props) {
-    //     super(props);
-    // }
-    function componentDidMount() {
+    value: function componentDidMount() {
       this.props.fetchArtist(this.props.match.params.artistId);
     }
   }, {
@@ -976,6 +973,7 @@ var ArtistShow = /*#__PURE__*/function (_React$Component) {
       var _this = this;
 
       var artist = this.props.artist;
+      if (!artist) return null;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "artist-show"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1030,7 +1028,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    artist: state.entities.artists[ownProps.match.params.artistId - 1]
+    artist: state.entities.artists[ownProps.match.params.artistId]
   };
 };
 
@@ -2431,6 +2429,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_artist_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/artist_actions */ "./frontend/actions/artist_actions.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
@@ -2442,7 +2442,7 @@ __webpack_require__.r(__webpack_exports__);
       return Object.assign({}, action.artists);
 
     case _actions_artist_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ARTIST"]:
-      return Object.assign({}, state, action.artist);
+      return Object.assign({}, state, _defineProperty({}, action.artist.id, action.artist));
 
     default:
       return state;

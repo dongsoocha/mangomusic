@@ -9,7 +9,7 @@ export default (state = {}, action) => {
         case RECEIVE_ARTISTS:
             return Object.assign({}, action.artists);
         case RECEIVE_ARTIST:
-            return Object.assign({}, state, action.artist);
+            return Object.assign({}, state, {[action.artist.id]: action.artist });
         default:
             return state;
     }

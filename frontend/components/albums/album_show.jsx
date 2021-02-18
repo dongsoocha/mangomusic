@@ -10,7 +10,7 @@ class AlbumShow extends React.Component {
 
     render() {
         debugger
-        console.log(this.props.album);
+        console.log(this.props);
         const { album } = this.props;
         if (!album) {
             return null;
@@ -20,7 +20,7 @@ class AlbumShow extends React.Component {
             <div className="album-show">
                 <img src={window.porterURL} alt="porter url" />
                 <div className="album-show-info">
-                    <h1 className="album-show-name">{album.name}</h1>
+                    <h1 className="album-show-name">{album.albumName}</h1>
                     <h1 className="album-show-artist">
                         <Link to={`/artists/${album.artist.id}`} >{album.artist.name}</Link>
                     </h1>

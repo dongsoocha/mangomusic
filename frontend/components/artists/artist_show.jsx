@@ -3,18 +3,13 @@ import { Link } from 'react-router-dom';
 import AlbumIndexItem from "../albums/album_index_item";
 
 class ArtistShow extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    // }
-
-
     componentDidMount() {
         this.props.fetchArtist(this.props.match.params.artistId);
     }
 
     render() {
         const { artist } = this.props;
-        
+        if (!artist) return null;
         return (
             <div className="artist-show">
                 <div className="artist-box">
