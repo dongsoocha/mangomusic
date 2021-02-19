@@ -16,8 +16,6 @@
             display: flex;
             justify-content: space-between;
             padding-bottom: 10px;
-            border-bottom: solid #343434;
-            border-width: 1px;    
 
             button {
                 background-color: #FA2D48;
@@ -76,7 +74,9 @@
         //     padding-top: 10px;
         //     padding-bottom: 30px;
         // }
-        .playlist-show{
+        .playlist-show {
+            border-top: solid #343434;
+            border-width: 1px; 
             .songs-grid {
                 
                 display: grid;
@@ -89,7 +89,6 @@
                     color: white;
                     font-weight: 300;
                     font-size: 14px;
-                    
                 }
                 .song-name {
                     float: right;
@@ -171,6 +170,7 @@
                             li {
                                 padding-left: 7px;
                                 padding-bottom: 2px;
+                                color: #808080;
                             }
                             li:hover {
                                 cursor: default;
@@ -197,6 +197,9 @@
                                 border-radius: 5px;
                             }
                         }
+                        ul:hover {
+                            cursor: default;
+                        }
                     }
                     button {
                         background: transparent;
@@ -211,7 +214,7 @@
                     }
                     button:hover {
                         color: #FA2D48;
-                        background-color: white;
+                        background-color: rgb(40, 40, 40);
                         cursor: pointer;
                         border-radius: 6px;
                     }

@@ -139,6 +139,7 @@
                         li {
                             padding-left: 7px;
                             padding-bottom: 2px;
+                            color: #808080;
                         }
                         li:hover {
                             cursor: default;
@@ -162,6 +163,9 @@
                             background: rgb(11, 68, 255);
                             border-radius: 5px;
                         }
+                    }
+                    ul:hover {
+                        cursor: default;
                     }
                 }
                 
