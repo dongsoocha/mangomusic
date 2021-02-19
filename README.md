@@ -14,6 +14,7 @@ A clone of Apple Music, Mango Music was created to allow the listener to create 
 Table of Contents
 * [Features](https://github.com/Chubbibanana/mangomusic/#features)
 * [Splash](https://github.com/Chubbibanana/mangomusic/#splash)
+* [Playlists](https://github.com/Chubbibanana/mangomusic/#playlists)
 * [Song Displays](https://github.com/Chubbibanana/mangomusic/#song-displays)
 * [Artists](https://github.com/Chubbibanana/mangomusic/#artists)
 * [Build](https://github.com/Chubbibanana/mangomusic/#built-with)
@@ -31,6 +32,32 @@ Table of Contents
 * Login button for the already initiated
 * An 'upsell' splash page
 
+### Playlists
+![Playlist](https://github.com/Chubbibanana/mangomusic/blob/main/app/assets/images/readme/ReademeVid.gif)
+* Song add/delete
+* Smooth navigation between playlists
+* Updating the playlist title was tricky due to props and state needing to be different, this was achieved with ComponentWillReceiveProps
+* ```
+    constructor(props) {
+        super(props);
+        this.state = this.props.playlist;
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.updatePlaylist(this.state);
+    }
+
+    componentWillReceiveProps(nextProps) {
+        this.setState(nextProps.playlist);
+        // this.setState(nextProps.playlist);
+    }
+    
+    update(name) {
+        return e => this.setState({ name: e.currentTarget.value});
+    }
 ### Song Displays
 All same-component lists are styled using CSS grid layout. 
 * Ability to play/pause directly from the song item
