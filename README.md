@@ -11,6 +11,12 @@ A clone of Apple Music, Mango Music was created to allow the listener to create 
 ## See it in action!
 [Mango Music Live](https://mango-music.herokuapp.com/#/)
 
+Table of Contents
+* [Features](https://github.com/Chubbibanana/mangomusic/#features)
+* [Splash](https://github.com/Chubbibanana/mangomusic/#splash)
+* [Song Displays](https://github.com/Chubbibanana/mangomusic/#song-displays)
+* [Artists](https://github.com/Chubbibanana/mangomusic/#artists)
+* [Build](https://github.com/Chubbibanana/mangomusic/#built-with)
 ## Features
 * Quick and easy User Authentication
 * Music Playback/ Pause
