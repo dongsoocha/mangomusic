@@ -157,18 +157,17 @@
                             color: white;
                             font-weight: 400;
                             font-size: 14px;
-                            text-align: left;
                             padding-top: 5px;
                             margin-left: -120px;
                             display: flex;
                             flex-direction: column;
-                            align-items: flex-start;
+                            align-items: center;
                             width: 180px;
                             position: absolute;
                             background-color: #464646;
                             opacity: .9;
                             border: 1px solid #343434;
-                            border-radius: 5px;                       
+                            border-radius: 5px;                      
                             li {
                                 padding-left: 7px;
                                 padding-bottom: 2px;
@@ -177,6 +176,7 @@
                                 cursor: default;
                             }
                             button {
+                                height: 20px;
                                 width: 100%;
                                 background: none;
                                 border: none;
@@ -189,6 +189,7 @@
                                 padding-top: 2px;
                                 padding-bottom: 2px;
                                 text-align: left;
+                                margin: 0px;
                             }
                             button:hover {
                                 cursor: pointer;
