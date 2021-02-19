@@ -34,6 +34,27 @@ Table of Contents
 ### Song Displays
 All same-component lists are styled using CSS grid layout. 
 * Ability to play/pause directly from the song item
+* Manipulating audio not using VanillaDOM but rather, React's inbuilt refs
+* Challenge to have the information loaded into the player bar be consistent with the song items to click
+* Handled the audio load in the actual player bar, and only passed song information into it on click
+* Because Mango Music does not use HTML5's inbuilt controls, I had to figure out a way to toggle the play and pause, while sending that information to my songs item component
+
+* ```
+       componentDidUpdate(prevProps) {
+         if (prevProps.playState !== this.props.playState || 
+             prevProps.currentSong !== this.props.currentSong) {
+           if (this.props.playState) {
+             this.audio.current.play();
+           } else {
+             this.audio.current.pause();
+           }
+         }
+       }
+
+       toggle() {
+           this.props.togglePlayState(this.props.currentSong.id);
+       }
+       
 * In albums, ability to add to any of the user-owned playlists
 * Display window maintains info even if navigating to different page
 
