@@ -216,7 +216,7 @@ table {
 /* app navigator */
 .app-nav {
   display: flex;
-  height: 100vw;
+  height: 100%;
   flex-direction: column;
   float: left;
   width: 259px;
