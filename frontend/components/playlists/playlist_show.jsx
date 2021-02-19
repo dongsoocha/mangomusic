@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { Link } from 'react-router-dom';
 import PlaylistSongIndexItem from '../songs/playlist_song_index_item';
 import PlaylistEditFormContainer from './playlist_edit_form_container';
+import PlaylistDeleteContainer from './playlist_delete_container';
 
 class PlaylistShow extends React.Component {
     componentDidMount() {
@@ -10,7 +11,8 @@ class PlaylistShow extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (prevProps.match.params.playlistId !== this.props.match.params.playlistId) {
+        if ((prevProps.match.params.playlistId !== this.props.match.params.playlistId) || 
+            (prevProps.playlist && prevProps.playlist.songs.length !== this.props.playlist.songs.length)){
             this.props.fetchPlaylist(this.props.match.params.playlistId);
         }
     }
@@ -29,6 +31,7 @@ class PlaylistShow extends React.Component {
                             {
                                 playlist.songs.map(song => (
                                     <PlaylistSongIndexItem 
+                                        playlist={playlist}
                                         song={song}
                                         fetchSong={fetchSong}
                                         key={song.id}

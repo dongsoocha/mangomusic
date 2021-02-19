@@ -950,7 +950,10 @@ body {
     margin-left: 30px; }
     .playlist-show .playlist-show-info .playlist-edit {
       display: flex;
-      justify-content: space-between; }
+      justify-content: space-between;
+      padding-bottom: 10px;
+      border-bottom: solid #343434;
+      border-width: 1px; }
       .playlist-show .playlist-show-info .playlist-edit button {
         background-color: #FA2D48;
         color: white;
@@ -974,65 +977,64 @@ body {
         appearance: none; }
       .playlist-show .playlist-show-info .playlist-edit input:focus {
         background: #343434; }
-    .playlist-show .playlist-show-info .songs-grid {
+    .playlist-show .playlist-show-info .playlist-show .songs-grid {
       display: grid;
       width: 100%;
       grid-template-columns: 100%;
       grid-auto-rows: 50px;
       overflow: hidden; }
-      .playlist-show .playlist-show-info .songs-grid p {
+      .playlist-show .playlist-show-info .playlist-show .songs-grid p {
         font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
         color: white;
         font-weight: 300;
         font-size: 14px; }
-      .playlist-show .playlist-show-info .songs-grid .song-name {
+      .playlist-show .playlist-show-info .playlist-show .songs-grid .song-name {
         float: right;
         width: 100%;
         padding-left: 20px; }
-      .playlist-show .playlist-show-info .songs-grid .song-container-container {
+      .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container {
         border-bottom: solid #343434;
         border-width: 1px;
         display: flex;
         align-items: center;
         justify-content: space-between; }
-        .playlist-show .playlist-show-info .songs-grid .song-container-container .song-container {
+        .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container .song-container {
           padding-left: 20px;
           display: flex;
           align-items: center;
           text-align: left;
           width: 80%;
           height: 100%; }
-          .playlist-show .playlist-show-info .songs-grid .song-container-container .song-container button {
+          .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container .song-container button {
             background-color: transparent;
             appearance: none;
             border: none;
             outline: none;
             display: flex;
             width: 29.3px; }
-            .playlist-show .playlist-show-info .songs-grid .song-container-container .song-container button i {
+            .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container .song-container button i {
               align-self: center;
               margin-bottom: -5px;
               font-size: 20px;
               visibility: hidden; }
-            .playlist-show .playlist-show-info .songs-grid .song-container-container .song-container button p {
+            .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container .song-container button p {
               margin-left: -16px;
               visibility: visible;
               width: 100%; }
-          .playlist-show .playlist-show-info .songs-grid .song-container-container .song-container button:hover {
+          .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container .song-container button:hover {
             cursor: pointer; }
-            .playlist-show .playlist-show-info .songs-grid .song-container-container .song-container button:hover i {
+            .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container .song-container button:hover i {
               visibility: visible;
               color: white;
               font-size: 15px; }
-            .playlist-show .playlist-show-info .songs-grid .song-container-container .song-container button:hover p {
+            .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container .song-container button:hover p {
               visibility: hidden; }
-        .playlist-show .playlist-show-info .songs-grid .song-container-container i {
-          padding-right: 20px;
+        .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container i {
           color: white; }
-          .playlist-show .playlist-show-info .songs-grid .song-container-container i ul {
+          .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container i ul {
             display: none;
             transition: all 0.2s; }
-        .playlist-show .playlist-show-info .songs-grid .song-container-container i:hover ul {
+        .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container i:hover ul {
           font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
           color: white;
           font-weight: 400;
@@ -1049,12 +1051,12 @@ body {
           opacity: .9;
           border: 1px solid #343434;
           border-radius: 5px; }
-          .playlist-show .playlist-show-info .songs-grid .song-container-container i:hover ul li {
+          .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container i:hover ul li {
             padding-left: 7px;
             padding-bottom: 2px; }
-          .playlist-show .playlist-show-info .songs-grid .song-container-container i:hover ul li:hover {
+          .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container i:hover ul li:hover {
             cursor: default; }
-          .playlist-show .playlist-show-info .songs-grid .song-container-container i:hover ul button {
+          .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container i:hover ul button {
             width: 100%;
             background: none;
             border: none;
@@ -1067,11 +1069,26 @@ body {
             padding-top: 2px;
             padding-bottom: 2px;
             text-align: left; }
-          .playlist-show .playlist-show-info .songs-grid .song-container-container i:hover ul button:hover {
+          .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container i:hover ul button:hover {
             cursor: pointer;
             background: #0b44ff;
             border-radius: 5px; }
-      .playlist-show .playlist-show-info .songs-grid .song-container-container:hover {
+        .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container button {
+          background: transparent;
+          color: white;
+          margin-left: -40px;
+          font-size: 30px;
+          outline: none;
+          appearance: none;
+          border: none;
+          margin-top: -5px;
+          line-height: .6; }
+        .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container button:hover {
+          color: #FA2D48;
+          background-color: white;
+          cursor: pointer;
+          border-radius: 6px; }
+      .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container:hover {
         background-color: #464646;
         cursor: pointer; }
 

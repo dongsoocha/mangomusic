@@ -35,9 +35,10 @@ export const createPlaylistSong = playlist_song => {
     })
 }
 
-// export const deletePlaylistSong = playlist_song => {
-//     return $.ajax({
-//         method: 'DELETE',
-//         url: 'api/playlist_songs/'
-//     })
-// }
+export const deletePlaylistSong = playlist_song => {
+    return $.ajax({
+        method: 'DELETE',
+        url: 'api/playlist_songs/123',
+        data: { playlist_song }
+    })
+}

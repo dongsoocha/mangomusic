@@ -2,8 +2,9 @@ import React, { useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import AddToPlaylistFormContainer from '../playlists/add_to_playlist_form_container';
+import PlaylistDeleteContainer from '../playlists/playlist_delete_container';
 
-const PlaylistIndexItem = ({ song, fetchSong, togglePlayState, playState, currentSong }) => {
+const PlaylistIndexItem = ({ playlist, song, fetchSong, togglePlayState, playState, currentSong }) => {
     return (
         <div className="song-container-container">
             <li className="song-container" onClick={() => {
@@ -15,6 +16,7 @@ const PlaylistIndexItem = ({ song, fetchSong, togglePlayState, playState, curren
                 <p className="song-name">{song.name}</p>
             </li>
             <AddToPlaylistFormContainer songId={song.id} />
+            <PlaylistDeleteContainer song={song} playlist={playlist} />
         </div>
     )
 };

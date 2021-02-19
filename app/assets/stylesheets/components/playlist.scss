@@ -15,6 +15,10 @@
         .playlist-edit {
             display: flex;
             justify-content: space-between;
+            padding-bottom: 10px;
+            border-bottom: solid #343434;
+            border-width: 1px;    
+
             button {
                 background-color: #FA2D48;
                 color: white;
@@ -71,136 +75,151 @@
         //     text-align: left;
         //     padding-top: 10px;
         //     padding-bottom: 30px;
-        //     border-bottom: solid #343434;
-        //     border-width: 1px; 
         // }
-        .songs-grid {
-            display: grid;
-            width: 100%;
-            grid-template-columns: 100%;
-            grid-auto-rows: 50px;
-            overflow: hidden;
-            p {
-                font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-                color: white;
-                font-weight: 300;
-                font-size: 14px;
+        .playlist-show{
+            .songs-grid {
                 
-            }
-            .song-name {
-                float: right;
+                display: grid;
                 width: 100%;
-                padding-left: 20px;
-            }
-            .song-container-container {
-                border-bottom: solid #343434;
-                border-width: 1px;     
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                .song-container {
+                grid-template-columns: 100%;
+                grid-auto-rows: 50px;
+                overflow: hidden;
+                p {
+                    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+                    color: white;
+                    font-weight: 300;
+                    font-size: 14px;
+                    
+                }
+                .song-name {
+                    float: right;
+                    width: 100%;
                     padding-left: 20px;
+                }
+                .song-container-container {
+                    border-bottom: solid #343434;
+                    border-width: 1px; 
                     display: flex;
                     align-items: center;
-                    text-align: left;
-                    width: 80%;
-                    height: 100%;
-                    button {
-                        background-color: transparent;
-                        appearance: none;
-                        border: none;
-                        outline: none;
+                    justify-content: space-between;
+                    .song-container {
+                        padding-left: 20px;
                         display: flex;
-                        width: 29.3px;
-                        i {
-                            align-self: center;
-                            
-                            margin-bottom: -5px;
-                            font-size: 20px;
-                            visibility: hidden;
-                        }
-                        p {
-                            margin-left: -16px;
-                            visibility: visible;
-                            width: 100%;
-                        }
-
-                        
-                    }
-                    button:hover {
-                        cursor: pointer;
-                        i {
-                            visibility: visible;
-                            color: white;
-                            font-size: 15px;
-                        }
-                        p {
-                            visibility: hidden;
-                        }
-                    }
-                }
-                // dropdown logic
-                i {
-                    padding-right: 20px;
-                    color: white;
-                    ul {
-                        display: none;
-                        transition: all 0.2s;
-                    }
-                }
-                i:hover {
-                    ul {
-                        font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-                        color: white;
-                        font-weight: 400;
-                        font-size: 14px;
+                        align-items: center;
                         text-align: left;
-                        padding-top: 5px;
-                        margin-left: -120px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        width: 180px;
-                        position: absolute;
-                        background-color: #464646;
-                        opacity: .9;
-                        border: 1px solid #343434;
-                        border-radius: 5px;                       
-                        li {
-                            padding-left: 7px;
-                            padding-bottom: 2px;
-                        }
-                        li:hover {
-                            cursor: default;
-                        }
+                        width: 80%;
+                        height: 100%;
                         button {
-                            width: 100%;
-                            background: none;
-                            border: none;
+                            background-color: transparent;
                             appearance: none;
+                            border: none;
                             outline: none;
+                            display: flex;
+                            width: 29.3px;
+                            i {
+                                align-self: center;
+                                
+                                margin-bottom: -5px;
+                                font-size: 20px;
+                                visibility: hidden;
+                            }
+                            p {
+                                margin-left: -16px;
+                                visibility: visible;
+                                width: 100%;
+                            }
+
+                            
+                        }
+                        button:hover {
+                            cursor: pointer;
+                            i {
+                                visibility: visible;
+                                color: white;
+                                font-size: 15px;
+                            }
+                            p {
+                                visibility: hidden;
+                            }
+                        }
+                    }
+                    // dropdown logic
+                    i {
+                        color: white;
+                        ul {
+                            display: none;
+                            transition: all 0.2s;
+                        }
+                    }
+                    i:hover {
+                        ul {
                             font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
                             color: white;
                             font-weight: 400;
                             font-size: 14px;
-                            padding-top: 2px;
-                            padding-bottom: 2px;
                             text-align: left;
-                        }
-                        button:hover {
-                            cursor: pointer;
-                            background: rgb(11, 68, 255);
-                            border-radius: 5px;
+                            padding-top: 5px;
+                            margin-left: -120px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            width: 180px;
+                            position: absolute;
+                            background-color: #464646;
+                            opacity: .9;
+                            border: 1px solid #343434;
+                            border-radius: 5px;                       
+                            li {
+                                padding-left: 7px;
+                                padding-bottom: 2px;
+                            }
+                            li:hover {
+                                cursor: default;
+                            }
+                            button {
+                                width: 100%;
+                                background: none;
+                                border: none;
+                                appearance: none;
+                                outline: none;
+                                font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+                                color: white;
+                                font-weight: 400;
+                                font-size: 14px;
+                                padding-top: 2px;
+                                padding-bottom: 2px;
+                                text-align: left;
+                            }
+                            button:hover {
+                                cursor: pointer;
+                                background: rgb(11, 68, 255);
+                                border-radius: 5px;
+                            }
                         }
                     }
+                    button {
+                        background: transparent;
+                        color: white;
+                        margin-left: -40px;
+                        font-size: 30px;
+                        outline: none;
+                        appearance: none;
+                        border: none;
+                        margin-top: -5px;
+                        line-height: .6;
+                    }
+                    button:hover {
+                        color: #FA2D48;
+                        background-color: white;
+                        cursor: pointer;
+                        border-radius: 6px;
+                    }
                 }
-                
-            }
-            .song-container-container:hover {
-                background-color: #464646;
-                cursor: pointer;
+                .song-container-container:hover {
+                    background-color: #464646;
+                    cursor: pointer;
+                }
             }
         }
-
     }
 }

@@ -40,3 +40,8 @@ export const updatePlaylist = playlist => dispatch => {
 export const createPlaylistSong = playlistSong => dispatch => {
     return PlaylistAPI.createPlaylist(playlistSong)
 }
+
+export const deletePlaylistSong = playlistSong => dispatch => {
+    return PlaylistAPI.deletePlaylistSong(playlistSong)
+        .then(updatedPlaylist => dispatch(receivePlaylist(updatedPlaylist)));
+}
