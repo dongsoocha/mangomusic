@@ -996,7 +996,7 @@ body {
         .playlist-show .playlist-show-info .playlist-show .songs-grid .song-name {
           float: right;
           width: 100%;
-          padding-left: 20px; }
+          margin-left: 20px; }
         .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container {
           border-bottom: solid #343434;
           border-width: 1px;
@@ -1004,7 +1004,6 @@ body {
           align-items: center;
           justify-content: space-between; }
           .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container .song-container {
-            padding-left: 20px;
             display: flex;
             align-items: center;
             text-align: left;
@@ -1016,7 +1015,8 @@ body {
               border: none;
               outline: none;
               display: flex;
-              width: 29.3px; }
+              width: 29.3px;
+              margin-left: 20px; }
               .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container .song-container button i {
                 align-self: center;
                 margin-bottom: -5px;
@@ -1027,7 +1027,8 @@ body {
                 visibility: visible;
                 width: 100%; }
             .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container .song-container button:hover {
-              cursor: pointer; }
+              cursor: pointer;
+              background-color: #464646; }
               .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container .song-container button:hover i {
                 visibility: visible;
                 color: white;

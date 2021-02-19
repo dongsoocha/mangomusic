@@ -93,7 +93,7 @@
                 .song-name {
                     float: right;
                     width: 100%;
-                    padding-left: 20px;
+                    margin-left: 20px;
                 }
                 .song-container-container {
                     border-bottom: solid #343434;
@@ -102,7 +102,7 @@
                     align-items: center;
                     justify-content: space-between;
                     .song-container {
-                        padding-left: 20px;
+                        // padding-left: 20px;
                         display: flex;
                         align-items: center;
                         text-align: left;
@@ -115,6 +115,7 @@
                             outline: none;
                             display: flex;
                             width: 29.3px;
+                            margin-left: 20px;
                             i {
                                 align-self: center;
                                 
@@ -132,10 +133,12 @@
                         }
                         button:hover {
                             cursor: pointer;
+                            background-color: #464646;
                             i {
                                 visibility: visible;
                                 color: white;
                                 font-size: 15px;
+
                             }
                             p {
                                 visibility: hidden;
