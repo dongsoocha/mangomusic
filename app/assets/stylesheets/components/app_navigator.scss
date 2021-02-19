@@ -35,6 +35,57 @@
     button .link:hover {
         cursor: pointer;
     }
+    .playlist-index {
+        width: 100%;
+        .playlist-header {
+            display: flex;
+            padding-left: 32px;
+            padding-right: 10px;
+            justify-content: space-between;
+            align-items: center;
+            h3 {
+                font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+                font-size: 10px;
+                font-weight: 350;
+                color: rgb(194, 194, 194);
+            }
+            button {
+                line-height: 1;
+                color: rgb(194, 194, 194);
+                font-size: 22px;
+            }
+            button:hover {
+                background-color: rgb(11, 68, 255);
+            }
+        }
+        ul {
+            li{
+                margin-left: 31px;
+                margin-right: 31px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                padding-left: 8px;
+                padding-right: 8px;
+                a{
+                    text-decoration: none;
+                    color: rgb(194, 194, 194);
+                    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+                    font-size: 14px;
+                    font-weight: 350;
+                    padding-left: 3px;
+                }
+                i {
+                    visibility: visible;
+                    color: white;
+                    font-size: 17px;
+                }
+            }
+            li:hover {
+                background-color: #727272;
+                border-radius: 5px;
+            }
+        }
+    }
 }
 
 

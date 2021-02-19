@@ -23,7 +23,7 @@ class AlbumShow extends React.Component {
                         <Link to={`/artists/${album.artist.id}`} >{album.artist.name}</Link>
                     </h1>
                     <h1 className="album-year">Year: {album.releaseDate.slice(-4)}</h1>
-                    < SongsIndexContainer className="album-show"albumId={album.id} />
+                    < SongsIndexContainer className="album-show" albumId={album.id} />
                 </div>
             </div>
         );

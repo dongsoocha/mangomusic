@@ -28,6 +28,11 @@ body {
    height: 100%;
 }
 
+a {
+	appearance: none;
+	outline: none;
+	text-decoration: none;
+}
 body::-webkit-scrollbar {
         background: rgba(43, 43, 43, 0.95);        /* color of the tracking area */
 } 

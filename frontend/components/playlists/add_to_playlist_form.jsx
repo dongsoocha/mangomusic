@@ -13,6 +13,7 @@ class AddToPlaylistForm extends React.Component {
         e.preventDefault();
         const pSong = Object.assign({}, this.state, {playlist_id: e.target.value});
         this.props.createPlaylistSong(pSong);
+        // e.target.style.display='none';
     }
 
     render() {

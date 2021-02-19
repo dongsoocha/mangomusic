@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
-import AddToPlaylistFormContainer from '../playlists/add_to_playlist_form_container';
 
 const BrowseIndexItem = ({ song, fetchSong, currentSong, playState }) => {
     return (

@@ -1,4 +1,4 @@
-.album-show {
+.playlist-show {
     max-width: 1600px;
     width: 93%;
     display: flex;
@@ -9,44 +9,74 @@
         height: 100%;
         border-radius: 5px;
     }
-    .album-show-info {
+    .playlist-show-info {
         width: 80%;
         margin-left: 30px;
-        .album-show-name {
-            font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-            color: white;
-            font-weight: 500;
-            font-size: 30px;
-            text-align: left;
-        }
-        .album-show-artist {
-            font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-            
-            font-weight: 400;
-            font-size: 20px;
-            text-align: left;
-            padding-top: 10px;
-            width: 100%;
-            text-decoration: none;
-            a {
-                text-decoration: none;
-                color: rgb(16, 72, 255);
+        .playlist-edit {
+            display: flex;
+            justify-content: space-between;
+            button {
+                background-color: #FA2D48;
+                color: white;
+                outline: none;
+                appearance: none;
+                border-radius: 3px;
+                border: none;
+                height: 100%;
+                margin-right: 90px;
+                align-self: flex-end;
+            }
+            input {
+                width: 80%;
+                height: 50px;
+                background: transparent;
+                font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+                color: white;
+                font-weight: 500;
+                font-size: 30px;
+                outline: none;
+                border: none;
+                appearance: none;
+            }
+            input:focus {
+                background: #343434;
             }
         }
-        .album-year {
-            font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-            color: rgb(92, 92, 92);
-            font-weight: 200;
-            font-size: 12px;
-            text-align: left;
-            padding-top: 10px;
-            padding-bottom: 30px;
-            border-bottom: solid #343434;
-            border-width: 1px; 
-        }
+        // .playlist-show-name {
+        //     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+        //     color: white;
+        //     font-weight: 500;
+        //     font-size: 30px;
+        //     text-align: left;
+        // }
+        // .playlist-show-artist {
+        //     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+            
+        //     font-weight: 400;
+        //     font-size: 20px;
+        //     text-align: left;
+        //     padding-top: 10px;
+        //     width: 100%;
+        //     text-decoration: none;
+        //     a {
+        //         text-decoration: none;
+        //         color: rgb(16, 72, 255);
+        //     }
+        // }
+        // .playlist-year {
+        //     font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+        //     color: rgb(92, 92, 92);
+        //     font-weight: 200;
+        //     font-size: 12px;
+        //     text-align: left;
+        //     padding-top: 10px;
+        //     padding-bottom: 30px;
+        //     border-bottom: solid #343434;
+        //     border-width: 1px; 
+        // }
         .songs-grid {
             display: grid;
-            max-width: 100%;
+            width: 100%;
             grid-template-columns: 100%;
             grid-auto-rows: 50px;
             overflow: hidden;
@@ -172,47 +202,5 @@
             }
         }
 
-    }
-}
-
-.album-grid {
-    display: grid;
-    height: 100%;
-    width: 100%;
-    grid-auto-flow: column;
-    grid-auto-columns: 50%;
-    grid-template-rows: 100%;
-    li .album-picture-link img {
-        height: 100%;
-        width: 100%;
-        border-radius: 5px;
-    }
-    li {
-        display: flex;
-        flex-direction: column;
-        margin-right: 5%;
-    }
-
-    li .album-outter-link p {
-        font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-        color: white;
-        line-height: 1.5;
-        font-size: 14px;
-        font-weight: 300;
-        text-decoration: none;
-    }
-    li .album-outter-link p {
-        text-decoration: none;
-    }
-
-    li .album-outter-link .album-artist-link {
-        font-size: 10px;
-        font-weight: 300;
-        color: #b2b2b2;
-    }
-
-    li .album-outter-link {
-        display: flex;
-        flex-direction: column;
     }
 }

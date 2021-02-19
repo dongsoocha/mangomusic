@@ -8,7 +8,7 @@ const PlaylistReducer = (state = {}, action) => {
 
     switch(action.type) {
         case RECEIVE_ALL_PLAYLISTS:
-            return Object.assign({}, state, action.playlists);
+            return action.playlists;
         case RECEIVE_PLAYLIST:
             return Object.assign({}, state, { [action.playlist.id]: action.playlist});
         default:

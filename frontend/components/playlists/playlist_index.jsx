@@ -18,7 +18,11 @@ class PlaylistIndex extends React.Component {
     //         this.props.fetchPlaylists();
     //     }
     // }
-
+    componentDidUpdate(prevProps) {
+        if (this.props.playlists.map(playlist => playlist.name).sort().join('') !== prevProps.playlists.map(playlist => playlist.name).sort().join('')) {
+            
+        }
+    }
     createPlaylist(playlist) {
         this.props.createPlaylist(playlist);
         // this.props.fetchPlaylists();
@@ -38,10 +42,12 @@ class PlaylistIndex extends React.Component {
             </div>
         )
         return (
-            <div>
-                <h3>Playlists</h3>
-                <button onClick={() => this.createPlaylist(defPlaylist)}>Create</button>
-                <ul className="playlist-index">
+            <div className="playlist-index">
+                <div className="playlist-header">
+                    <h3>PLAYLISTS</h3>
+                    <button onClick={() => this.createPlaylist(defPlaylist)}>+</button>
+                </div>
+                <ul>
                     {
                         playlists.map(playlist => (
                             <PlaylistIndexItem
