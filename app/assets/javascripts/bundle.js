@@ -3610,7 +3610,12 @@ var createPlaylistSong = function createPlaylistSong(playlist_song) {
       playlist_song: playlist_song
     }
   });
-};
+}; // export const deletePlaylistSong = playlist_song => {
+//     return $.ajax({
+//         method: 'DELETE',
+//         url: 'api/playlist_songs/'
+//     })
+// }
 
 /***/ }),
 

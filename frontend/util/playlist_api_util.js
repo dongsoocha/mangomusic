@@ -34,3 +34,10 @@ export const createPlaylistSong = playlist_song => {
         data: { playlist_song }
     })
 }
+
+// export const deletePlaylistSong = playlist_song => {
+//     return $.ajax({
+//         method: 'DELETE',
+//         url: 'api/playlist_songs/'
+//     })
+// }
