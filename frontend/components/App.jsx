@@ -32,9 +32,9 @@ const App = () => {
                 <section className="App">
                     <Switch>
                         <AuthRoute exact path="/" component={SplashContainer} />
-                        <Route exact path="/browse" component={BrowseContainer} />
-                        <Route exact path="/albums/:albumId" component={AlbumShowContainer} />
-                        <Route exact path="/artists/:artistId" component={ArtistShowContainer} />
+                        <ProtectedRoute exact path="/browse" component={BrowseContainer} />
+                        <ProtectedRoute exact path="/albums/:albumId" component={AlbumShowContainer} />
+                        <ProtectedRoute exact path="/artists/:artistId" component={ArtistShowContainer} />
                         <ProtectedRoute exact path="/playlists/:playlistId" component={PlaylistShowContainer} />
                         <Route component={NoMatchPage} />
                     </Switch>

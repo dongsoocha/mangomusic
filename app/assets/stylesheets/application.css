@@ -43,7 +43,8 @@ body {
 a {
   appearance: none;
   outline: none;
-  text-decoration: none; }
+  text-decoration: none;
+  color: white; }
 
 body::-webkit-scrollbar {
   background: rgba(43, 43, 43, 0.95);

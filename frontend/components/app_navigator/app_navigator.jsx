@@ -8,7 +8,7 @@ const AppNavigator = () => {
     );
     return (
         <nav className="app-nav">
-            <p className="mango-logo"><img className="small-logo" src={window.mangoURL} alt="Mango Logo" />Music</p>
+            <p className="mango-logo"><img className="small-logo" src={window.mangoURL} alt="Mango Logo" /><Link to='/'>Music</Link></p>
             <input className="nav-search" type="text" placeholder="Search"/>
             {/* <button>Listen Now</button> */}
             <button><Link to="/browse" className="link">Browse</Link></button>
