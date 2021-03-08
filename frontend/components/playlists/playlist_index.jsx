@@ -3,26 +3,24 @@ import PlaylistIndexItem from './playlist_index_item';
 import { withRouter } from "react-router";
 
 class PlaylistIndex extends React.Component {
-    constructor(props) {
-        super(props);
-        // this.createPlaylist = this.createPlaylist.bind(this);
+    // constructor(props) {
+    //     super(props);
+    //     // this.createPlaylist = this.createPlaylist.bind(this);
 
-    }
+    // }
 
     componentDidMount() {
+        // debugger
         this.props.fetchPlaylists();
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if (this.props.playlists.length !== prevProps.playlists.length) {
-    //         this.props.fetchPlaylists();
-    //     }
-    // }
     componentDidUpdate(prevProps) {
-        if (this.props.playlists.map(playlist => playlist.name).sort().join('') !== prevProps.playlists.map(playlist => playlist.name).sort().join('')) {
-            
+        if (!prevProps.playlists || !this.props.playlists || this.props.playlists.length !== prevProps.playlists.length) {
+            this.props.fetchPlaylists();
         }
+
     }
+
     createPlaylist(playlist) {
         this.props.createPlaylist(playlist);
         // this.props.fetchPlaylists();
@@ -35,12 +33,7 @@ class PlaylistIndex extends React.Component {
             name: 'Playlist',
             user_id: currentUser
         }
-        if (!playlists) return (
-            <div>
-                <h3>Playlists</h3>
-                <button onClick={() => this.createPlaylist(defPlaylist)}>Create</button>
-            </div>
-        )
+        if (!currentUser) return null;
         return (
             <div className="playlist-index">
                 <div className="playlist-header">

@@ -3,7 +3,7 @@ import PlaylistIndex from './playlist_index';
 import { fetchPlaylists, createPlaylist } from '../../actions/playlist_actions';
 
 const mapStateToProps = state => {
-    if (state.entities.playlists) {
+    if (state.session.id) {
         return {
             playlists: Object.values(state.entities.playlists),
             currentUser: state.session.id,

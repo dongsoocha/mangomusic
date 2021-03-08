@@ -1797,7 +1797,6 @@ var PlaylistEditFormContainer = /*#__PURE__*/function (_React$Component) {
     _this = _super.call(this, props);
     _this.state = _this.props.playlist;
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
-    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -1811,10 +1810,6 @@ var PlaylistEditFormContainer = /*#__PURE__*/function (_React$Component) {
     key: "componentWillReceiveProps",
     value: function componentWillReceiveProps(nextProps) {
       this.setState(nextProps.playlist); // this.setState(nextProps.playlist);
-    }
-  }, {
-    key: "handleChange",
-    value: function handleChange(e) {// this.props.onChange(e.target.value);
     }
   }, {
     key: "update",
@@ -1904,30 +1899,28 @@ var PlaylistIndex = /*#__PURE__*/function (_React$Component) {
 
   var _super = _createSuper(PlaylistIndex);
 
-  function PlaylistIndex(props) {
+  function PlaylistIndex() {
     _classCallCheck(this, PlaylistIndex);
 
-    return _super.call(this, props); // this.createPlaylist = this.createPlaylist.bind(this);
+    return _super.apply(this, arguments);
   }
 
   _createClass(PlaylistIndex, [{
     key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.fetchPlaylists();
-    } // componentDidUpdate(prevProps) {
-    //     if (this.props.playlists.length !== prevProps.playlists.length) {
-    //         this.props.fetchPlaylists();
-    //     }
+    value: // constructor(props) {
+    //     super(props);
+    //     // this.createPlaylist = this.createPlaylist.bind(this);
     // }
-
+    function componentDidMount() {
+      // debugger
+      this.props.fetchPlaylists();
+    }
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
-      if (this.props.playlists.map(function (playlist) {
-        return playlist.name;
-      }).sort().join('') !== prevProps.playlists.map(function (playlist) {
-        return playlist.name;
-      }).sort().join('')) {}
+      if (!prevProps.playlists || !this.props.playlists || this.props.playlists.length !== prevProps.playlists.length) {
+        this.props.fetchPlaylists();
+      }
     }
   }, {
     key: "createPlaylist",
@@ -1947,11 +1940,7 @@ var PlaylistIndex = /*#__PURE__*/function (_React$Component) {
         name: 'Playlist',
         user_id: currentUser
       };
-      if (!playlists) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Playlists"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: function onClick() {
-          return _this.createPlaylist(defPlaylist);
-        }
-      }, "Create"));
+      if (!currentUser) return null;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "playlist-index"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1993,7 +1982,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mapStateToProps = function mapStateToProps(state) {
-  if (state.entities.playlists) {
+  if (state.session.id) {
     return {
       playlists: Object.values(state.entities.playlists),
       currentUser: state.session.id

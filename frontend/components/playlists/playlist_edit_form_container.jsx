@@ -7,7 +7,6 @@ class PlaylistEditFormContainer extends React.Component {
         super(props);
         this.state = this.props.playlist;
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleChange = this.handleChange.bind(this);
     }
 
     handleSubmit(e) {
@@ -20,9 +19,6 @@ class PlaylistEditFormContainer extends React.Component {
         // this.setState(nextProps.playlist);
     }
 
-    handleChange(e) {
-        // this.props.onChange(e.target.value);
-    }
 
     update(name) {
         return e => this.setState({ name: e.currentTarget.value});
