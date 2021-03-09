@@ -4,6 +4,7 @@ import albumsReducer from './albums_reducer';
 import songsReducer from './songs_reducer';
 import artistsReducer from './artists_reducer';
 import playlistReducer from './playlist_reducer';
+import searchReducer from './search_reducer';
 
 const entitiesReducer = combineReducers({
     users: usersReducer,
@@ -11,6 +12,7 @@ const entitiesReducer = combineReducers({
     songs: songsReducer,
     artists: artistsReducer,
     playlists: playlistReducer,
+    search: searchReducer,
 });
 
 export default entitiesReducer;

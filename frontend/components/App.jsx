@@ -7,7 +7,8 @@ import SplashContainer from "./splash/splash_container";
 import BrowseContainer from "./browse/browse_container";
 import AlbumShowContainer from "./albums/album_show_container";
 import ArtistShowContainer from "./artists/artist_show_container";
-import PlaylistShowContainer from "./playlists/playlist_show_container.jsx";
+import PlaylistShowContainer from "./playlists/playlist_show_container";
+import SearchShowContainer from "./search/search_show_container";
 import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
@@ -49,6 +50,11 @@ const App = () => {
               exact
               path="/playlists/:playlistId"
               component={PlaylistShowContainer}
+            />
+            <ProtectedRoute
+              exact
+              path="/search"
+              component={SearchShowContainer}
             />
             <Route component={NoMatchPage} />
           </Switch>

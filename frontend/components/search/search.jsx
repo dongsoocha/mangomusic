@@ -1,4 +1,7 @@
 import React from 'react';
+import { withRouter } from 'react-router';
+import SearchResult from './search_result';
+
 
 class Search extends React.Component {
     constructor(props) {
@@ -6,26 +9,38 @@ class Search extends React.Component {
 
         this.state = {
             search: '',
-            results: {},
-            loading: false,
         };
-        
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(e) {
         const search = e.target.value;
-        this.setState({search, loading: true});
+        this.setState({search: search});
+        debugger
+        if (this.state.search) {
+            this.props.fetchSearchResults(this.state.search);
+        } else {
+            this.props.clearSearch();
+        }
+
     }
 
+    handleSubmit() {
+        this.props.history.push('/search');
+    }    
 
     render() {
         return (
             <div className="search-container">
-                <input type="text" value="" placeholder="search" onChange={this.handleChange}/>
+                <form className="search-form" onSubmit={this.handleSubmit}>
+                    <input type="text" value={this.state.search} placeholder="search" onChange={this.handleChange}/>
+                    <input type="submit" style={{display: 'none'}}/>
+                </form>
+                    {/* <SearchResult results={this.props.results} /> */}
             </div>
         )
     }
 }
 
-export default Search;
+export default withRouter(Search);
