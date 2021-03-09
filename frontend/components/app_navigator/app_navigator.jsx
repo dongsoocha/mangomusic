@@ -12,6 +12,7 @@ const AppNavigator = () => {
             <input className="nav-search" type="text" placeholder="Search"/>
             {/* find a way to parse through state */}
             {/* maybe in mstp? */}
+            {/* add in a modal to show, if empty, don't display */}
             {/* <button>Listen Now</button> */}
             <button><Link to="/browse" className="link">Browse</Link></button>
             {/* <button>Radio</button> */}
