@@ -35,7 +35,7 @@ const App = () => {
                         <ProtectedRoute exact path="/browse" component={BrowseContainer} />
                         <ProtectedRoute exact path="/albums/:albumId" component={AlbumShowContainer} />
                         <ProtectedRoute exact path="/artists/:artistId" component={ArtistShowContainer} />
-                        <ProtectedRoute exact path="/playlists/:playlistId" component={PlaylistShowContainer} />
+                        <ProtectedRouthtmle exact path="/playlists/:playlistId" component={PlaylistShowContainer} />
                         <Route component={NoMatchPage} />
                     </Switch>
                 </section>

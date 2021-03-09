@@ -506,7 +506,7 @@ var App = function App() {
     exact: true,
     path: "/artists/:artistId",
     component: _artists_artist_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_11__["ProtectedRoute"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ProtectedRouthtmle, {
     exact: true,
     path: "/playlists/:playlistId",
     component: _playlists_playlist_show_container_jsx__WEBPACK_IMPORTED_MODULE_9__["default"]
