@@ -1102,4 +1102,8 @@ body {
           background-color: #464646;
           cursor: pointer; }
 
+/* search */
+.search {
+  color: white; }
+
 /*# sourceMappingURL=application.css.map */

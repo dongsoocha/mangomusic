@@ -1,50 +1,80 @@
 import React from "react";
 import AlbumsIndexContainer from "../albums/album_index_container";
 // import ArtistIndexContainer from "../artist/artist_index_container";
+import { Link } from "react-router-dom";
 import BrowseIndexContainer from "../songs/browse_index_container";
 import ArtistIndexContainer from "../artists/artist_index_container";
 
-const SearchShow = ({results}) => {
-  if (!results) return null;
+class SearchShow extends React.Component {
+  constructor(props) {
+    super(props);
+    
+  }
+
   
-  return (
-    <div className="browse">
-      <h1 className="browse-header">Search Results</h1>
-      <h3 className="browse-headers">Artists</h3>
-      <ul>
-        {results.artists ? results.artists.map((artist) => {
-          <li>{artist.name}</li>;
-        }) : ''}
-      </ul>
+  render() {
+    const { results } = this.props;
+    if (results.empty) return null;
+    return (
+      <div className="browse">
+        <h1 className="browse-header">Search Results</h1>
+        <h3 className="browse-headers">Artists</h3>
+        <ul className="search">
+          {results.artists && results.artists.length
+            ? results.artists.map((artist) => (
+                <li>
+                  <div className="left-artist">
+                    <Link
+                      to={`/artists/${artist.id}`}
+                      className="artist-outter-link"
+                    >
+                      <p className="artist-link">{artist.name}</p>
+                    </Link>
+                  </div>
+                </li>
+              ))
+            : "No results found"}
+        </ul>
 
-      <h3 className="browse-headers">Albums</h3>
-      <ul>
-        {results.albums ? results.albums.map((album) => {
-          <li>{album.album_name}</li>;
-        }) : ''}
-      </ul>
-      <h3 className="browse-headers">Songs</h3>
-      <ul>
-        {results.songs ? results.songs.map((song) => {
-          <li>{song.name}</li>;
-        }) : ''}
-      </ul>
-
-    </div>
-  );
-};
-
-// class SearchShow extends React.Component {
-//   constructor(props) {
-//     super(props)
-//   }
-
-//   render() {
-
-//     return {
-
-//     }
-//   }
-// }
+        <h3 className="browse-headers">Albums</h3>
+        <ul className="search">
+          {results.albums && results.albums.length
+            ? results.albums.map((album) => (
+                <li>
+                  <Link
+                    to={`/albums/${album.id}`}
+                    className="album-outter-link"
+                  >
+                    <p className="album-link">{album.album_name}</p>
+                    {album.artist ? (
+                      <p className="album-artist-link">
+                        {album.artist.name}
+                        <i>{album.release_date.slice(-4)}</i>
+                      </p>
+                    ) : null}
+                  </Link>
+                </li>
+              ))
+            : "No results found"}
+        </ul>
+        <h3 className="browse-headers">Songs</h3>
+        <ul className="search">
+          {results.songs && results.songs.length
+            ? results.songs.map((song) => (
+                <li>
+                  <Link
+                    to={`/albums/${song.album_id}`}
+                    className="album-outter-link"
+                  >
+                    <p className="album-link">{song.name}</p>
+                  </Link>
+                </li>
+              ))
+            : "No results found"}
+        </ul>
+      </div>
+    );
+  }
+}
 
 export default SearchShow;
