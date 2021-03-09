@@ -7,42 +7,56 @@ import SplashContainer from "./splash/splash_container";
 import BrowseContainer from "./browse/browse_container";
 import AlbumShowContainer from "./albums/album_show_container";
 import ArtistShowContainer from "./artists/artist_show_container";
-import PlaylistShowContainer from './playlists/playlist_show_container.jsx';
-import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import PlaylistShowContainer from "./playlists/playlist_show_container.jsx";
+import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
 const NoMatchPage = () => {
-    return (
-        <div>
-            <h3>404 - Not found</h3>
-            <button><Link to="/browse">Browse</Link></button>
-        </div>
-    );
+  return (
+    <div>
+      <h3>404 - Not found</h3>
+      <button>
+        <Link to="/browse">Browse</Link>
+      </button>
+    </div>
+  );
 };
 
 const App = () => {
-    // return (
-        // )
-        return (
-        <div className="whole-app">
-            <Modal modal="" />
-            <NavBarContainer />
-            <div className="main-space">
-                <AppNavigatorContainer className="navigator" />
-                <section className="App">
-                    <Switch>
-                        <AuthRoute exact path="/" component={SplashContainer} />
-                        <ProtectedRoute exact path="/browse" component={BrowseContainer} />
-                        <ProtectedRoute exact path="/albums/:albumId" component={AlbumShowContainer} />
-                        <ProtectedRoute exact path="/artists/:artistId" component={ArtistShowContainer} />
-                        <ProtectedRouthtmle exact path="/playlists/:playlistId" component={PlaylistShowContainer} />
-                        <Route component={NoMatchPage} />
-                    </Switch>
-                </section>
-            </div>
-            <SubscribePromptContainer />
-        </div>
-    );
+  // return (
+  // )
+  return (
+    <div className="whole-app">
+      <Modal modal="" />
+      <NavBarContainer />
+      <div className="main-space">
+        <AppNavigatorContainer className="navigator" />
+        <section className="App">
+          <Switch>
+            <AuthRoute exact path="/" component={SplashContainer} />
+            <ProtectedRoute exact path="/browse" component={BrowseContainer} />
+            <ProtectedRoute
+              exact
+              path="/albums/:albumId"
+              component={AlbumShowContainer}
+            />
+            <ProtectedRoute
+              exact
+              path="/artists/:artistId"
+              component={ArtistShowContainer}
+            />
+            <ProtectedRoute
+              exact
+              path="/playlists/:playlistId"
+              component={PlaylistShowContainer}
+            />
+            <Route component={NoMatchPage} />
+          </Switch>
+        </section>
+      </div>
+      <SubscribePromptContainer />
+    </div>
+  );
 };
 
 export default App;
