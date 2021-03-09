@@ -13,7 +13,7 @@ const ArtistIndexItem = props => {
                     <p className="artist-link">{props.artist.name}</p>
                 </Link>
             </div>
-            <p className="artist-desc">Violinist turned software programmer, Dongsoo Cha's previous performances serve as a reminder of his attention to detail and his love of the abstract. Listen to this up-and-coming programmer's musical mind now!</p>
+            <p className="artist-desc">Violinist turned software engineer, Dongsoo Cha's previous performances serve as a reminder of his attention to detail and his love of the abstract. Listen to this up-and-coming programmer's musical mind now!</p>
         </li>
     )
 }
