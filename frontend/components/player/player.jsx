@@ -37,7 +37,7 @@ class Player extends React.Component {
                     <button className="next-button"><i className="fas fa-forward"></i></button>
                     <button className="repeat-button"><i className="fas fa-redo"></i></button>
                 </div>
-                <CurrentSongInfo currentSong={this.props.currentSong} />
+                <CurrentSongInfo currentSong={this.props.currentSong}/>
                 <div className="volume-slider">
                     <p className="volume-icon"><i className="fas fa-volume-up"></i></p>
                     <input type="range" min="1" max="100" defaultValue="50" step="1" className="slider" id="myRange"></input>

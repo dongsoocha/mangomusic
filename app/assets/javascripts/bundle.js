@@ -1342,7 +1342,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var CurrentSongInfo = function CurrentSongInfo(_ref) {
-  var currentSong = _ref.currentSong;
+  var currentSong = _ref.currentSong,
+      time = _ref.time;
 
   var nosongInfo = function nosongInfo() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1372,7 +1373,10 @@ var CurrentSongInfo = function CurrentSongInfo(_ref) {
       className: "song-name"
     }, currentSong.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "song-artist"
-    }, currentSong.artist.name)));
+    }, currentSong.artist.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "range",
+      value: time
+    })));
   };
 
   return currentSong ? songInfo() : nosongInfo();
@@ -1593,7 +1597,9 @@ var Player = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-redo"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_current_song_info__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        currentSong: this.props.currentSong
+        currentSong: this.props.currentSong,
+        time: this.audio.current.currentTime,
+        max: this.audio.current.duration
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "volume-slider"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -1690,7 +1696,7 @@ var AddToPlaylistForm = /*#__PURE__*/function (_React$Component) {
       var pSong = Object.assign({}, this.state, {
         playlist_id: e.target.value
       });
-      this.props.createPlaylistSong(pSong); // e.target.style.display='none';
+      this.props.createPlaylistSong(pSong);
     }
   }, {
     key: "render",

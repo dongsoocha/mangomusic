@@ -41,7 +41,7 @@
         img {
             height: 45px;
             border-radius: 3px;
-            margin-left: -34.2px;
+            margin-left: -38px;
         }
         i {
             visibility: hidden;
@@ -72,10 +72,13 @@
         width: 100%;
         
         p {
+            width: 100%;
             font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
             color: white;
             font-size: 14px;
             font-weight: 300;
+            overflow-y: hidden;
+            overflow-x: visible;
         }
         .artist-name-browse {
             
@@ -86,8 +89,5 @@
         .artist-name-browse, .song-name-browse {
             margin-left: 0;
         }
-    }
-    .browse-song-text:hover {
-        cursor: default;
     }
 }

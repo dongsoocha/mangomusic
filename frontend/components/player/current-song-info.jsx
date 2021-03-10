@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CurrentSongInfo = ({ currentSong }) => {
+const CurrentSongInfo = ({ currentSong, time }) => {
 
     const nosongInfo = () => {
         return (
@@ -22,6 +22,7 @@ const CurrentSongInfo = ({ currentSong }) => {
             <div className="with-info">
                 <p className="song-name">{currentSong.name}</p>
                 <p className="song-artist">{currentSong.artist.name}</p>
+                {/* <input type="range" value={time}/> */}
             </div>
         </div>
         )
