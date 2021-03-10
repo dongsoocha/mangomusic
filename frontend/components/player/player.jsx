@@ -9,6 +9,7 @@ class Player extends React.Component {
         
         // const audio = useRef('audio-tag');
         this.changeVolume = this.changeVolume.bind(this);
+        this.resetAudio = this.resetAudio.bind(this);
     }
 
     componentDidUpdate(prevProps) {
@@ -30,14 +31,18 @@ class Player extends React.Component {
         this.audio.current.volume = e.target.value / 100;
     }
 
+    resetAudio() {
+        this.audio.current.currentTime = 0;
+    }
+
     MusicPlayer() {
         return (
             <div className="player-toolbar">
                 <audio ref={this.audio} src={this.props.currentSong ? this.props.currentSong.audioUrl : ''} />
                 <div className="player">
                     <button className="shuffle-button"><i className="fas fa-random"></i></button>
-                    <button className="rewind-button"><i className="fas fa-backward"></i></button>
-                    {this.props.playState }
+                    <button className="rewind-button" onClick={() => this.resetAudio()}><i className="fas fa-backward"></i></button>
+                    {/* {this.props.playState } */}
                     <button  className="play-button" onClick={() => this.toggle()}>{this.props.playState ? <i className="fas fa-pause"></i> : <i className="fas fa-play"></i>}</button>
                     <button className="next-button"><i className="fas fa-forward"></i></button>
                     <button className="repeat-button"><i className="fas fa-redo"></i></button>

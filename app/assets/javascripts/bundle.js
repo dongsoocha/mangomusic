@@ -1536,6 +1536,7 @@ var Player = /*#__PURE__*/function (_React$Component) {
     _this.audio = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef(); // const audio = useRef('audio-tag');
 
     _this.changeVolume = _this.changeVolume.bind(_assertThisInitialized(_this));
+    _this.resetAudio = _this.resetAudio.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -1563,6 +1564,11 @@ var Player = /*#__PURE__*/function (_React$Component) {
       this.audio.current.volume = e.target.value / 100;
     }
   }, {
+    key: "resetAudio",
+    value: function resetAudio() {
+      this.audio.current.currentTime = 0;
+    }
+  }, {
     key: "MusicPlayer",
     value: function MusicPlayer() {
       var _this2 = this;
@@ -1579,10 +1585,13 @@ var Player = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-random"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "rewind-button"
+        className: "rewind-button",
+        onClick: function onClick() {
+          return _this2.resetAudio();
+        }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-backward"
-      })), this.props.playState, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "play-button",
         onClick: function onClick() {
           return _this2.toggle();
