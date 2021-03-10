@@ -1537,6 +1537,7 @@ var Player = /*#__PURE__*/function (_React$Component) {
 
     _this.changeVolume = _this.changeVolume.bind(_assertThisInitialized(_this));
     _this.resetAudio = _this.resetAudio.bind(_assertThisInitialized(_this));
+    _this.seekTrack = _this.seekTrack.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -1561,12 +1562,17 @@ var Player = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "changeVolume",
     value: function changeVolume(e) {
-      this.audio.current.volume = e.target.value / 100;
+      this.audio.current.volume = e.target.value;
     }
   }, {
     key: "resetAudio",
-    value: function resetAudio() {
+    value: function resetAudio(e) {
       this.audio.current.currentTime = 0;
+    }
+  }, {
+    key: "seekTrack",
+    value: function seekTrack(e) {
+      this.audio.current.currentTime = e.target.value;
     }
   }, {
     key: "MusicPlayer",
@@ -1577,7 +1583,8 @@ var Player = /*#__PURE__*/function (_React$Component) {
         className: "player-toolbar"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("audio", {
         ref: this.audio,
-        src: this.props.currentSong ? this.props.currentSong.audioUrl : ''
+        src: this.props.currentSong ? this.props.currentSong.audioUrl : "",
+        volume: "0.5"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "player"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1608,9 +1615,20 @@ var Player = /*#__PURE__*/function (_React$Component) {
         className: "repeat-button"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-redo"
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_current_song_info__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }))), this.audio.current ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "song-seeker"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_current_song_info__WEBPACK_IMPORTED_MODULE_1__["default"], {
         currentSong: this.props.currentSong
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "range",
+        min: "0",
+        max: this.audio.current.duration,
+        step: "1",
+        value: this.audio.current.currentTime,
+        onChange: function onChange(e) {
+          return _this2.seekTrack(e);
+        }
+      })) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "volume-slider"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "volume-icon"
@@ -1619,9 +1637,9 @@ var Player = /*#__PURE__*/function (_React$Component) {
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "range",
         min: "0",
-        max: "100",
-        defaultValue: "50",
-        step: "1",
+        max: "1",
+        defaultValue: this.audio.current ? this.audio.current.volume : .5,
+        step: ".01",
         className: "slider",
         id: "myRange",
         onChange: function onChange(e) {

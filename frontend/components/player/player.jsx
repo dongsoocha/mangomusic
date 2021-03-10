@@ -10,6 +10,7 @@ class Player extends React.Component {
         // const audio = useRef('audio-tag');
         this.changeVolume = this.changeVolume.bind(this);
         this.resetAudio = this.resetAudio.bind(this);
+        this.seekTrack = this.seekTrack.bind(this);
     }
 
     componentDidUpdate(prevProps) {
@@ -28,32 +29,86 @@ class Player extends React.Component {
     }
 
     changeVolume(e) {
-        this.audio.current.volume = e.target.value / 100;
+        this.audio.current.volume = e.target.value;
     }
 
-    resetAudio() {
+    resetAudio(e) {
         this.audio.current.currentTime = 0;
     }
-
+    seekTrack(e) {
+        this.audio.current.currentTime = e.target.value;
+    }
     MusicPlayer() {
         return (
-            <div className="player-toolbar">
-                <audio ref={this.audio} src={this.props.currentSong ? this.props.currentSong.audioUrl : ''} />
-                <div className="player">
-                    <button className="shuffle-button"><i className="fas fa-random"></i></button>
-                    <button className="rewind-button" onClick={() => this.resetAudio()}><i className="fas fa-backward"></i></button>
-                    {/* {this.props.playState } */}
-                    <button  className="play-button" onClick={() => this.toggle()}>{this.props.playState ? <i className="fas fa-pause"></i> : <i className="fas fa-play"></i>}</button>
-                    <button className="next-button"><i className="fas fa-forward"></i></button>
-                    <button className="repeat-button"><i className="fas fa-redo"></i></button>
-                </div>
-                <CurrentSongInfo currentSong={this.props.currentSong}/>
-                <div className="volume-slider">
-                    <p className="volume-icon"><i className="fas fa-volume-up"></i></p>
-                    <input type="range" min="0" max="100" defaultValue="50" step="1" className="slider" id="myRange" onChange={(e) => this.changeVolume(e)}></input>
-                </div>
-                <button className="logout-button" onClick={() => this.props.logout()}>Log Out</button>
+          <div className="player-toolbar">
+            <audio
+              ref={this.audio}
+              src={
+                  this.props.currentSong ? this.props.currentSong.audioUrl : ""
+                }
+              volume="0.5"
+            />
+            <div className="player">
+              <button className="shuffle-button">
+                <i className="fas fa-random"></i>
+              </button>
+              <button
+                className="rewind-button"
+                onClick={() => this.resetAudio()}
+              >
+                <i className="fas fa-backward"></i>
+              </button>
+              {/* {this.props.playState } */}
+              <button className="play-button" onClick={() => this.toggle()}>
+                {this.props.playState ? (
+                  <i className="fas fa-pause"></i>
+                ) : (
+                  <i className="fas fa-play"></i>
+                )}
+              </button>
+              <button className="next-button">
+                <i className="fas fa-forward"></i>
+              </button>
+              <button className="repeat-button">
+                <i className="fas fa-redo"></i>
+              </button>
             </div>
+            {this.audio.current ?
+            <div className="song-seeker">
+              <CurrentSongInfo currentSong={this.props.currentSong} />
+              <input 
+                type="range"
+                min="0"
+                max={this.audio.current.duration}
+                step="1"
+                value={this.audio.current.currentTime}
+                onChange={(e) => this.seekTrack(e)}/>
+            </div>
+            :
+            null
+            }
+            <div className="volume-slider">
+              <p className="volume-icon">
+                <i className="fas fa-volume-up"></i>
+              </p>
+              <input
+                type="range"
+                min="0"
+                max="1"
+                defaultValue={this.audio.current ? this.audio.current.volume : .5}
+                step=".01"
+                className="slider"
+                id="myRange"
+                onChange={(e) => this.changeVolume(e)}
+              ></input>
+            </div>
+            <button
+              className="logout-button"
+              onClick={() => this.props.logout()}
+            >
+              Log Out
+            </button>
+          </div>
         );
     };
 
