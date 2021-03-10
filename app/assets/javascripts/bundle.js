@@ -1373,10 +1373,7 @@ var CurrentSongInfo = function CurrentSongInfo(_ref) {
       className: "song-name"
     }, currentSong.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "song-artist"
-    }, currentSong.artist.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-      type: "range",
-      value: time
-    })));
+    }, currentSong.artist.name)));
   };
 
   return currentSong ? songInfo() : nosongInfo();
@@ -1538,6 +1535,7 @@ var Player = /*#__PURE__*/function (_React$Component) {
     _this = _super.call(this, props);
     _this.audio = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef(); // const audio = useRef('audio-tag');
 
+    _this.changeVolume = _this.changeVolume.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -1558,6 +1556,11 @@ var Player = /*#__PURE__*/function (_React$Component) {
     key: "toggle",
     value: function toggle() {
       this.props.togglePlayState(this.props.currentSong.id);
+    }
+  }, {
+    key: "changeVolume",
+    value: function changeVolume(e) {
+      this.audio.current.volume = e.target.value / 100;
     }
   }, {
     key: "MusicPlayer",
@@ -1597,9 +1600,7 @@ var Player = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-redo"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_current_song_info__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        currentSong: this.props.currentSong,
-        time: this.audio.current.currentTime,
-        max: this.audio.current.duration
+        currentSong: this.props.currentSong
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "volume-slider"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -1608,12 +1609,15 @@ var Player = /*#__PURE__*/function (_React$Component) {
         className: "fas fa-volume-up"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "range",
-        min: "1",
+        min: "0",
         max: "100",
         defaultValue: "50",
         step: "1",
         className: "slider",
-        id: "myRange"
+        id: "myRange",
+        onChange: function onChange(e) {
+          return _this2.changeVolume(e);
+        }
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "logout-button",
         onClick: function onClick() {
