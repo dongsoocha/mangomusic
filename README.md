@@ -90,10 +90,10 @@ All same-component lists are styled using CSS grid layout.
 - Song Information Window
 
 
-![SongInformation](https://github.com/Chubbibanana/mangomusic/blob/main/app/assets/images/readme/albumsong.png)
+![SongInformation](https://github.com/Chubbibanana/mangomusic/blob/main/app/assets/images/readme/songinformation.png)
 
 ### Artists
-![Artistpage](https://github.com/Chubbibanana/mangomusic/blob/main/app/assets/images/readme/songinformation.png)
+![Artistpage](https://github.com/Chubbibanana/mangomusic/blob/main/app/assets/images/readme/artistshow.png)
 * Artist page displays the artist profile and their albums
 * Navigate to albums in 1 click
 ## Built with
