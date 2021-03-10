@@ -23,39 +23,36 @@ class SearchShow extends React.Component {
           {results.artists && results.artists.length
             ? results.artists.map((artist) => (
                 <li>
-                  <div className="left-artist">
-                    <Link
-                      to={`/artists/${artist.id}`}
-                      className="artist-outter-link"
-                    >
-                      <p className="artist-link">{artist.name}</p>
-                    </Link>
-                  </div>
+                  <Link
+                    to={`/artists/${artist.id}`}
+                    className="artist-outter-link"
+                  >
+                    <p className="artist-link">{artist.name}</p>
+                  </Link>
                 </li>
               ))
-            : "No results found"}
+            : <li>No results found</li>
+          }
         </ul>
 
         <h3 className="browse-headers">Albums</h3>
         <ul className="search">
-          {results.albums && results.albums.length
-            ? results.albums.map((album) => (
-                <li>
-                  <Link
-                    to={`/albums/${album.id}`}
-                    className="album-outter-link"
-                  >
-                    <p className="album-link">{album.album_name}</p>
-                    {album.artist ? (
-                      <p className="album-artist-link">
-                        {album.artist.name}
-                        <i>{album.release_date.slice(-4)}</i>
-                      </p>
-                    ) : null}
-                  </Link>
-                </li>
-              ))
-            : "No results found"}
+          {results.albums && results.albums.length ? (
+            results.albums.map((album) => (
+              <li>
+                <Link to={`/albums/${album.id}`} className="album-outter-link">
+                  <p className="album-link">{album.album_name}</p>
+                  {album.artist ? (
+                    <p className="album-artist-link">
+                      {album.artist.name} - {album.release_date.slice(-4)}
+                    </p>
+                  ) : null}
+                </Link>
+              </li>
+            ))
+          ) : (
+            <li>No results found</li>
+          )}
         </ul>
         <h3 className="browse-headers">Songs</h3>
         <ul className="search">
@@ -70,7 +67,8 @@ class SearchShow extends React.Component {
                   </Link>
                 </li>
               ))
-            : "No results found"}
+            : <li>No results found</li>
+          }
         </ul>
       </div>
     );

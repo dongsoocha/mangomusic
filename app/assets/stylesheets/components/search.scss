@@ -1,3 +1,28 @@
 .search { 
     color: white;
+    width: 100%;
+    li > a > p{
+        color: #b8b8b8;
+        
+    }
+    
+    li > a {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    li {
+        color: #b8b8b8;
+        width: 98%;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 3px;
+        padding: 8px;
+    }
+
+    li:hover{
+        background: #393939;
+    }
 }
