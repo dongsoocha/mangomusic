@@ -81,7 +81,7 @@ class Player extends React.Component {
                 min="0"
                 max={this.audio.current.duration}
                 step="1"
-                value={this.audio.current.currentTime}
+                defaultValue={this.audio.current.currentTime}
                 onChange={(e) => this.seekTrack(e)}/>
             </div>
             :

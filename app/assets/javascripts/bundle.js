@@ -1624,7 +1624,7 @@ var Player = /*#__PURE__*/function (_React$Component) {
         min: "0",
         max: this.audio.current.duration,
         step: "1",
-        value: this.audio.current.currentTime,
+        defaultValue: this.audio.current.currentTime,
         onChange: function onChange(e) {
           return _this2.seekTrack(e);
         }
