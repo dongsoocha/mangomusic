@@ -302,17 +302,31 @@ table {
     margin-right: -5px; }
 
 .nav-search {
+  padding-left: 23px;
   margin-top: 25px;
   margin-bottom: 25px;
   outline: none;
-  margin-left: 25px;
-  margin-right: 25px;
   line-height: 2.1;
   background-color: #1F1F1F;
   appearance: none;
   border: solid rgba(19, 19, 19, 0.604);
   border-radius: 3px;
-  border-width: 1px; }
+  border-width: 1px;
+  width: 175px;
+  caret-color: #727272;
+  color: #aaaaaa; }
+
+.search-box {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 28px; }
+  .search-box i {
+    margin-left: 5px;
+    color: #727272;
+    position: absolute;
+    z-index: 2;
+    font-size: 15px; }
 
 /* splash */
 .splash-page {

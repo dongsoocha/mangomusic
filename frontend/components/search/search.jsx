@@ -39,20 +39,20 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div className="search-container">
-        <form className="search-form" onSubmit={this.handleSubmit}>
+        <form className="search-box" onSubmit={this.handleSubmit}>
+          <i className="fas fa-search"></i>
           <input
+            className="nav-search"
             type="text"
             value={this.state.search}
-            placeholder="search"
+            placeholder="Search"
             onChange={this.handleChange}
             ref={this.inputRef}
             onKeyPress={(e) => this.keypressHandler(e)}
           />
           <input type="submit" style={{ display: "none" }} />
         </form>
-        {/* <SearchResult results={this.props.results} /> */}
-      </div>
+      
     );
   }
 }

@@ -2360,15 +2360,16 @@ var Search = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "search-container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        className: "search-form",
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "search-box",
         onSubmit: this.handleSubmit
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-search"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "nav-search",
         type: "text",
         value: this.state.search,
-        placeholder: "search",
+        placeholder: "Search",
         onChange: this.handleChange,
         ref: this.inputRef,
         onKeyPress: function onKeyPress(e) {
@@ -2379,7 +2380,7 @@ var Search = /*#__PURE__*/function (_React$Component) {
         style: {
           display: "none"
         }
-      })));
+      }));
     }
   }]);
 
