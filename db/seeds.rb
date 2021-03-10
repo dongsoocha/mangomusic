@@ -10,8 +10,8 @@ require 'open-uri'
 
 User.create(email: "mango@mango.com", password: "ilovemusic")
 Artist.create(name: "Dongsoo Cha", description: "Dongsoo Cha currently resides in Vienna, Austria, studying under the supervision of Barbara Górzyńska. He received his Master of Music at Yale University, studying under the tutelage of Syoko Aki, and his Bachelor of Music in Violin Performance from the University of Southern California, studying under Glenn Dicterow. He has won numerous competitions including the Austin Symphony Concerto Competition, the Pearl Amster Concerto Competition, and First Prize in the Texas Association of Symphony Orchestras Juanita Miller Concerto Competition’s String Divison. He has performed with the Austin Symphony Orchestra and the Austin Civic Orchestra, and has performed on the radio. He has attended the Green Mountain Chamber Music Festival, Luzerne Music Center’s summer festival, and the PyeongChang Music Festival and School. Among his previous teachers are Daniel Ching, Brian Lewis, and Zhao Wei.", image_url: "/Users/dongsoo/Desktop/mango_music/mangomusic/app/assets/images/blank_album_cover.png")
-Album.create(album_name: "Recital Hits", artist_id: 1, release_date: "April 17, 2019")
-Album.create(album_name: "Chamber Hits", artist_id: 1, release_date: "April 17, 2019")
+album1 = Album.create(album_name: "Recital Hits", artist_id: 1, release_date: "April 17, 2019")
+album2 = Album.create(album_name: "Chamber Hits", artist_id: 1, release_date: "April 17, 2019")
 
 song1 = Song.create(name: "Sonata for Solo Violin Sz. 117, BB 124, I", album_id: 1, track_number: 1) 
 file = open('https://mango-music-seeds.s3-us-west-1.amazonaws.com/mango+audio+seeds/bartok_1_mov.mp3')
