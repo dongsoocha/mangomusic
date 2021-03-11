@@ -22,6 +22,7 @@ class Player extends React.Component {
             if (this.props.playState) {
                 // debugger
                 this.audio.current.play();
+                this.interval = setInterval(() => this.refresh(), 100);
             } else {
                 // debugger31701dcc!
 

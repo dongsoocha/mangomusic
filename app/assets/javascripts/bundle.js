@@ -1392,10 +1392,6 @@ var CurrentSongInfo = /*#__PURE__*/function (_React$Component) {
       }, 100);
     }
   }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate() {// if song is different
-    }
-  }, {
     key: "refresh",
     value: function refresh() {
       this.setState({
@@ -1633,6 +1629,9 @@ var Player = /*#__PURE__*/function (_React$Component) {
         if (this.props.playState) {
           // debugger
           this.audio.current.play();
+          this.interval = setInterval(function () {
+            return _this2.refresh();
+          }, 100);
         } else {
           // debugger31701dcc!
           this.audio.current.pause();
