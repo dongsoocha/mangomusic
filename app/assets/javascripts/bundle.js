@@ -1378,6 +1378,7 @@ var CurrentSongInfo = /*#__PURE__*/function (_React$Component) {
       time: null,
       duration: null
     };
+    _this.seekTrack = _this.seekTrack.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -1391,11 +1392,23 @@ var CurrentSongInfo = /*#__PURE__*/function (_React$Component) {
           time: _this2.props.time,
           duration: _this2.props.duration || 500
         });
-      }, 100);
+      }, 500);
+    } //   componentDidUpdate() {
+    //   }
+
+  }, {
+    key: "seekTrack",
+    value: function seekTrack(e) {
+      this.setState({
+        time: e.target.value
+      });
+      this.props.audio.current.currentTime = e.target.value;
     }
   }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
       if (!this.props.currentSong) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "current-info"
@@ -1429,7 +1442,7 @@ var CurrentSongInfo = /*#__PURE__*/function (_React$Component) {
         step: "1",
         value: this.state.time,
         onChange: function onChange(e) {
-          return seekTrack(e);
+          return _this3.seekTrack(e);
         }
       })));
     }

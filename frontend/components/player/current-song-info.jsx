@@ -7,16 +7,27 @@ class CurrentSongInfo extends React.Component {
       time: null,
       duration: null,
     };
+
+    this.seekTrack = this.seekTrack.bind(this);
   }
 
-  componentDidUpdate() {
-    setInterval(() =>
-      this.setState({
-        time: this.props.time,
-        duration: this.props.duration || 500,
-      }),
-      100
-    );
+    componentDidUpdate(){
+        setInterval(() =>
+        this.setState({
+            time: this.props.time,
+            duration: this.props.duration || 500,
+        }),
+        500
+        );
+    }
+
+//   componentDidUpdate() {
+
+//   }
+
+  seekTrack(e) {
+      this.setState({time: e.target.value});
+      this.props.audio.current.currentTime = e.target.value;
   }
 
   render() {
@@ -47,7 +58,7 @@ class CurrentSongInfo extends React.Component {
             max={this.state.duration}
             step="1"
             value={this.state.time}
-            onChange={(e) => seekTrack(e)}
+            onChange={(e) => this.seekTrack(e)}
           />
         </div>
       </div>
