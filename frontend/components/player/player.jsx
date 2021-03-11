@@ -10,6 +10,10 @@ class Player extends React.Component {
         // const audio = useRef('audio-tag');
         this.changeVolume = this.changeVolume.bind(this);
         this.resetAudio = this.resetAudio.bind(this);
+        this.state = {
+          time: null
+        };
+
         // this.seekTrack = this.seekTrack.bind(this);
     }
 
@@ -19,9 +23,18 @@ class Player extends React.Component {
                 // debugger
                 this.audio.current.play();
             } else {
-                // debugger
+                // debugger31701dcc!
+
                 this.audio.current.pause();
         }}
+        if (this.props.playState) {
+          this.interval = setInterval(() => this.refresh(), 100);
+        }
+    }
+
+    refresh() {
+      console.log("refreshing")
+      this.setState({time: this.audio.current.currentTime});
     }
 
     toggle() {
@@ -77,7 +90,7 @@ class Player extends React.Component {
                 <CurrentSongInfo
                   currentSong={this.props.currentSong}
                   audio={this.audio}
-                  time={this.audio.current.currentTime}
+                  time={this.state.time}
                   playing={this.props.playState}
                   duration={this.audio.current.duration}
                 />

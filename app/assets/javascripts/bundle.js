@@ -1383,31 +1383,51 @@ var CurrentSongInfo = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(CurrentSongInfo, [{
-    key: "componentDidUpdate",
-    value: function componentDidUpdate() {
+    key: "componentDidMount",
+    value: function componentDidMount() {
       var _this2 = this;
 
-      setInterval(function () {
-        return _this2.setState({
-          time: _this2.props.time,
-          duration: _this2.props.duration || 500
-        });
-      }, 500);
+      debugger;
+      this.interval = setInterval(function () {
+        return _this2.refresh();
+      }, 100);
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {
+      var _this3 = this;
+
+      this.interval = setInterval(function () {
+        return _this3.refresh();
+      }, 100);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      clearInterval(this.interval);
     } //   componentDidUpdate() {
     //   }
 
+  }, {
+    key: "refresh",
+    value: function refresh() {
+      this.setState({
+        time: this.props.time,
+        duration: this.props.duration || 500
+      });
+    }
   }, {
     key: "seekTrack",
     value: function seekTrack(e) {
       this.setState({
         time: e.target.value
       });
-      this.props.audio.current.currentTime = e.target.value;
+      this.props.audio.current.currentTime = e.target.value; // this works
     }
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
       if (!this.props.currentSong) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1440,9 +1460,9 @@ var CurrentSongInfo = /*#__PURE__*/function (_React$Component) {
         min: "0",
         max: this.state.duration,
         step: "1",
-        value: this.state.time,
+        value: this.state.time || 0,
         onChange: function onChange(e) {
-          return _this3.seekTrack(e);
+          return _this4.seekTrack(e);
         }
       })));
     }
@@ -1608,7 +1628,10 @@ var Player = /*#__PURE__*/function (_React$Component) {
     _this.audio = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef(); // const audio = useRef('audio-tag');
 
     _this.changeVolume = _this.changeVolume.bind(_assertThisInitialized(_this));
-    _this.resetAudio = _this.resetAudio.bind(_assertThisInitialized(_this)); // this.seekTrack = this.seekTrack.bind(this);
+    _this.resetAudio = _this.resetAudio.bind(_assertThisInitialized(_this));
+    _this.state = {
+      time: null
+    }; // this.seekTrack = this.seekTrack.bind(this);
 
     return _this;
   }
@@ -1616,15 +1639,31 @@ var Player = /*#__PURE__*/function (_React$Component) {
   _createClass(Player, [{
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
+      var _this2 = this;
+
       if (prevProps.playState !== this.props.playState || prevProps.currentSong !== this.props.currentSong) {
         if (this.props.playState) {
           // debugger
           this.audio.current.play();
         } else {
-          // debugger
+          // debugger31701dcc!
           this.audio.current.pause();
         }
       }
+
+      if (this.props.playState) {
+        this.interval = setInterval(function () {
+          return _this2.refresh();
+        }, 100);
+      }
+    }
+  }, {
+    key: "refresh",
+    value: function refresh() {
+      console.log("refreshing");
+      this.setState({
+        time: this.audio.current.currentTime
+      });
     }
   }, {
     key: "toggle",
@@ -1644,7 +1683,7 @@ var Player = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "MusicPlayer",
     value: function MusicPlayer() {
-      var _this2 = this;
+      var _this3 = this;
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "player-toolbar"
@@ -1662,14 +1701,14 @@ var Player = /*#__PURE__*/function (_React$Component) {
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "rewind-button",
         onClick: function onClick() {
-          return _this2.resetAudio();
+          return _this3.resetAudio();
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-backward"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "play-button",
         onClick: function onClick() {
-          return _this2.toggle();
+          return _this3.toggle();
         }
       }, this.props.playState ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-pause"
@@ -1688,7 +1727,7 @@ var Player = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_current_song_info__WEBPACK_IMPORTED_MODULE_1__["default"], {
         currentSong: this.props.currentSong,
         audio: this.audio,
-        time: this.audio.current.currentTime,
+        time: this.state.time,
         playing: this.props.playState,
         duration: this.audio.current.duration
       })) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1706,12 +1745,12 @@ var Player = /*#__PURE__*/function (_React$Component) {
         className: "slider",
         id: "myRange",
         onChange: function onChange(e) {
-          return _this2.changeVolume(e);
+          return _this3.changeVolume(e);
         }
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "logout-button",
         onClick: function onClick() {
-          return _this2.props.logout();
+          return _this3.props.logout();
         }
       }, "Log Out"));
     }
