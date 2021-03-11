@@ -94,7 +94,18 @@ class Player extends React.Component {
                   duration={this.audio.current.duration}
                 />
               </div>
-            ) : null}
+            ) : (
+              <div className="current-info">
+                <img src={window.defaultalbumURL} alt="song-album-cover" />
+                <div className="info">
+                  <img
+                    className="default-logo"
+                    src={window.mangoURL}
+                    alt="mango logo"
+                  />
+                </div>
+              </div>
+            )}
             <div className="volume-slider">
               <p className="volume-icon">
                 <i className="fas fa-volume-up"></i>
