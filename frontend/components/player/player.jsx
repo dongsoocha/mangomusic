@@ -8,6 +8,7 @@ class Player extends React.Component {
         this.audio = React.createRef();
         this.changeVolume = this.changeVolume.bind(this);
         this.resetAudio = this.resetAudio.bind(this);
+        this.skip = this.skip.bind(this);
         this.state = {
           time: null
         };
@@ -26,7 +27,11 @@ class Player extends React.Component {
     refresh() {
       this.setState({time: this.audio.current.currentTime});
     }
-
+    skip() {
+      this.setState({time: this.audio.current.duration});
+      this.audio.current.currentTime = this.audio.current.duration;
+      this.toggle();
+    }
     toggle() {
         this.props.togglePlayState(this.props.currentSong.id);
     }
@@ -69,7 +74,7 @@ class Player extends React.Component {
                   <i className="fas fa-play"></i>
                 )}
               </button>
-              <button className="next-button">
+              <button className="next-button" onClick={() => this.skip()}>
                 <i className="fas fa-forward"></i>
               </button>
               <button className="repeat-button">

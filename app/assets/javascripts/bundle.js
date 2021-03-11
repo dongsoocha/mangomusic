@@ -1612,6 +1612,7 @@ var Player = /*#__PURE__*/function (_React$Component) {
     _this.audio = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
     _this.changeVolume = _this.changeVolume.bind(_assertThisInitialized(_this));
     _this.resetAudio = _this.resetAudio.bind(_assertThisInitialized(_this));
+    _this.skip = _this.skip.bind(_assertThisInitialized(_this));
     _this.state = {
       time: null
     };
@@ -1641,6 +1642,15 @@ var Player = /*#__PURE__*/function (_React$Component) {
       this.setState({
         time: this.audio.current.currentTime
       });
+    }
+  }, {
+    key: "skip",
+    value: function skip() {
+      this.setState({
+        time: this.audio.current.duration
+      });
+      this.audio.current.currentTime = this.audio.current.duration;
+      this.toggle();
     }
   }, {
     key: "toggle",
@@ -1695,7 +1705,10 @@ var Player = /*#__PURE__*/function (_React$Component) {
       }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-play"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "next-button"
+        className: "next-button",
+        onClick: function onClick() {
+          return _this3.skip();
+        }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-forward"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
