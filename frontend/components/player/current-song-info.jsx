@@ -1,48 +1,58 @@
 import React from 'react';
 
-const CurrentSongInfo = ({ currentSong, time, audio }) => {
+class CurrentSongInfo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      time: null,
+      duration: null,
+    };
+  }
 
-    const nosongInfo = () => {
-        return (
-            <div className="current-info">
-                <img  src={window.defaultalbumURL} alt="song-album-cover"/>
-                <div className="info">
-                    <img className="default-logo" src={window.mangoURL} alt="mango logo"/>
-                </div>
-            </div>
-        )
-    }
-    const seekTrack = (e) => {
-        audio.current.currentTime = e.target.value;
-    }
+  componentDidUpdate() {
+    setInterval(() =>
+      this.setState({
+        time: this.props.time,
+        duration: this.props.duration || 500,
+      }),
+      100
+    );
+  }
 
-    const songInfo = () => {
-        // debugger
-        let duration = audio.current.duration;
-        return (
-          <div className="current-info">
-            <img src={window.testalbumURL} alt="song-album-cover" />
-            <div className="with-info">
-              <p className="song-name">{currentSong.name}</p>
-              <p className="song-artist">{currentSong.artist.name}</p>
-              <input
-                type="range"
-                min="0"
-                max={duration}
-                step="1"
-                defaultValue={audio.current.currentTime}
-                onChange={(e) => seekTrack(e)}
-              />
-            </div>
+  render() {
+    if (!this.props.currentSong) {
+      return (
+        <div className="current-info">
+          <img src={window.defaultalbumURL} alt="song-album-cover" />
+          <div className="info">
+            <img
+              className="default-logo"
+              src={window.mangoURL}
+              alt="mango logo"
+            />
           </div>
-        );
+        </div>
+      );
     }
 
     return (
-        currentSong ?
-        songInfo() :
-        nosongInfo()
-    )
+      <div className="current-info">
+        <img src={window.testalbumURL} alt="song-album-cover" />
+        <div className="with-info">
+          <p className="song-name">{this.props.currentSong.name}</p>
+          <p className="song-artist">{this.props.currentSong.artist.name}</p>
+          <input
+            type="range"
+            min="0"
+            max={this.state.duration}
+            step="1"
+            value={this.state.time}
+            onChange={(e) => seekTrack(e)}
+          />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default CurrentSongInfo;

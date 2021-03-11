@@ -41,9 +41,10 @@ class Player extends React.Component {
           <div className="player-toolbar">
             <audio
               ref={this.audio}
+              preload="metadata"
               src={
-                  this.props.currentSong ? this.props.currentSong.audioUrl : ""
-                }
+                this.props.currentSong ? this.props.currentSong.audioUrl : ""
+              }
               volume="0.5"
             />
             <div className="player">
@@ -71,13 +72,17 @@ class Player extends React.Component {
                 <i className="fas fa-redo"></i>
               </button>
             </div>
-            {this.audio.current ?
-            <div className="song-seeker">
-              <CurrentSongInfo currentSong={this.props.currentSong} audio={this.audio} time={this.audio.current.currentTime}/>
-            </div>
-            :
-            null
-            }
+            {this.audio.current ? (
+              <div className="song-seeker">
+                <CurrentSongInfo
+                  currentSong={this.props.currentSong}
+                  audio={this.audio}
+                  time={this.audio.current.currentTime}
+                  playing={this.props.playState}
+                  duration={this.audio.current.duration}
+                />
+              </div>
+            ) : null}
             <div className="volume-slider">
               <p className="volume-icon">
                 <i className="fas fa-volume-up"></i>
@@ -86,7 +91,9 @@ class Player extends React.Component {
                 type="range"
                 min="0"
                 max="1"
-                defaultValue={this.audio.current ? this.audio.current.volume : .5}
+                defaultValue={
+                  this.audio.current ? this.audio.current.volume : 0.5
+                }
                 step=".01"
                 className="slider"
                 id="myRange"
