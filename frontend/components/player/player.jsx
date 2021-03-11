@@ -46,6 +46,7 @@ class Player extends React.Component {
 
     resetAudio(e) {
         this.audio.current.currentTime = 0;
+        this.setState({time: 0});
     }
     
     MusicPlayer() {

@@ -1664,6 +1664,9 @@ var Player = /*#__PURE__*/function (_React$Component) {
     key: "resetAudio",
     value: function resetAudio(e) {
       this.audio.current.currentTime = 0;
+      this.setState({
+        time: 0
+      });
     }
   }, {
     key: "MusicPlayer",
