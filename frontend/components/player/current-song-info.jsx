@@ -12,17 +12,10 @@ class CurrentSongInfo extends React.Component {
   }
 
     componentDidMount() {
-        debugger
         this.interval = setInterval(() => this.refresh(), 100);
     }
 
-    componentDidUpdate() {
-        this.interval = setInterval(() => this.refresh(), 100);
-    }
 
-    componentWillUnmount() {
-        clearInterval(this.interval);
-    }
 
 //   componentDidUpdate() {
 

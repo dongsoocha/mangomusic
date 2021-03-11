@@ -33,7 +33,6 @@ class Player extends React.Component {
     }
 
     refresh() {
-      console.log("refreshing")
       this.setState({time: this.audio.current.currentTime});
     }
 

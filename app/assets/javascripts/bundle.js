@@ -1387,24 +1387,9 @@ var CurrentSongInfo = /*#__PURE__*/function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      debugger;
       this.interval = setInterval(function () {
         return _this2.refresh();
       }, 100);
-    }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate() {
-      var _this3 = this;
-
-      this.interval = setInterval(function () {
-        return _this3.refresh();
-      }, 100);
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      clearInterval(this.interval);
     } //   componentDidUpdate() {
     //   }
 
@@ -1427,7 +1412,7 @@ var CurrentSongInfo = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this4 = this;
+      var _this3 = this;
 
       if (!this.props.currentSong) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1462,7 +1447,7 @@ var CurrentSongInfo = /*#__PURE__*/function (_React$Component) {
         step: "1",
         value: this.state.time || 0,
         onChange: function onChange(e) {
-          return _this4.seekTrack(e);
+          return _this3.seekTrack(e);
         }
       })));
     }
@@ -1660,7 +1645,6 @@ var Player = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "refresh",
     value: function refresh() {
-      console.log("refreshing");
       this.setState({
         time: this.audio.current.currentTime
       });
