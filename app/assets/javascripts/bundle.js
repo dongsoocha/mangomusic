@@ -1214,8 +1214,7 @@ var Browse = function Browse() {
     className: "song-browse",
     albumId: "browse"
   })));
-}; // refresh
-
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (Browse);
 
