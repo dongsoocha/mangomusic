@@ -860,7 +860,8 @@ body {
   border-bottom: solid #343434;
   border-width: 1px;
   position: sticky;
-  top: 0px; }
+  top: 0px;
+  z-index: 2; }
   .player-toolbar .player {
     display: flex;
     width: 16vw;
