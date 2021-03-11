@@ -17,9 +17,9 @@ class CurrentSongInfo extends React.Component {
 
 
 
-//   componentDidUpdate() {
-
-//   }
+  componentDidUpdate() {
+// if song is different
+  }
     refresh() {
         this.setState({
         time: this.props.time,

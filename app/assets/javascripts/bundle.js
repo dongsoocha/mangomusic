@@ -1390,9 +1390,11 @@ var CurrentSongInfo = /*#__PURE__*/function (_React$Component) {
       this.interval = setInterval(function () {
         return _this2.refresh();
       }, 100);
-    } //   componentDidUpdate() {
-    //   }
-
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {// if song is different
+    }
   }, {
     key: "refresh",
     value: function refresh() {
