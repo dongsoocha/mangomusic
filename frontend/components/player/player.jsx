@@ -10,7 +10,7 @@ class Player extends React.Component {
         // const audio = useRef('audio-tag');
         this.changeVolume = this.changeVolume.bind(this);
         this.resetAudio = this.resetAudio.bind(this);
-        this.seekTrack = this.seekTrack.bind(this);
+        // this.seekTrack = this.seekTrack.bind(this);
     }
 
     componentDidUpdate(prevProps) {
@@ -35,9 +35,7 @@ class Player extends React.Component {
     resetAudio(e) {
         this.audio.current.currentTime = 0;
     }
-    seekTrack(e) {
-        this.audio.current.currentTime = e.target.value;
-    }
+    
     MusicPlayer() {
         return (
           <div className="player-toolbar">
@@ -75,14 +73,7 @@ class Player extends React.Component {
             </div>
             {this.audio.current ?
             <div className="song-seeker">
-              <CurrentSongInfo currentSong={this.props.currentSong} />
-              <input 
-                type="range"
-                min="0"
-                max={this.audio.current.duration}
-                step="1"
-                defaultValue={this.audio.current.currentTime}
-                onChange={(e) => this.seekTrack(e)}/>
+              <CurrentSongInfo currentSong={this.props.currentSong} audio={this.audio}/>
             </div>
             :
             null
