@@ -890,7 +890,7 @@ body {
     .player-toolbar .current-info img {
       height: 45px; }
     .player-toolbar .current-info .info {
-      background-color: #464646;
+      background-color: #46464690;
       border-bottom-right-radius: 2px;
       border-top-right-radius: 2px;
       display: flex;
@@ -905,7 +905,7 @@ body {
       padding-top: 15px;
       width: 100vw;
       display: flex;
-      background-color: #464646;
+      background-color: #46464690;
       border-bottom-right-radius: 3px;
       border-top-right-radius: 3px;
       flex-direction: column;
