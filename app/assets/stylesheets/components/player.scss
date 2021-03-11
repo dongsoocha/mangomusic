@@ -60,6 +60,7 @@
             }
         }
         .with-info {
+            padding-top: 15px;
             width: 100vw;
             display: flex;
             background-color: #464646;
@@ -81,6 +82,26 @@
         .default-logo {
             height: 35px;
             width: 40px;
+        }
+        .song-progress {
+            margin-top: 5px;
+            display: flex;
+            -webkit-appearance: none;
+            height: 5px;
+            width: 99%;
+            outline: none;
+            appearance: none;
+            background: #727272;
+            align-self: flex-end;
+        }
+        .song-progress::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 5px;
+            height: 7px;
+            border-radius: 50%; 
+            background: white;
+            cursor: pointer;
         }
     }
     .volume-slider {

@@ -1441,6 +1441,7 @@ var CurrentSongInfo = /*#__PURE__*/function (_React$Component) {
       }, this.props.currentSong.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "song-artist"
       }, this.props.currentSong.artist.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "song-progress",
         type: "range",
         min: "0",
         max: this.state.duration,

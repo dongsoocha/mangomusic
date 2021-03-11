@@ -55,6 +55,7 @@ class CurrentSongInfo extends React.Component {
           <p className="song-name">{this.props.currentSong.name}</p>
           <p className="song-artist">{this.props.currentSong.artist.name}</p>
           <input
+            className="song-progress"
             type="range"
             min="0"
             max={this.state.duration}
