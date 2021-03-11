@@ -1339,139 +1339,60 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+var CurrentSongInfo = function CurrentSongInfo(_ref) {
+  var currentSong = _ref.currentSong,
+      time = _ref.time,
+      audio = _ref.audio;
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+  var nosongInfo = function nosongInfo() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "current-info"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: window.defaultalbumURL,
+      alt: "song-album-cover"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "info"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "default-logo",
+      src: window.mangoURL,
+      alt: "mango logo"
+    })));
+  };
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+  var seekTrack = function seekTrack(e) {
+    audio.current.currentTime = e.target.value;
+  };
 
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
- // const CurrentSongInfo = ({ currentSong, time, audio }) => {
-//     const nosongInfo = () => {
-//         return (
-//             <div className="current-info">
-//                 <img  src={window.defaultalbumURL} alt="song-album-cover"/>
-//                 <div className="info">
-//                     <img className="default-logo" src={window.mangoURL} alt="mango logo"/>
-//                 </div>
-//             </div>
-//         )
-//     }
-//     const songInfo = () => {
-//         // debugger
-//         return (
-//           <div className="current-info">
-//             <img src={window.testalbumURL} alt="song-album-cover" />
-//             <div className="with-info">
-//               <p className="song-name">{currentSong.name}</p>
-//               <p className="song-artist">{currentSong.artist.name}</p>
-//               <input
-//                 type="range"
-//                 min="0"
-//                 max={audio.current.duration}
-//                 step="1"
-//                 defaultValue={audio.current.currentTime}
-//                 onChange={(e) => seekTrack(e)}
-//               />
-//             </div>
-//           </div>
-//         );
-//     }
-//     return (
-//         currentSong ?
-//         songInfo() :
-//         nosongInfo()
-//     )
-// }
-
-var CurrentSongInfo = /*#__PURE__*/function (_React$Component) {
-  _inherits(CurrentSongInfo, _React$Component);
-
-  var _super = _createSuper(CurrentSongInfo);
-
-  function CurrentSongInfo(props) {
-    var _this;
-
-    _classCallCheck(this, CurrentSongInfo);
-
-    _this = _super.call(this, props);
-    _this.seekTrack = _this.seekTrack.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(CurrentSongInfo, [{
-    key: "seekTrack",
-    value: function seekTrack(e) {
-      this.props.audio.current.currentTime = e.target.value;
-    }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate(prevProps) {
-      if (this.props.audio.current.currentTime !== prevProps.audio.current.currentTime) {
-        debugger;
+  var songInfo = function songInfo() {
+    // debugger
+    var duration = audio.current.duration;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "current-info"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: window.testalbumURL,
+      alt: "song-album-cover"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "with-info"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "song-name"
+    }, currentSong.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "song-artist"
+    }, currentSong.artist.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "range",
+      min: "0",
+      max: duration,
+      step: "1",
+      defaultValue: audio.current.currentTime,
+      onChange: function onChange(e) {
+        return seekTrack(e);
       }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
+    })));
+  };
 
-      if (!this.props.currentSong) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "current-info"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-          src: window.defaultalbumURL,
-          alt: "song-album-cover"
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "info"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-          className: "default-logo",
-          src: window.mangoURL,
-          alt: "mango logo"
-        })));
-      }
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "current-info"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: window.testalbumURL,
-        alt: "song-album-cover"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "with-info"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "song-name"
-      }, this.props.currentSong.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "song-artist"
-      }, this.props.currentSong.artist.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "range",
-        min: "0",
-        max: this.props.audio.current.duration,
-        step: "1",
-        defaultValue: this.props.audio.current.currentTime,
-        onChange: function onChange(e) {
-          return _this2.seekTrack(e);
-        }
-      })));
-    }
-  }]);
-
-  return CurrentSongInfo;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+  return currentSong ? songInfo() : nosongInfo();
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (CurrentSongInfo);
 
@@ -1708,7 +1629,8 @@ var Player = /*#__PURE__*/function (_React$Component) {
         className: "song-seeker"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_current_song_info__WEBPACK_IMPORTED_MODULE_1__["default"], {
         currentSong: this.props.currentSong,
-        audio: this.audio
+        audio: this.audio,
+        time: this.audio.current.currentTime
       })) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "volume-slider"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {

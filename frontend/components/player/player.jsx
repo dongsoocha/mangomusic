@@ -73,7 +73,7 @@ class Player extends React.Component {
             </div>
             {this.audio.current ?
             <div className="song-seeker">
-              <CurrentSongInfo currentSong={this.props.currentSong} audio={this.audio}/>
+              <CurrentSongInfo currentSong={this.props.currentSong} audio={this.audio} time={this.audio.current.currentTime}/>
             </div>
             :
             null
