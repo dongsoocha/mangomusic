@@ -21,18 +21,15 @@ class Player extends React.Component {
         if (prevProps.playState !== this.props.playState || prevProps.currentSong !== this.props.currentSong) {
             if (this.props.playState) {
                 // debugger
+                this.interval = setInterval(() => this.refresh(), 1000);
                 this.audio.current.play();
-                this.interval = setInterval(() => this.refresh(), 100);
             } else {
                 // debugger31701dcc!
-
+                clearInterval(this.interval);
                 this.audio.current.pause();
-        }}
-        if (this.props.playState) {
-          this.interval = setInterval(() => this.refresh(), 100);
-        }
+            }}
     }
-
+// doesn't update properly on song change
     refresh() {
       this.setState({time: this.audio.current.currentTime});
     }

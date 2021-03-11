@@ -1628,22 +1628,18 @@ var Player = /*#__PURE__*/function (_React$Component) {
       if (prevProps.playState !== this.props.playState || prevProps.currentSong !== this.props.currentSong) {
         if (this.props.playState) {
           // debugger
-          this.audio.current.play();
           this.interval = setInterval(function () {
             return _this2.refresh();
-          }, 100);
+          }, 1000);
+          this.audio.current.play();
         } else {
           // debugger31701dcc!
+          clearInterval(this.interval);
           this.audio.current.pause();
         }
       }
+    } // doesn't update properly on song change
 
-      if (this.props.playState) {
-        this.interval = setInterval(function () {
-          return _this2.refresh();
-        }, 100);
-      }
-    }
   }, {
     key: "refresh",
     value: function refresh() {
