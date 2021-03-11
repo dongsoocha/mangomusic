@@ -6,30 +6,23 @@ class Player extends React.Component {
     constructor (props) {
         super(props);
         this.audio = React.createRef();
-        
-        // const audio = useRef('audio-tag');
         this.changeVolume = this.changeVolume.bind(this);
         this.resetAudio = this.resetAudio.bind(this);
         this.state = {
           time: null
         };
-
-        // this.seekTrack = this.seekTrack.bind(this);
     }
 
     componentDidUpdate(prevProps) {
         if (prevProps.playState !== this.props.playState || prevProps.currentSong !== this.props.currentSong) {
             if (this.props.playState) {
-                // debugger
                 this.interval = setInterval(() => this.refresh(), 1000);
                 this.audio.current.play();
             } else {
-                // debugger31701dcc!
                 clearInterval(this.interval);
                 this.audio.current.pause();
             }}
     }
-// doesn't update properly on song change
     refresh() {
       this.setState({time: this.audio.current.currentTime});
     }

@@ -1609,14 +1609,12 @@ var Player = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, Player);
 
     _this = _super.call(this, props);
-    _this.audio = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef(); // const audio = useRef('audio-tag');
-
+    _this.audio = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
     _this.changeVolume = _this.changeVolume.bind(_assertThisInitialized(_this));
     _this.resetAudio = _this.resetAudio.bind(_assertThisInitialized(_this));
     _this.state = {
       time: null
-    }; // this.seekTrack = this.seekTrack.bind(this);
-
+    };
     return _this;
   }
 
@@ -1627,19 +1625,16 @@ var Player = /*#__PURE__*/function (_React$Component) {
 
       if (prevProps.playState !== this.props.playState || prevProps.currentSong !== this.props.currentSong) {
         if (this.props.playState) {
-          // debugger
           this.interval = setInterval(function () {
             return _this2.refresh();
           }, 1000);
           this.audio.current.play();
         } else {
-          // debugger31701dcc!
           clearInterval(this.interval);
           this.audio.current.pause();
         }
       }
-    } // doesn't update properly on song change
-
+    }
   }, {
     key: "refresh",
     value: function refresh() {
