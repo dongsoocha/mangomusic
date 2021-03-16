@@ -57,9 +57,9 @@ class Player extends React.Component {
               volume="0.5"
             />
             <div className="player">
-              <button className="shuffle-button">
+              {/* <button className="shuffle-button">
                 <i className="fas fa-random"></i>
-              </button>
+              </button> */}
               <button
                 className="rewind-button"
                 onClick={() => this.resetAudio()}
@@ -77,9 +77,9 @@ class Player extends React.Component {
               <button className="next-button" onClick={() => this.skip()}>
                 <i className="fas fa-forward"></i>
               </button>
-              <button className="repeat-button">
+              {/* <button className="repeat-button">
                 <i className="fas fa-redo"></i>
-              </button>
+              </button> */}
             </div>
             {this.audio.current ? (
               <div className="song-seeker">

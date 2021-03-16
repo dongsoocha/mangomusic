@@ -741,6 +741,18 @@ body {
       color: #b2b2b2; }
     .browse-songs-grid .browse-song-container .browse-song-text .artist-name-browse, .browse-songs-grid .browse-song-container .browse-song-text .song-name-browse {
       margin-left: 0; }
+    .browse-songs-grid .browse-song-container .browse-song-text .song-name-browse {
+      height: 12px;
+      margin-bottom: 3px;
+      overflow: hidden;
+      position: relative; }
+    .browse-songs-grid .browse-song-container .browse-song-text .song-name-browse span {
+      position: absolute;
+      white-space: nowrap;
+      transform: translateX(0); }
+    .browse-songs-grid .browse-song-container .browse-song-text .song-name-browse:hover span {
+      transition: 5s;
+      transform: translateX(calc(100px - 100%)); }
 
 .artist-grid {
   display: grid;

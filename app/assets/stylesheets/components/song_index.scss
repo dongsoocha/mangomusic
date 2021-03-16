@@ -89,5 +89,20 @@
         .artist-name-browse, .song-name-browse {
             margin-left: 0;
         }
+        .song-name-browse {
+            height: 12px;
+            margin-bottom: 3px;
+            overflow: hidden;
+            position: relative;
+        }
+        .song-name-browse span {
+            position: absolute;
+            white-space: nowrap;
+            transform: translateX(0);
+        }
+        .song-name-browse:hover span{
+            transition: 5s;
+            transform: translateX(calc(100px - 100%));
+        }
     }
 }
