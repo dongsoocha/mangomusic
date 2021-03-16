@@ -102,8 +102,8 @@ the entire page, allowing for a smooth user experience and navigation between pa
 
 
 ## To-do
-* Navigation controls and volume slider besides play/pause
-* Searching database
+* ~~Navigation controls and volume slider besides play/pause~~
+* ~~Searching database~~
 * More playing functionality, such as add to queue/ remove from queue
 * Playlist deletion
 * User Library
