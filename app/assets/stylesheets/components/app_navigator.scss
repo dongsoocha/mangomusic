@@ -56,8 +56,8 @@
         max-height: auto;
         overflow-y: scroll;
         margin-bottom: 15px;
-        -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-        mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+        // -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+        // mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
         .playlist-header {
             display: flex;
             padding-left: 32px;
@@ -116,6 +116,7 @@
         height: 40px;
         font-size: 20px;;
         justify-content: space-evenly;
+        opacity: .8;
         a {
             color: #727272;
         }

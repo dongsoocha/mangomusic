@@ -265,9 +265,7 @@ img:hover {
     width: 100%;
     max-height: auto;
     overflow-y: scroll;
-    margin-bottom: 15px;
-    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 85%, transparent 100%); }
+    margin-bottom: 15px; }
     .app-nav .playlist-index .playlist-header {
       display: flex;
       padding-left: 32px;
@@ -314,7 +312,8 @@ img:hover {
     align-items: center;
     height: 40px;
     font-size: 20px;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    opacity: .8; }
     .app-nav .links a {
       color: #727272; }
     .app-nav .links a:hover {
