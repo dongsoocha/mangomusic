@@ -1061,7 +1061,8 @@ body {
     .playlist-show .playlist-show-info .playlist-edit {
       display: flex;
       justify-content: space-between;
-      padding-bottom: 10px; }
+      padding-bottom: 10px;
+      margin-right: 60px; }
       .playlist-show .playlist-show-info .playlist-edit button {
         background-color: #FA2D48;
         color: white;
@@ -1069,9 +1070,12 @@ body {
         appearance: none;
         border-radius: 3px;
         border: none;
-        height: 100%;
-        margin-right: 90px;
+        height: 20px;
+        margin-right: 15px;
         align-self: flex-end; }
+      .playlist-show .playlist-show-info .playlist-edit button:hover {
+        cursor: pointer;
+        background-color: #b60028; }
       .playlist-show .playlist-show-info .playlist-edit input {
         width: 80%;
         height: 50px;
@@ -1085,6 +1089,8 @@ body {
         appearance: none; }
       .playlist-show .playlist-show-info .playlist-edit input:focus {
         background: #343434; }
+      .playlist-show .playlist-show-info .playlist-edit .edit-playlists {
+        display: flex; }
     .playlist-show .playlist-show-info .playlist-show {
       border-top: solid #343434;
       border-width: 1px; }

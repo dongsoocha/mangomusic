@@ -1,6 +1,7 @@
 import {
     RECEIVE_ALL_PLAYLISTS,
-    RECEIVE_PLAYLIST
+    RECEIVE_PLAYLIST,
+    DELETE_PLAYLIST,
 } from '../actions/playlist_actions';
 
 const PlaylistReducer = (state = {}, action) => {
@@ -11,6 +12,10 @@ const PlaylistReducer = (state = {}, action) => {
             return action.playlists;
         case RECEIVE_PLAYLIST:
             return Object.assign({}, state, { [action.playlist.id]: action.playlist});
+        case DELETE_PLAYLIST:
+            let nextState = Object.assign({}, state);
+            delete nextState[action.playlist.id];
+            return nextState;
         default:
             return state;
     }

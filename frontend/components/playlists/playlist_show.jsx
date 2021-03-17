@@ -18,14 +18,14 @@ class PlaylistShow extends React.Component {
     }
 
     render() {
-        const { playlist, fetchSong, togglePlayState, currentSong, playState } = this.props;
+        const { playlist, fetchSong, togglePlayState, currentSong, playState, deletePlaylist } = this.props;
         
         if (!playlist) return null;
         return (
             <div className="playlist-show">
                 <img src={window.playlistURL} alt="playlist-image"/>
                 <div className="playlist-show-info">
-                    <PlaylistEditFormContainer playlist={playlist} />
+                    <PlaylistEditFormContainer playlist={playlist} deletePlaylist={deletePlaylist}/>
                     <div className="playlist-show">
                         <ul className="songs-grid">
                             {

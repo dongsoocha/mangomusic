@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PlaylistIndex from './playlist_index';
-import { fetchPlaylists, createPlaylist } from '../../actions/playlist_actions';
+import { fetchPlaylists, createPlaylist, deletePlaylist } from '../../actions/playlist_actions';
 
 const mapStateToProps = state => {
     if (state.session.id) {
@@ -13,7 +13,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
     fetchPlaylists: () => dispatch(fetchPlaylists()),
-    createPlaylist: playlist => dispatch(createPlaylist(playlist))
+    createPlaylist: playlist => dispatch(createPlaylist(playlist)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlaylistIndex);

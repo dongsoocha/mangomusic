@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PlaylistShow from './playlist_show';
-import { fetchPlaylist } from '../../actions/playlist_actions';
+import { fetchPlaylist, deletePlaylist } from '../../actions/playlist_actions';
 import { fetchCurrentSong } from '../../actions/song_actions';
 import { togglePlayState } from '../../actions/session_actions';
 
@@ -17,6 +17,7 @@ const mapDispatchToProps = dispatch => {
         fetchPlaylist: playlistId => dispatch(fetchPlaylist(playlistId)),
         togglePlayState: songId => dispatch(togglePlayState(songId)),
         fetchSong: songId => dispatch(fetchCurrentSong(songId)),
+        deletePlaylist: playlist => dispatch(deletePlaylist(playlist)),
     };
 };
 
