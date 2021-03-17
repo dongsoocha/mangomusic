@@ -4,12 +4,29 @@
 }
 
 .login-signup {
+    position: sticky;
+    top: 0;
     height: 55px;
     float: right;
     margin-left: 260px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    a {
+        font-size: 20px;
+        color: #727272;
+        padding: 10px;
+    }
+    a:hover {
+            transition: 1s;
+            color: white;
+    }
+    a:active {
+        color:rgb(92, 184, 255);
+    }
+    a:last-of-type {
+        padding-right: 20px;
+    }
     button:last-child {
         margin-left: 10px;
         margin-right: 20px;
@@ -92,6 +109,7 @@
         padding-top: 102px;
         width: 70vw;
         max-width: 1200px;
+        padding-bottom: 102px;
     }
     .upsell:hover {
         opacity: 1;
@@ -113,6 +131,7 @@
     }
     background-color: #FA2D48;
     border-style: none;
+    outline: none;
 }
 
 .main-prompt {

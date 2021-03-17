@@ -28,6 +28,7 @@ body {
    height: 100%;
 }
 
+
 a {
 	appearance: none;
 	outline: none;
@@ -35,7 +36,8 @@ a {
 	color: white;
 }
 body::-webkit-scrollbar {
-        background: rgba(43, 43, 43, 0.95);        /* color of the tracking area */
+        background: rgba(43, 43, 43, 0.95);   /* color of the tracking area */
+		width: 6px;     
 } 
 body::-webkit-scrollbar-thumb {
         background: gray;        

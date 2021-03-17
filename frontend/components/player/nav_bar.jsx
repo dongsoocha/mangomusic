@@ -5,11 +5,28 @@ const NavBar = ({ currentUser, logout, openModal, demoLogin, currentSong, playSt
     
     const sessionLinks = () => {
         return (
-        <nav className="login-signup">
-            <button onClick={() => openModal('login')}><i className="fas fa-user"></i> Sign in</button>
+          <nav className="login-signup">
+            <a
+              href="https://www.linkedin.com/in/dongsoo-cha-72511476/"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/dongsoocha/sort-visualizer/"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://angel.co/u/dongsoo-cha" target="_blank">
+              <i class="fab fa-angellist"></i>
+            </a>
+            <button onClick={() => openModal("login")}>
+              <i className="fas fa-user"></i> Sign in
+            </button>
             <button onClick={() => demoLogin()}>Demo Login</button>
-        </nav>
-        )
+          </nav>
+        );
     };
 
     return (

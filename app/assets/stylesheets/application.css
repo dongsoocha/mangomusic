@@ -48,7 +48,8 @@ a {
 
 body::-webkit-scrollbar {
   background: rgba(43, 43, 43, 0.95);
-  /* color of the tracking area */ }
+  /* color of the tracking area */
+  width: 6px; }
 
 body::-webkit-scrollbar-thumb {
   background: gray;
@@ -368,12 +369,25 @@ img:hover {
   flex-direction: column; }
 
 .login-signup {
+  position: sticky;
+  top: 0;
   height: 55px;
   float: right;
   margin-left: 260px;
   display: flex;
   justify-content: flex-end;
   align-items: center; }
+  .login-signup a {
+    font-size: 20px;
+    color: #727272;
+    padding: 10px; }
+  .login-signup a:hover {
+    transition: 1s;
+    color: white; }
+  .login-signup a:active {
+    color: #5cb8ff; }
+  .login-signup a:last-of-type {
+    padding-right: 20px; }
   .login-signup button:last-child {
     margin-left: 10px;
     margin-right: 20px; }
@@ -439,7 +453,8 @@ img:hover {
   .splash .upsell {
     padding-top: 102px;
     width: 70vw;
-    max-width: 1200px; }
+    max-width: 1200px;
+    padding-bottom: 102px; }
   .splash .upsell:hover {
     opacity: 1; }
 
@@ -452,7 +467,8 @@ img:hover {
   bottom: 0;
   left: 0;
   background-color: #FA2D48;
-  border-style: none; }
+  border-style: none;
+  outline: none; }
   .subscribe :hover {
     cursor: pointer; }
 
