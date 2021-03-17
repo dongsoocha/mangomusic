@@ -35,8 +35,29 @@
     button .link:hover {
         cursor: pointer;
     }
+    .playlist-index::-webkit-scrollbar {
+        background: transparent;
+        width: 6px;
+    }
+
+    .playlist-index::-webkit-scrollbar-thumb {
+        background: #727272;
+        border-radius: 15px;
+    }
+    .playlist-index::-webkit-scrollbar-thumb:hover {
+        background: #525252;
+    }
+    .playlist-index::-webkit-scrollbar-thumb:active {
+        background: #3e3e3e;
+    }
+
     .playlist-index {
         width: 100%;
+        max-height: auto;
+        overflow-y: scroll;
+        margin-bottom: 15px;
+        -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
         .playlist-header {
             display: flex;
             padding-left: 32px;
@@ -84,6 +105,28 @@
                 background-color: #727272;
                 border-radius: 5px;
             }
+        }
+    }
+    .links {
+        margin-top: auto;
+        margin-bottom: 15px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 40px;
+        font-size: 20px;;
+        justify-content: space-evenly;
+        a {
+            color: #727272;
+        }
+
+        a:hover {
+            transition: 1s;
+            color: white;
+        }
+
+        a:active {
+            color:rgb(92, 184, 255);
         }
     }
 }

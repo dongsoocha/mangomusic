@@ -26,6 +26,7 @@ class Search extends React.Component {
     } else {
       this.props.clearSearch();
     }
+    this.setState({ search: '' });
     this.props.history.push("/search");
   }
 

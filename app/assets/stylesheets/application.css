@@ -250,8 +250,23 @@ img:hover {
     background-color: #727272; }
   .app-nav button .link:hover {
     cursor: pointer; }
+  .app-nav .playlist-index::-webkit-scrollbar {
+    background: transparent;
+    width: 6px; }
+  .app-nav .playlist-index::-webkit-scrollbar-thumb {
+    background: #727272;
+    border-radius: 15px; }
+  .app-nav .playlist-index::-webkit-scrollbar-thumb:hover {
+    background: #525252; }
+  .app-nav .playlist-index::-webkit-scrollbar-thumb:active {
+    background: #3e3e3e; }
   .app-nav .playlist-index {
-    width: 100%; }
+    width: 100%;
+    max-height: auto;
+    overflow-y: scroll;
+    margin-bottom: 15px;
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%); }
     .app-nav .playlist-index .playlist-header {
       display: flex;
       padding-left: 32px;
@@ -290,6 +305,22 @@ img:hover {
     .app-nav .playlist-index ul li:hover {
       background-color: #727272;
       border-radius: 5px; }
+  .app-nav .links {
+    margin-top: auto;
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-size: 20px;
+    justify-content: space-evenly; }
+    .app-nav .links a {
+      color: #727272; }
+    .app-nav .links a:hover {
+      transition: 1s;
+      color: white; }
+    .app-nav .links a:active {
+      color: #5cb8ff; }
 
 .mango-logo {
   display: flex;
@@ -409,6 +440,8 @@ img:hover {
     padding-top: 102px;
     width: 70vw;
     max-width: 1200px; }
+  .splash .upsell:hover {
+    opacity: 1; }
 
 .subscribe {
   align-self: left;
@@ -666,6 +699,9 @@ body {
     flex-direction: column; }
 
 /* browse */
+.song-scroll {
+  width: 100%; }
+
 .browse .songs-grid, .browse .browse-songs-grid {
   display: grid;
   height: 100%;
@@ -1074,9 +1110,9 @@ body {
               margin-left: 20px; }
               .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container .song-container button i {
                 align-self: center;
+                color: #656565;
                 margin-bottom: -5px;
-                font-size: 20px;
-                visibility: hidden; }
+                font-size: 15px; }
               .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container .song-container button p {
                 margin-left: -16px;
                 visibility: visible;
@@ -1085,7 +1121,6 @@ body {
               cursor: pointer;
               background-color: #464646; }
               .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container .song-container button:hover i {
-                visibility: visible;
                 color: white;
                 font-size: 15px; }
               .playlist-show .playlist-show-info .playlist-show .songs-grid .song-container-container .song-container button:hover p {
@@ -1178,5 +1213,7 @@ body {
     padding: 8px; }
   .search li:hover {
     background: #393939; }
+    .search li:hover p {
+      color: white; }
 
 /*# sourceMappingURL=application.css.map */

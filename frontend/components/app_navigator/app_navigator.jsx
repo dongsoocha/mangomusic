@@ -11,18 +11,42 @@ const AppNavigator = () => {
     
 
     return (
-        <nav className="app-nav">
-            <p className="mango-logo"><img className="small-logo" src={window.mangoURL} alt="Mango Logo" /><Link to='/'>Music</Link></p>
-            
-            <SearchContainer />
-            {/* find a way to parse through state */}
-            {/* maybe in mstp? */}
-            {/* add in a modal to show, if empty, don't display */}
-            {/* <button>Listen Now</button> */}
-            <button><Link to="/browse" className="link">Browse</Link></button>
-            {/* <button>Radio</button> */}
-            <PlaylistIndexContainer />
-        </nav>
+      <nav className="app-nav">
+        <p className="mango-logo">
+          <img className="small-logo" src={window.mangoURL} alt="Mango Logo" />
+          <Link to="/">Music</Link>
+        </p>
+
+        <SearchContainer />
+        {/* find a way to parse through state */}
+        {/* maybe in mstp? */}
+        {/* add in a modal to show, if empty, don't display */}
+        {/* <button>Listen Now</button> */}
+        <button>
+          <Link to="/browse" className="link">
+            Browse
+          </Link>
+        </button>
+        {/* <button>Radio</button> */}
+        <PlaylistIndexContainer />
+        <div className="links">
+          <a
+            href="https://www.linkedin.com/in/dongsoo-cha-72511476/"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/dongsoocha/sort-visualizer/"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://angel.co/u/dongsoo-cha" target="_blank">
+            <i class="fab fa-angellist"></i>
+          </a>
+        </div>
+      </nav>
     );
 };
 

@@ -28,6 +28,12 @@ class Api::PlaylistsController < ApplicationController
         end
     end
 
+    def destroy
+        playlist = Playlist.find(params[:id])
+        playlist.destroy!
+    end
+
+
     private
 
     def playlist_params

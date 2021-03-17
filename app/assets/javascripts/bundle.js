@@ -874,7 +874,24 @@ var AppNavigator = function AppNavigator() {
   }, "Music")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_search_search_container__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/browse",
     className: "link"
-  }, "Browse")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_playlists_playlist_index_container__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  }, "Browse")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_playlists_playlist_index_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "links"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.linkedin.com/in/dongsoo-cha-72511476/",
+    target: "_blank"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    "class": "fab fa-linkedin"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://github.com/dongsoocha/sort-visualizer/",
+    target: "_blank"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    "class": "fab fa-github"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://angel.co/u/dongsoo-cha",
+    target: "_blank"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    "class": "fab fa-angellist"
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AppNavigator);
@@ -2115,7 +2132,7 @@ var PlaylistIndex = /*#__PURE__*/function (_React$Component) {
           playlists = _this$props.playlists,
           currentUser = _this$props.currentUser;
       var defPlaylist = {
-        name: 'Playlist',
+        name: "Playlist",
         user_id: currentUser
       };
       if (!currentUser) return null;
@@ -2477,6 +2494,9 @@ var Search = /*#__PURE__*/function (_React$Component) {
         this.props.clearSearch();
       }
 
+      this.setState({
+        search: ''
+      });
       this.props.history.push("/search");
     }
   }, {
