@@ -897,17 +897,17 @@ var AppNavigator = function AppNavigator() {
     href: "https://www.linkedin.com/in/dongsoo-cha-72511476/",
     target: "_blank"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    "class": "fab fa-linkedin"
+    className: "fab fa-linkedin"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://github.com/dongsoocha/sort-visualizer/",
     target: "_blank"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    "class": "fab fa-github"
+    className: "fab fa-github"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://angel.co/u/dongsoo-cha",
     target: "_blank"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    "class": "fab fa-angellist"
+    className: "fab fa-angellist"
   }))));
 };
 
@@ -1524,17 +1524,17 @@ var NavBar = function NavBar(_ref) {
       href: "https://www.linkedin.com/in/dongsoo-cha-72511476/",
       target: "_blank"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      "class": "fab fa-linkedin"
+      className: "fab fa-linkedin"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       href: "https://github.com/dongsoocha/sort-visualizer/",
       target: "_blank"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      "class": "fab fa-github"
+      className: "fab fa-github"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       href: "https://angel.co/u/dongsoo-cha",
       target: "_blank"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      "class": "fab fa-angellist"
+      className: "fab fa-angellist"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       onClick: function onClick() {
         return openModal("login");
@@ -2064,7 +2064,7 @@ var PlaylistEditFormContainer = /*#__PURE__*/function (_React$Component) {
         onChange: this.update("name") // onChange={this.handleChange}
 
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "edit-playlists"
+        className: "edit-playlists"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
         value: this.state.name,

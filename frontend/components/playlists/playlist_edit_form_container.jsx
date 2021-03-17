@@ -33,7 +33,7 @@ class PlaylistEditFormContainer extends React.Component {
           onChange={this.update("name")}
           // onChange={this.handleChange}
         />
-        <div class='edit-playlists'>
+        <div className='edit-playlists'>
           <button
             type="submit"
             value={this.state.name}

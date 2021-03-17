@@ -34,16 +34,16 @@ const AppNavigator = () => {
             href="https://www.linkedin.com/in/dongsoo-cha-72511476/"
             target="_blank"
           >
-            <i class="fab fa-linkedin"></i>
+            <i className="fab fa-linkedin"></i>
           </a>
           <a
             href="https://github.com/dongsoocha/sort-visualizer/"
             target="_blank"
           >
-            <i class="fab fa-github"></i>
+            <i className="fab fa-github"></i>
           </a>
           <a href="https://angel.co/u/dongsoo-cha" target="_blank">
-            <i class="fab fa-angellist"></i>
+            <i className="fab fa-angellist"></i>
           </a>
         </div>
       </nav>
