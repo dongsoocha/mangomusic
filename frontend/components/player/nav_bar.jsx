@@ -12,10 +12,8 @@ const NavBar = ({ currentUser, logout, openModal, demoLogin, currentSong, playSt
             >
               <i className="fab fa-linkedin"></i>
             </a>
-            <a
-              href="https://github.com/dongsoocha/sort-visualizer/"
-              target="_blank"
-            >
+            <a href="https://github.com/dongsoocha/mangomusic" 
+              target="_blank">
               <i className="fab fa-github"></i>
             </a>
             <a href="https://angel.co/u/dongsoo-cha" target="_blank">
