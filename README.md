@@ -24,6 +24,7 @@ Table of Contents
 * Playlist creation/ editing
 * Browse album or artist pages
 * Sidebar for quick navigation
+* Searchable by Song, Album, or Artist
 
 
 ### Splash
